@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "astronomy_checks": [
+    "source/rapid_inspired_gru: AP, ROC, top-5% count and positives",
+    "source/frozen_forest: AP, ROC, top-5% count and positives",
+    "independent/rapid_inspired_gru: AP, ROC, top-5% count and positives",
+    "independent/frozen_forest: AP, ROC, top-5% count and positives"
+  ],
+  "source_external_id_overlap": 0,
+  "phishing_support": [
+    {
+      "seed": 17,
+      "test_rows": 2616,
+      "test_components": 582,
+      "positive_components": 1,
+      "positive_component_details": [
+        {
+          "group": "1",
+          "rows": 2035,
+          "positives": 1559
+        }
+      ]
+    },
+    {
+      "seed": 42,
+      "test_rows": 2616,
+      "test_components": 582,
+      "positive_components": 1,
+      "positive_component_details": [
+        {
+          "group": "1",
+          "rows": 2035,
+          "positives": 1559
+        }
+      ]
+    },
+    {
+      "seed": 91,
+      "test_rows": 2616,
+      "test_components": 582,
+      "positive_components": 1,
+      "positive_component_details": [
+        {
+          "group": "1",
+          "rows": 2035,
+          "positives": 1559
+        }
+      ]
+    }
+  ],
+  "interpretation": "All test positives lie in one component per seed. Conditional bootstrap intervals do not measure generalization across independent phishing components.",
+  "scope": "Saved-score audit, not a raw-data reproduction, fresh test, or independent peer review.",
+  "sha256": {
+    "results/followup/recurrent-source-scores.csv": "04f76928daccb5bb320d8eb361f96938cada2dd62d9dfded75c3a23b6b10bf82",
+    "results/followup/recurrent-independent-scores.csv": "b642c92a6eb761e6276bf8030128ea67e1d415241c857d9c999a732bf09538aa",
+    "results/validation/visual-phishing-scores.json.gz": "d2b1848fa16fe45e027a28323a4b971d70134a3dbbd69a781b8a8d09986903fa"
+  }
+}

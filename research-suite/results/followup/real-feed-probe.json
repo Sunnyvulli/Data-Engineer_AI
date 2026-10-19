@@ -1,0 +1,58 @@
+{
+  "status": "completed one-snapshot provider-labelled external probe; no balanced deployment validation",
+  "source_model": "PhiUSIIL full-URL seed42 frozen reconstruction",
+  "source_sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a",
+  "local_artifact_sha256": "f9d8a65417b8776b36c620d58b1a3cac6d0bdefaf575e0ab974810a36dc16078",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "provenance": {
+    "source": "https://raw.githubusercontent.com/openphish/public_feed/refs/heads/main/feed.txt",
+    "fetched_utc": "2026-10-19T01:51:37.763491+00:00",
+    "last_modified": null,
+    "bytes": 14748,
+    "sha256": "1e224c0db31da9aed93de272504799197294f33d8cc6460e1d1b8c2de746b931"
+  },
+  "permission_sources": [
+    "https://openphish.com/terms.html",
+    "https://openphish.com/phishing_feeds.html"
+  ],
+  "terms_scope": "personal independent noncommercial research; no feed/URL/individual score redistribution",
+  "selection": {
+    "nonempty_lines": 300,
+    "unique_urls": 300,
+    "invalid_excluded": 0,
+    "source_host_overlap_excluded": 1,
+    "retained": 299
+  },
+  "threshold": 0.15123258726438127,
+  "source_validation_fpr": 0.009921213889699446,
+  "provider_reported_phishing_flagged": 297,
+  "provider_feed_agreement": 0.9933110367892977,
+  "uncertainty": {
+    "resampling_unit": "exact normalized hostname",
+    "clusters": 265,
+    "resamples": 300,
+    "percentile_95": [
+      0.9827586206896551,
+      1.0
+    ],
+    "limitation": "conditional snapshot agreement; not adjudicated recall or deployment uncertainty"
+  },
+  "not_estimable": [
+    "independently adjudicated phishing recall",
+    "false-positive rate",
+    "precision",
+    "AP",
+    "ROC AUC"
+  ],
+  "limits": [
+    "one limited feed snapshot; provider labels not independently adjudicated",
+    "no benign controls; no deployment prevalence or representative sampling frame",
+    "exact-host exclusion does not exclude related registered domains or campaigns",
+    "PhiUSIIL collection shortcuts remain; no screenshot/HTML capability"
+  ]
+}

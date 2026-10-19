@@ -1,0 +1,40 @@
+{
+  "status": "independent simulated objects; no real-world external validation",
+  "selection": {
+    "selected_complete_objects": 5000,
+    "last_id": 53125
+  },
+  "eligible_detected_objects": 5000,
+  "excluded_without_detection": 0,
+  "original_metadata_id_overlap": 0,
+  "frozen_model_sha256": "d1e0bf6dece9af03fdd817a68218dd461a67ecb738fa1c8410e38a74678417c4",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "evaluation_status": "rare-event discrimination not estimable: selected sample lacks both classes",
+  "metrics": {
+    "n": 5000,
+    "positives": 0,
+    "average_precision": null,
+    "roc_auc": null,
+    "recall": null,
+    "false_positive_rate": 0.0
+  },
+  "budget": {
+    "selected": 250,
+    "rare_found": 0,
+    "precision_at_budget": 0.0,
+    "recall_at_budget": null
+  },
+  "uncertainty": {
+    "reason": "No valid two-class resampling distribution"
+  },
+  "expected_random_precision": 0.0,
+  "input_sha256": {
+    "plasticc_test_metadata.csv.gz": "8048d59cf84ab30fa539ad69aeeebdac6c7347a149b8724e4a32adc9bbf6897e",
+    "plasticc_test_lightcurves_01.csv.gz": "388c76d92b3a9572f9beff646ec240e852c4be164c2a63d735247d0b810899f3"
+  }
+}

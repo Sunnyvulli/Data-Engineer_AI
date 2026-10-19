@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "reconciled_policies": 19,
+  "checks": [
+    "asqa/learned_lexical",
+    "asqa/bounded_nli",
+    "asqa/coverage_nli",
+    "asqa/review_all",
+    "asqa/review_none",
+    "eli5/learned_lexical",
+    "eli5/bounded_nli",
+    "eli5/coverage_nli",
+    "eli5/review_all",
+    "eli5/review_none",
+    "17/url",
+    "17/image",
+    "17/fusion",
+    "42/url",
+    "42/image",
+    "42/fusion",
+    "91/url",
+    "91/image",
+    "91/fusion"
+  ],
+  "tolerance": 1e-12,
+  "scope": "independent metric/confusion recomputation from saved risk vectors, not new labels or independent peer review",
+  "file_sha256": {
+    "external-support.json": "62eecc6ee1baef83003709575161733742b1759ed957f0b4394199ccad58d97e",
+    "external-support-scores.json": "793cc7f33161783a4fab6324e7fbeca3415f627d6b976fbfba106122874b1526",
+    "visual-phishing.json": "41ca3d3fee37c95c0a41af218d74170e4d4f6a48b349b2b3b127e48e7dc237b0",
+    "visual-phishing-scores.json.gz": "d2b1848fa16fe45e027a28323a4b971d70134a3dbbd69a781b8a8d09986903fa"
+  }
+}

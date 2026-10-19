@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "phiusiil.zip",
+    "url": "https://archive.ics.uci.edu/static/public/967/phiusiil+phishing+url+dataset.zip",
+    "bytes": 15376007,
+    "sha256": "0a639fd03aea6308c5b1c10c92aa23c2ce1505447a9137271865cd0badc9a59a"
+  },
+  {
+    "filename": "plasticc_test_metadata.csv.gz",
+    "url": "https://zenodo.org/api/records/2539456/files/plasticc_test_metadata.csv.gz/content",
+    "bytes": 157245185,
+    "sha256": "8048d59cf84ab30fa539ad69aeeebdac6c7347a149b8724e4a32adc9bbf6897e"
+  },
+  {
+    "filename": "plasticc_test_lightcurves_01.csv.gz",
+    "url": "https://zenodo.org/api/records/2539456/files/plasticc_test_lightcurves_01.csv.gz/content",
+    "bytes": 148537739,
+    "sha256": "388c76d92b3a9572f9beff646ec240e852c4be164c2a63d735247d0b810899f3"
+  }
+]

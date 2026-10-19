@@ -1,0 +1,3 @@
+# Optional CPU inference only. Install base research requirements first.
+onnxruntime==1.24.4
+tokenizers==0.22.2

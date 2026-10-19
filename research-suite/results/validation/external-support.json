@@ -1,0 +1,1904 @@
+{
+  "status": "completed independent human-annotated QA benchmark, not deployment or learning-outcome validation",
+  "selection": {
+    "eligible_test_qa_responses": 900,
+    "exact_alce_question_groups_excluded": 0,
+    "retained_responses": 900,
+    "retained_source_groups": 150
+  },
+  "positive_label": "any released annotated hallucination span; supplied-evidence support, not universal truth",
+  "annotation_unit": "complete response; differs from ALCE sentences",
+  "positives": 160,
+  "negatives": 740,
+  "ragtruth_revision": "c103204b9ce28d6bbad859304bf30de72b8ed8fe",
+  "input_sha256": {
+    "dataset_source_info.jsonl": "0dffc26ea9f3c1c3d7c7e8336b56ef1646e3cec876edffcca3c9c624d12d578b",
+    "dataset_response.jsonl": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073"
+  },
+  "alce_sha256": "cfed9293752413d7c7631f36524dd4ee9ef58b209cdf9c63f6fc1e280b43cca6",
+  "model": "cross-encoder/nli-deberta-v3-small",
+  "model_revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "wall_seconds": 306.691712672,
+  "bounded_context": {
+    "evidence_truncated": 151,
+    "claims_truncated": 458
+  },
+  "coverage": {
+    "inference_pairs": 1836,
+    "reencoding_truncations": 0
+  },
+  "validation": [
+    {
+      "source": "asqa",
+      "rows": 172,
+      "questions": 19,
+      "coverage_threshold": 0.9898110104764857
+    },
+    {
+      "source": "eli5",
+      "rows": 363,
+      "questions": 19,
+      "coverage_threshold": 0.4517162707774379
+    }
+  ],
+  "experiments": [
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.28080542182137214,
+      "roc_auc": 0.7092314189189188,
+      "brier": 0.34428887712879896,
+      "f1": 0.3047619047619048,
+      "recall": 1.0,
+      "precision": 0.1797752808988764,
+      "false_positive_rate": 0.9864864864864865,
+      "threshold": 0.24421833595776518,
+      "confusion": {
+        "tn": 10,
+        "fp": 730,
+        "fn": 0,
+        "tp": 160
+      },
+      "review_fraction": 0.9888888888888889,
+      "missed_unsupported": 0,
+      "unsupported_fraction_among_unflagged": 0.0,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.23078631840890462,
+            0.3441002962602713
+          ],
+          "unsupported_recall": [
+            1.0,
+            1.0
+          ],
+          "supported_fpr": [
+            0.9758139762964776,
+            0.9953460678526295
+          ],
+          "review_fraction": [
+            0.9799444444444445,
+            0.9961388888888889
+          ],
+          "paired_ap_difference": null
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.21015613045775924,
+      "roc_auc": 0.6021452702702703,
+      "brier": 0.49557001595162253,
+      "f1": 0.2566585956416465,
+      "recall": 0.33125,
+      "precision": 0.20948616600790515,
+      "false_positive_rate": 0.2702702702702703,
+      "threshold": 0.9902848572170767,
+      "confusion": {
+        "tn": 540,
+        "fp": 200,
+        "fn": 107,
+        "tp": 53
+      },
+      "review_fraction": 0.2811111111111111,
+      "missed_unsupported": 107,
+      "unsupported_fraction_among_unflagged": 0.16537867078825347,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.17434734470405042,
+            0.2552962480867309
+          ],
+          "unsupported_recall": [
+            0.262032391754826,
+            0.4157368753953193
+          ],
+          "supported_fpr": [
+            0.2160336778568181,
+            0.33110095673282874
+          ],
+          "review_fraction": [
+            0.22608333333333333,
+            0.34074999999999983
+          ],
+          "paired_ap_difference": [
+            -0.12146951588750632,
+            -0.025366314466301866
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.28123893892762253,
+      "roc_auc": 0.6990625,
+      "brier": 0.503495412787621,
+      "f1": 0.3950617283950617,
+      "recall": 0.6,
+      "precision": 0.294478527607362,
+      "false_positive_rate": 0.3108108108108108,
+      "threshold": 0.9898110104764857,
+      "confusion": {
+        "tn": 510,
+        "fp": 230,
+        "fn": 64,
+        "tp": 96
+      },
+      "review_fraction": 0.3622222222222222,
+      "missed_unsupported": 64,
+      "unsupported_fraction_among_unflagged": 0.11149825783972125,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.22667214141613812,
+            0.3365790421022704
+          ],
+          "unsupported_recall": [
+            0.5136752136752136,
+            0.6768419682374381
+          ],
+          "supported_fpr": [
+            0.25740868631062,
+            0.3735990995368121
+          ],
+          "review_fraction": [
+            0.30830555555555555,
+            0.4205833333333333
+          ],
+          "paired_ap_difference": [
+            -0.05314740520382608,
+            0.053649941562964557
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "review_all",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.17777777777777778,
+      "roc_auc": 0.5,
+      "brier": 0.8222222222222222,
+      "f1": 0.3018867924528302,
+      "recall": 1.0,
+      "precision": 0.17777777777777778,
+      "false_positive_rate": 1.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 0,
+        "fp": 740,
+        "fn": 0,
+        "tp": 160
+      },
+      "review_fraction": 1.0,
+      "missed_unsupported": 0,
+      "unsupported_fraction_among_unflagged": null,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.14497222222222222,
+            0.20555555555555555
+          ],
+          "unsupported_recall": [
+            1.0,
+            1.0
+          ],
+          "supported_fpr": [
+            1.0,
+            1.0
+          ],
+          "review_fraction": [
+            1.0,
+            1.0
+          ],
+          "paired_ap_difference": [
+            -0.15682155186784574,
+            -0.06421075567073588
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "review_none",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.17777777777777778,
+      "roc_auc": 0.5,
+      "brier": 0.17777777777777778,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 740,
+        "fp": 0,
+        "fn": 160,
+        "tp": 0
+      },
+      "review_fraction": 0.0,
+      "missed_unsupported": 160,
+      "unsupported_fraction_among_unflagged": 0.17777777777777778,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.14497222222222222,
+            0.20555555555555555
+          ],
+          "unsupported_recall": [
+            0.0,
+            0.0
+          ],
+          "supported_fpr": [
+            0.0,
+            0.0
+          ],
+          "review_fraction": [
+            0.0,
+            0.0
+          ],
+          "paired_ap_difference": [
+            -0.15682155186784574,
+            -0.06421075567073588
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.2180284823836875,
+      "roc_auc": 0.619839527027027,
+      "brier": 0.1963469130353488,
+      "f1": 0.34248366013071896,
+      "recall": 0.81875,
+      "precision": 0.21652892561983472,
+      "false_positive_rate": 0.6405405405405405,
+      "threshold": 0.19986564867263254,
+      "confusion": {
+        "tn": 266,
+        "fp": 474,
+        "fn": 29,
+        "tp": 131
+      },
+      "review_fraction": 0.6722222222222223,
+      "missed_unsupported": 29,
+      "unsupported_fraction_among_unflagged": 0.09830508474576272,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.18063382628947822,
+            0.2639730098592175
+          ],
+          "unsupported_recall": [
+            0.7337278106508875,
+            0.9013518217683916
+          ],
+          "supported_fpr": [
+            0.5852867957544144,
+            0.6927986074387449
+          ],
+          "review_fraction": [
+            0.6232777777777778,
+            0.7211666666666666
+          ],
+          "paired_ap_difference": null
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.21015613045775924,
+      "roc_auc": 0.6021452702702703,
+      "brier": 0.49557001595162253,
+      "f1": 0.33377135348226017,
+      "recall": 0.79375,
+      "precision": 0.2113144758735441,
+      "false_positive_rate": 0.6405405405405405,
+      "threshold": 0.4930565534921404,
+      "confusion": {
+        "tn": 266,
+        "fp": 474,
+        "fn": 33,
+        "tp": 127
+      },
+      "review_fraction": 0.6677777777777778,
+      "missed_unsupported": 33,
+      "unsupported_fraction_among_unflagged": 0.11036789297658862,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.17434734470405042,
+            0.2552962480867309
+          ],
+          "unsupported_recall": [
+            0.726648800872093,
+            0.8590572344942856
+          ],
+          "supported_fpr": [
+            0.5924297112462006,
+            0.6897372788230809
+          ],
+          "review_fraction": [
+            0.6211111111111111,
+            0.7139166666666666
+          ],
+          "paired_ap_difference": [
+            -0.045827732630929416,
+            0.03159488733861268
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.28123893892762253,
+      "roc_auc": 0.6990625,
+      "brier": 0.503495412787621,
+      "f1": 0.3659147869674185,
+      "recall": 0.9125,
+      "precision": 0.22884012539184953,
+      "false_positive_rate": 0.6648648648648648,
+      "threshold": 0.4517162707774379,
+      "confusion": {
+        "tn": 248,
+        "fp": 492,
+        "fn": 14,
+        "tp": 146
+      },
+      "review_fraction": 0.7088888888888889,
+      "missed_unsupported": 14,
+      "unsupported_fraction_among_unflagged": 0.05343511450381679,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.22667214141613812,
+            0.3365790421022704
+          ],
+          "unsupported_recall": [
+            0.8608391315282086,
+            0.9461993243243243
+          ],
+          "supported_fpr": [
+            0.6201919290511979,
+            0.7098515519568152
+          ],
+          "review_fraction": [
+            0.6683055555555556,
+            0.7494722222222222
+          ],
+          "paired_ap_difference": [
+            0.016573935740071526,
+            0.11699062674317597
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "review_all",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.17777777777777778,
+      "roc_auc": 0.5,
+      "brier": 0.8222222222222222,
+      "f1": 0.3018867924528302,
+      "recall": 1.0,
+      "precision": 0.17777777777777778,
+      "false_positive_rate": 1.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 0,
+        "fp": 740,
+        "fn": 0,
+        "tp": 160
+      },
+      "review_fraction": 1.0,
+      "missed_unsupported": 0,
+      "unsupported_fraction_among_unflagged": null,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.14497222222222222,
+            0.20555555555555555
+          ],
+          "unsupported_recall": [
+            1.0,
+            1.0
+          ],
+          "supported_fpr": [
+            1.0,
+            1.0
+          ],
+          "review_fraction": [
+            1.0,
+            1.0
+          ],
+          "paired_ap_difference": [
+            -0.07637742121703207,
+            -0.01804705465166478
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "review_none",
+      "n": 900,
+      "positives": 160,
+      "average_precision": 0.17777777777777778,
+      "roc_auc": 0.5,
+      "brier": 0.17777777777777778,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 740,
+        "fp": 0,
+        "fn": 160,
+        "tp": 0
+      },
+      "review_fraction": 0.0,
+      "missed_unsupported": 160,
+      "unsupported_fraction_among_unflagged": 0.17777777777777778,
+      "uncertainty": {
+        "unit": "complete RAGTruth source_id",
+        "clusters": 150,
+        "requested": 300,
+        "valid": 300,
+        "percentile_95": {
+          "ap": [
+            0.14497222222222222,
+            0.20555555555555555
+          ],
+          "unsupported_recall": [
+            0.0,
+            0.0
+          ],
+          "supported_fpr": [
+            0.0,
+            0.0
+          ],
+          "review_fraction": [
+            0.0,
+            0.0
+          ],
+          "paired_ap_difference": [
+            -0.07637742121703207,
+            -0.01804705465166478
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee"
+      }
+    }
+  ],
+  "descriptive_strata": [
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.34255394698060837,
+        "roc_auc": 0.7319493006993006,
+        "brier": 0.3287273801975385,
+        "f1": 0.3121951219512195,
+        "recall": 1.0,
+        "precision": 0.18497109826589594,
+        "false_positive_rate": 0.986013986013986,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 10,
+          "fp": 705,
+          "fn": 0,
+          "tp": 160
+        },
+        "review_fraction": 0.9885714285714285,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.07734631538755249,
+        "roc_auc": 0.7089655172413794,
+        "brier": 0.33885032300844253,
+        "f1": 0.06666666666666667,
+        "recall": 1.0,
+        "precision": 0.034482758620689655,
+        "false_positive_rate": 0.9655172413793104,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 5,
+          "fp": 140,
+          "fn": 0,
+          "tp": 5
+        },
+        "review_fraction": 0.9666666666666667,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.011111111111111112,
+        "roc_auc": 0.40268456375838924,
+        "brier": 0.25248627771350535,
+        "f1": 0.0136986301369863,
+        "recall": 1.0,
+        "precision": 0.006896551724137931,
+        "false_positive_rate": 0.9664429530201343,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 5,
+          "fp": 144,
+          "fn": 0,
+          "tp": 1
+        },
+        "review_fraction": 0.9666666666666667,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.42626857770990634,
+        "roc_auc": 0.6890838206627681,
+        "brier": 0.3637324264918932,
+        "f1": 0.3870967741935484,
+        "recall": 1.0,
+        "precision": 0.24,
+        "false_positive_rate": 1.0,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 0,
+          "fp": 114,
+          "fn": 0,
+          "tp": 36
+        },
+        "review_fraction": 1.0,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": null
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.35879049500500626,
+        "roc_auc": 0.6561490683229814,
+        "brier": 0.37414124589123005,
+        "f1": 0.3783783783783784,
+        "recall": 1.0,
+        "precision": 0.23333333333333334,
+        "false_positive_rate": 1.0,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 0,
+          "fp": 115,
+          "fn": 0,
+          "tp": 35
+        },
+        "review_fraction": 1.0,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": null
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.45616401373496357,
+        "roc_auc": 0.6202904238618523,
+        "brier": 0.3457891594811564,
+        "f1": 0.5148514851485149,
+        "recall": 1.0,
+        "precision": 0.3466666666666667,
+        "false_positive_rate": 1.0,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 0,
+          "fp": 98,
+          "fn": 0,
+          "tp": 52
+        },
+        "review_fraction": 1.0,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": null
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.2155274952584816,
+        "roc_auc": 0.5467606397397669,
+        "brier": 0.3907338301865663,
+        "f1": 0.3425414364640884,
+        "recall": 1.0,
+        "precision": 0.20666666666666667,
+        "false_positive_rate": 1.0,
+        "threshold": 0.24421833595776518,
+        "confusion": {
+          "tn": 0,
+          "fp": 119,
+          "fn": 0,
+          "tp": 31
+        },
+        "review_fraction": 1.0,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": null
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.2304560182343236,
+        "roc_auc": 0.6182954545454545,
+        "brier": 0.48154262156378613,
+        "f1": 0.2697201017811705,
+        "recall": 0.33125,
+        "precision": 0.22746781115879827,
+        "false_positive_rate": 0.2517482517482518,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 535,
+          "fp": 180,
+          "fn": 107,
+          "tp": 53
+        },
+        "review_fraction": 0.2662857142857143,
+        "missed_unsupported": 107,
+        "unsupported_fraction_among_unflagged": 0.16666666666666666
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.11761577123895964,
+        "roc_auc": 0.776551724137931,
+        "brier": 0.48591739860087313,
+        "f1": 0.13333333333333333,
+        "recall": 0.6,
+        "precision": 0.075,
+        "false_positive_rate": 0.25517241379310346,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 108,
+          "fp": 37,
+          "fn": 2,
+          "tp": 3
+        },
+        "review_fraction": 0.26666666666666666,
+        "missed_unsupported": 2,
+        "unsupported_fraction_among_unflagged": 0.01818181818181818
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.018518518518518517,
+        "roc_auc": 0.6442953020134228,
+        "brier": 0.34479772050555996,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "false_positive_rate": 0.15436241610738255,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 126,
+          "fp": 23,
+          "fn": 1,
+          "tp": 0
+        },
+        "review_fraction": 0.15333333333333332,
+        "missed_unsupported": 1,
+        "unsupported_fraction_among_unflagged": 0.007874015748031496
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.24522627074059355,
+        "roc_auc": 0.5214424951267056,
+        "brier": 0.578984029384125,
+        "f1": 0.3181818181818182,
+        "recall": 0.3888888888888889,
+        "precision": 0.2692307692307692,
+        "false_positive_rate": 0.3333333333333333,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 76,
+          "fp": 38,
+          "fn": 22,
+          "tp": 14
+        },
+        "review_fraction": 0.3466666666666667,
+        "missed_unsupported": 22,
+        "unsupported_fraction_among_unflagged": 0.22448979591836735
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.2678978522492109,
+        "roc_auc": 0.529192546583851,
+        "brier": 0.5378927509840192,
+        "f1": 0.23076923076923078,
+        "recall": 0.2571428571428571,
+        "precision": 0.20930232558139536,
+        "false_positive_rate": 0.2956521739130435,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 81,
+          "fp": 34,
+          "fn": 26,
+          "tp": 9
+        },
+        "review_fraction": 0.2866666666666667,
+        "missed_unsupported": 26,
+        "unsupported_fraction_among_unflagged": 0.24299065420560748
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.3646531978669215,
+        "roc_auc": 0.5306122448979591,
+        "brier": 0.5217105861519863,
+        "f1": 0.3368421052631579,
+        "recall": 0.3076923076923077,
+        "precision": 0.37209302325581395,
+        "false_positive_rate": 0.2755102040816326,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 71,
+          "fp": 27,
+          "fn": 36,
+          "tp": 16
+        },
+        "review_fraction": 0.2866666666666667,
+        "missed_unsupported": 36,
+        "unsupported_fraction_among_unflagged": 0.3364485981308411
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.22677158594381167,
+        "roc_auc": 0.5529953917050692,
+        "brier": 0.5041176100831717,
+        "f1": 0.26506024096385544,
+        "recall": 0.3548387096774194,
+        "precision": 0.21153846153846154,
+        "false_positive_rate": 0.3445378151260504,
+        "threshold": 0.9902848572170767,
+        "confusion": {
+          "tn": 78,
+          "fp": 41,
+          "fn": 20,
+          "tp": 11
+        },
+        "review_fraction": 0.3466666666666667,
+        "missed_unsupported": 20,
+        "unsupported_fraction_among_unflagged": 0.20408163265306123
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.3151352105938807,
+        "roc_auc": 0.7151748251748251,
+        "brier": 0.48969714443424334,
+        "f1": 0.41201716738197425,
+        "recall": 0.6,
+        "precision": 0.3137254901960784,
+        "false_positive_rate": 0.2937062937062937,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 505,
+          "fp": 210,
+          "fn": 64,
+          "tp": 96
+        },
+        "review_fraction": 0.3497142857142857,
+        "missed_unsupported": 64,
+        "unsupported_fraction_among_unflagged": 0.11247803163444639
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.14378507295173962,
+        "roc_auc": 0.8179310344827586,
+        "brier": 0.48356440043372423,
+        "f1": 0.17777777777777778,
+        "recall": 0.8,
+        "precision": 0.1,
+        "false_positive_rate": 0.2482758620689655,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 109,
+          "fp": 36,
+          "fn": 1,
+          "tp": 4
+        },
+        "review_fraction": 0.26666666666666666,
+        "missed_unsupported": 1,
+        "unsupported_fraction_among_unflagged": 0.00909090909090909
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.01818181818181818,
+        "roc_auc": 0.6375838926174497,
+        "brier": 0.3556383218538396,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "false_positive_rate": 0.174496644295302,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 123,
+          "fp": 26,
+          "fn": 1,
+          "tp": 0
+        },
+        "review_fraction": 0.17333333333333334,
+        "missed_unsupported": 1,
+        "unsupported_fraction_among_unflagged": 0.008064516129032258
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.3001530793560879,
+        "roc_auc": 0.6006335282651072,
+        "brier": 0.5965179340001419,
+        "f1": 0.43243243243243246,
+        "recall": 0.6666666666666666,
+        "precision": 0.32,
+        "false_positive_rate": 0.4473684210526316,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 63,
+          "fp": 51,
+          "fn": 12,
+          "tp": 24
+        },
+        "review_fraction": 0.5,
+        "missed_unsupported": 12,
+        "unsupported_fraction_among_unflagged": 0.16
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.35433856117146256,
+        "roc_auc": 0.6325465838509317,
+        "brier": 0.5585001899443246,
+        "f1": 0.38636363636363635,
+        "recall": 0.4857142857142857,
+        "precision": 0.32075471698113206,
+        "false_positive_rate": 0.3130434782608696,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 79,
+          "fp": 36,
+          "fn": 18,
+          "tp": 17
+        },
+        "review_fraction": 0.35333333333333333,
+        "missed_unsupported": 18,
+        "unsupported_fraction_among_unflagged": 0.18556701030927836
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.45987179593309657,
+        "roc_auc": 0.6381475667189952,
+        "brier": 0.5432303509857519,
+        "f1": 0.53125,
+        "recall": 0.6538461538461539,
+        "precision": 0.4473684210526316,
+        "false_positive_rate": 0.42857142857142855,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 56,
+          "fp": 42,
+          "fn": 18,
+          "tp": 34
+        },
+        "review_fraction": 0.5066666666666667,
+        "missed_unsupported": 18,
+        "unsupported_fraction_among_unflagged": 0.24324324324324326
+      }
+    },
+    {
+      "source_policy": "asqa",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.2831242176851988,
+        "roc_auc": 0.6554621848739496,
+        "brier": 0.483521279507944,
+        "f1": 0.39080459770114945,
+        "recall": 0.5483870967741935,
+        "precision": 0.30357142857142855,
+        "false_positive_rate": 0.3277310924369748,
+        "threshold": 0.9898110104764857,
+        "confusion": {
+          "tn": 80,
+          "fp": 39,
+          "fn": 14,
+          "tp": 17
+        },
+        "review_fraction": 0.37333333333333335,
+        "missed_unsupported": 14,
+        "unsupported_fraction_among_unflagged": 0.14893617021276595
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.24686279242979975,
+        "roc_auc": 0.6403409090909091,
+        "brier": 0.17678583536106712,
+        "f1": 0.35405405405405405,
+        "recall": 0.81875,
+        "precision": 0.22586206896551725,
+        "false_positive_rate": 0.627972027972028,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 266,
+          "fp": 449,
+          "fn": 29,
+          "tp": 131
+        },
+        "review_fraction": 0.6628571428571428,
+        "missed_unsupported": 29,
+        "unsupported_fraction_among_unflagged": 0.09830508474576272
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.05362105226016517,
+        "roc_auc": 0.6151724137931034,
+        "brier": 0.16599752564970155,
+        "f1": 0.07692307692307693,
+        "recall": 0.8,
+        "precision": 0.04040404040404041,
+        "false_positive_rate": 0.6551724137931034,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 50,
+          "fp": 95,
+          "fn": 1,
+          "tp": 4
+        },
+        "review_fraction": 0.66,
+        "missed_unsupported": 1,
+        "unsupported_fraction_among_unflagged": 0.0196078431372549
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.017857142857142856,
+        "roc_auc": 0.6308724832214765,
+        "brier": 0.06253614985602655,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "false_positive_rate": 0.3624161073825503,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 95,
+          "fp": 54,
+          "fn": 1,
+          "tp": 0
+        },
+        "review_fraction": 0.36,
+        "missed_unsupported": 1,
+        "unsupported_fraction_among_unflagged": 0.010416666666666666
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.3179734786283828,
+        "roc_auc": 0.5938109161793372,
+        "brier": 0.20581134150765795,
+        "f1": 0.40789473684210525,
+        "recall": 0.8611111111111112,
+        "precision": 0.2672413793103448,
+        "false_positive_rate": 0.7456140350877193,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 29,
+          "fp": 85,
+          "fn": 5,
+          "tp": 31
+        },
+        "review_fraction": 0.7733333333333333,
+        "missed_unsupported": 5,
+        "unsupported_fraction_among_unflagged": 0.14705882352941177
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.30433271855993427,
+        "roc_auc": 0.6318012422360249,
+        "brier": 0.20846618067405445,
+        "f1": 0.4129032258064516,
+        "recall": 0.9142857142857143,
+        "precision": 0.26666666666666666,
+        "false_positive_rate": 0.7652173913043478,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 27,
+          "fp": 88,
+          "fn": 3,
+          "tp": 32
+        },
+        "review_fraction": 0.8,
+        "missed_unsupported": 3,
+        "unsupported_fraction_among_unflagged": 0.1
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.3618163845791187,
+        "roc_auc": 0.5590659340659341,
+        "brier": 0.2439903210960221,
+        "f1": 0.5375,
+        "recall": 0.8269230769230769,
+        "precision": 0.39814814814814814,
+        "false_positive_rate": 0.6632653061224489,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 33,
+          "fp": 65,
+          "fn": 9,
+          "tp": 43
+        },
+        "review_fraction": 0.72,
+        "missed_unsupported": 9,
+        "unsupported_fraction_among_unflagged": 0.21428571428571427
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "learned_lexical",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.18043381601405598,
+        "roc_auc": 0.44049878015722416,
+        "brier": 0.29127995942863016,
+        "f1": 0.302158273381295,
+        "recall": 0.6774193548387096,
+        "precision": 0.19444444444444445,
+        "false_positive_rate": 0.7310924369747899,
+        "threshold": 0.19986564867263254,
+        "confusion": {
+          "tn": 32,
+          "fp": 87,
+          "fn": 10,
+          "tp": 21
+        },
+        "review_fraction": 0.72,
+        "missed_unsupported": 10,
+        "unsupported_fraction_among_unflagged": 0.23809523809523808
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.2304560182343236,
+        "roc_auc": 0.6182954545454545,
+        "brier": 0.48154262156378613,
+        "f1": 0.3451086956521739,
+        "recall": 0.79375,
+        "precision": 0.2204861111111111,
+        "false_positive_rate": 0.627972027972028,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 266,
+          "fp": 449,
+          "fn": 33,
+          "tp": 127
+        },
+        "review_fraction": 0.6582857142857143,
+        "missed_unsupported": 33,
+        "unsupported_fraction_among_unflagged": 0.11036789297658862
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.11761577123895964,
+        "roc_auc": 0.776551724137931,
+        "brier": 0.48591739860087313,
+        "f1": 0.11235955056179775,
+        "recall": 1.0,
+        "precision": 0.05952380952380952,
+        "false_positive_rate": 0.5448275862068965,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 66,
+          "fp": 79,
+          "fn": 0,
+          "tp": 5
+        },
+        "review_fraction": 0.56,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.018518518518518517,
+        "roc_auc": 0.6442953020134228,
+        "brier": 0.34479772050555996,
+        "f1": 0.031746031746031744,
+        "recall": 1.0,
+        "precision": 0.016129032258064516,
+        "false_positive_rate": 0.40939597315436244,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 88,
+          "fp": 61,
+          "fn": 0,
+          "tp": 1
+        },
+        "review_fraction": 0.41333333333333333,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.24522627074059355,
+        "roc_auc": 0.5214424951267056,
+        "brier": 0.578984029384125,
+        "f1": 0.379746835443038,
+        "recall": 0.8333333333333334,
+        "precision": 0.2459016393442623,
+        "false_positive_rate": 0.8070175438596491,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 22,
+          "fp": 92,
+          "fn": 6,
+          "tp": 30
+        },
+        "review_fraction": 0.8133333333333334,
+        "missed_unsupported": 6,
+        "unsupported_fraction_among_unflagged": 0.21428571428571427
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.2678978522492109,
+        "roc_auc": 0.529192546583851,
+        "brier": 0.5378927509840192,
+        "f1": 0.35374149659863946,
+        "recall": 0.7428571428571429,
+        "precision": 0.23214285714285715,
+        "false_positive_rate": 0.7478260869565218,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 29,
+          "fp": 86,
+          "fn": 9,
+          "tp": 26
+        },
+        "review_fraction": 0.7466666666666667,
+        "missed_unsupported": 9,
+        "unsupported_fraction_among_unflagged": 0.23684210526315788
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.3646531978669215,
+        "roc_auc": 0.5306122448979591,
+        "brier": 0.5217105861519863,
+        "f1": 0.49142857142857144,
+        "recall": 0.8269230769230769,
+        "precision": 0.34959349593495936,
+        "false_positive_rate": 0.8163265306122449,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 18,
+          "fp": 80,
+          "fn": 9,
+          "tp": 43
+        },
+        "review_fraction": 0.82,
+        "missed_unsupported": 9,
+        "unsupported_fraction_among_unflagged": 0.3333333333333333
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "bounded_nli",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.22677158594381167,
+        "roc_auc": 0.5529953917050692,
+        "brier": 0.5041176100831717,
+        "f1": 0.34108527131782945,
+        "recall": 0.7096774193548387,
+        "precision": 0.22448979591836735,
+        "false_positive_rate": 0.6386554621848739,
+        "threshold": 0.4930565534921404,
+        "confusion": {
+          "tn": 43,
+          "fp": 76,
+          "fn": 9,
+          "tp": 22
+        },
+        "review_fraction": 0.6533333333333333,
+        "missed_unsupported": 9,
+        "unsupported_fraction_among_unflagged": 0.17307692307692307
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "good",
+      "n": 875,
+      "positives": 160,
+      "metrics": {
+        "n": 875,
+        "positives": 160,
+        "average_precision": 0.3151352105938807,
+        "roc_auc": 0.7151748251748251,
+        "brier": 0.48969714443424334,
+        "f1": 0.3777490297542044,
+        "recall": 0.9125,
+        "precision": 0.23817292006525284,
+        "false_positive_rate": 0.6531468531468532,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 248,
+          "fp": 467,
+          "fn": 14,
+          "tp": 146
+        },
+        "review_fraction": 0.7005714285714286,
+        "missed_unsupported": 14,
+        "unsupported_fraction_among_unflagged": 0.05343511450381679
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "incorrect_refusal",
+      "n": 24,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "quality",
+      "value": "truncated",
+      "n": 1,
+      "positives": 0,
+      "metrics": null
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "gpt-3.5-turbo-0613",
+      "n": 150,
+      "positives": 5,
+      "metrics": {
+        "n": 150,
+        "positives": 5,
+        "average_precision": 0.14378507295173962,
+        "roc_auc": 0.8179310344827586,
+        "brier": 0.48356440043372423,
+        "f1": 0.1111111111111111,
+        "recall": 1.0,
+        "precision": 0.058823529411764705,
+        "false_positive_rate": 0.5517241379310345,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 65,
+          "fp": 80,
+          "fn": 0,
+          "tp": 5
+        },
+        "review_fraction": 0.5666666666666667,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "gpt-4-0613",
+      "n": 150,
+      "positives": 1,
+      "metrics": {
+        "n": 150,
+        "positives": 1,
+        "average_precision": 0.01818181818181818,
+        "roc_auc": 0.6375838926174497,
+        "brier": 0.3556383218538396,
+        "f1": 0.03076923076923077,
+        "recall": 1.0,
+        "precision": 0.015625,
+        "false_positive_rate": 0.4228187919463087,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 86,
+          "fp": 63,
+          "fn": 0,
+          "tp": 1
+        },
+        "review_fraction": 0.4266666666666667,
+        "missed_unsupported": 0,
+        "unsupported_fraction_among_unflagged": 0.0
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-13b-chat",
+      "n": 150,
+      "positives": 36,
+      "metrics": {
+        "n": 150,
+        "positives": 36,
+        "average_precision": 0.3001530793560879,
+        "roc_auc": 0.6006335282651072,
+        "brier": 0.5965179340001419,
+        "f1": 0.3855421686746988,
+        "recall": 0.8888888888888888,
+        "precision": 0.24615384615384617,
+        "false_positive_rate": 0.8596491228070176,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 16,
+          "fp": 98,
+          "fn": 4,
+          "tp": 32
+        },
+        "review_fraction": 0.8666666666666667,
+        "missed_unsupported": 4,
+        "unsupported_fraction_among_unflagged": 0.2
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-70b-chat",
+      "n": 150,
+      "positives": 35,
+      "metrics": {
+        "n": 150,
+        "positives": 35,
+        "average_precision": 0.35433856117146256,
+        "roc_auc": 0.6325465838509317,
+        "brier": 0.5585001899443246,
+        "f1": 0.41025641025641024,
+        "recall": 0.9142857142857143,
+        "precision": 0.2644628099173554,
+        "false_positive_rate": 0.7739130434782608,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 26,
+          "fp": 89,
+          "fn": 3,
+          "tp": 32
+        },
+        "review_fraction": 0.8066666666666666,
+        "missed_unsupported": 3,
+        "unsupported_fraction_among_unflagged": 0.10344827586206896
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "llama-2-7b-chat",
+      "n": 150,
+      "positives": 52,
+      "metrics": {
+        "n": 150,
+        "positives": 52,
+        "average_precision": 0.45987179593309657,
+        "roc_auc": 0.6381475667189952,
+        "brier": 0.5432303509857519,
+        "f1": 0.5240641711229946,
+        "recall": 0.9423076923076923,
+        "precision": 0.362962962962963,
+        "false_positive_rate": 0.8775510204081632,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 12,
+          "fp": 86,
+          "fn": 3,
+          "tp": 49
+        },
+        "review_fraction": 0.9,
+        "missed_unsupported": 3,
+        "unsupported_fraction_among_unflagged": 0.2
+      }
+    },
+    {
+      "source_policy": "eli5",
+      "policy": "coverage_nli",
+      "stratum": "generator",
+      "value": "mistral-7B-instruct",
+      "n": 150,
+      "positives": 31,
+      "metrics": {
+        "n": 150,
+        "positives": 31,
+        "average_precision": 0.2831242176851988,
+        "roc_auc": 0.6554621848739496,
+        "brier": 0.483521279507944,
+        "f1": 0.40298507462686567,
+        "recall": 0.8709677419354839,
+        "precision": 0.2621359223300971,
+        "false_positive_rate": 0.6386554621848739,
+        "threshold": 0.4517162707774379,
+        "confusion": {
+          "tn": 43,
+          "fp": 76,
+          "fn": 4,
+          "tp": 27
+        },
+        "review_fraction": 0.6866666666666666,
+        "missed_unsupported": 4,
+        "unsupported_fraction_among_unflagged": 0.0851063829787234
+      }
+    }
+  ],
+  "limits": [
+    "question exact-match exclusion is not semantic deduplication",
+    "pretraining overlap unknown",
+    "human labels can be imperfect",
+    "answer-level and sentence-level results are not pooled",
+    "window aggregation is length-dependent and can lose joint semantics",
+    "source threshold recall target has no transfer guarantee",
+    "no human educational or deployment trial",
+    "no target adaptation after outcomes"
+  ]
+}

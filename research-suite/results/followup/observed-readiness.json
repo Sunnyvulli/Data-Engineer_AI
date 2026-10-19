@@ -1,0 +1,223 @@
+{
+  "status": "completed observed-data readiness audit; no classifier performance experiment",
+  "frame": {
+    "url": "https://sites.astro.caltech.edu/ztf/bts/explorer.php?format=csv",
+    "sha256": "af2362275074ff4b6c70523b9db6f2d5991af16fdd8d76ed47520948eb788e82",
+    "bytes": 1245075,
+    "snapshot_saved_utc": "2026-10-19T02:25:10.093198+00:00",
+    "selection_limit": "default BTS query quality/purity selection, then provider-SN negative controls"
+  },
+  "selection": {
+    "frame_rows": 10551,
+    "provider_sn_rows": 6989,
+    "invalid_excluded": 0,
+    "duplicate_ids_excluded": 0,
+    "eligible_unique_ids": 6989,
+    "selected": 20
+  },
+  "selected_objects": [
+    {
+      "ztf_id": "ZTF21acfaugw",
+      "provider_class": "SN Ia",
+      "ra_deg": 159.81091666666669,
+      "dec_deg": 20.29838888888889,
+      "selection_sha256": "0014799b1b51d06ec2a7e5da5eb5182b00c34d65f5f6753b45fcd3c3483886dc"
+    },
+    {
+      "ztf_id": "ZTF24abmtnee",
+      "provider_class": "SN II",
+      "ra_deg": 116.81991666666666,
+      "dec_deg": -3.993333333333333,
+      "selection_sha256": "001f483c69fe661beff8bb4af6d9091f8c0d7f314ca2aa63c5bc360ae07266f4"
+    },
+    {
+      "ztf_id": "ZTF21abvddpq",
+      "provider_class": "SN Ia",
+      "ra_deg": 78.95808333333333,
+      "dec_deg": 1.6823333333333332,
+      "selection_sha256": "002b41701e3dff805217b67a49cde60d7cc6d9cb1ee39a0f1039190f4789e1f1"
+    },
+    {
+      "ztf_id": "ZTF19aayslow",
+      "provider_class": "SN Ia",
+      "ra_deg": 203.22704166666668,
+      "dec_deg": 32.102472222222225,
+      "selection_sha256": "002e01b0b1ca860225184788e4c1d9c7d5f43bbe7383fbf79ae4ccdbb92070de"
+    },
+    {
+      "ztf_id": "ZTF21aaaldio",
+      "provider_class": "SN Ia",
+      "ra_deg": 103.14658333333334,
+      "dec_deg": 18.22208333333333,
+      "selection_sha256": "0039a3ea0b9151127538fa55840d17cdd6abd076b3d2df35e619c79f226c3c7d"
+    },
+    {
+      "ztf_id": "ZTF21abmwwsq",
+      "provider_class": "SN Ia",
+      "ra_deg": 11.074124999999999,
+      "dec_deg": 49.00391666666667,
+      "selection_sha256": "004264a47f8c291a0104c02bc7b3e4a17fe57afd46b3fd1d7006bf5a1b4fccb6"
+    },
+    {
+      "ztf_id": "ZTF20acntqoh",
+      "provider_class": "SN Ia",
+      "ra_deg": 87.77441666666665,
+      "dec_deg": 61.312,
+      "selection_sha256": "0047686562a92d0342fa7161beb0288018e6a752169259bc0cd7416a03f0c1bc"
+    },
+    {
+      "ztf_id": "ZTF19abzkyjy",
+      "provider_class": "SN Ia",
+      "ra_deg": 24.027500000000003,
+      "dec_deg": -7.756916666666666,
+      "selection_sha256": "004dd7b89a0bf38313a8d276785205573ef2e3e4759389667fa2039dbfe14aac"
+    },
+    {
+      "ztf_id": "ZTF21ablducj",
+      "provider_class": "SN Ia",
+      "ra_deg": 5.226166666666667,
+      "dec_deg": 36.786249999999995,
+      "selection_sha256": "00692a19acf3ea176e83ab0ebbf13071d89dc063281df68c20aa17f01e12b173"
+    },
+    {
+      "ztf_id": "ZTF19abgppki",
+      "provider_class": "SN Ia",
+      "ra_deg": 243.57095833333332,
+      "dec_deg": 30.999472222222224,
+      "selection_sha256": "007829eac7aeb404c48db24e78c13491339de724507bc93d94179f062a8e660e"
+    },
+    {
+      "ztf_id": "ZTF23abvommm",
+      "provider_class": "SN II",
+      "ra_deg": 36.76325,
+      "dec_deg": -9.417305555555554,
+      "selection_sha256": "00a1b0016ba52a07e931319341aa60a986531e2b7c40b39b421a922083f98835"
+    },
+    {
+      "ztf_id": "ZTF22aaohilj",
+      "provider_class": "SN IIn",
+      "ra_deg": 252.75987500000002,
+      "dec_deg": 30.664527777777778,
+      "selection_sha256": "00a37de208c01e7053f70abed6b7ba2cd651be27190b3289d93a4f0b5c3943d3"
+    },
+    {
+      "ztf_id": "ZTF19acyqwlm",
+      "provider_class": "SN Ia",
+      "ra_deg": 119.44004166666667,
+      "dec_deg": 56.41291666666667,
+      "selection_sha256": "00ac751e1c9b8d323f29a2040e691c71336ddd5442034c328832cc9bf2e48539"
+    },
+    {
+      "ztf_id": "ZTF24aabpojp",
+      "provider_class": "SN II",
+      "ra_deg": 167.66854166666667,
+      "dec_deg": 21.107444444444447,
+      "selection_sha256": "00c23f4f8c49c859143499e63f1433c68aa97173e13d2c4ed014fffee9d9db0e"
+    },
+    {
+      "ztf_id": "ZTF25abqkiqr",
+      "provider_class": "SN Ia",
+      "ra_deg": 315.79941666666673,
+      "dec_deg": -0.10286111111111111,
+      "selection_sha256": "00c29e209b892736812add207caf203a6421fde65afcc0183d8a63e2b92f57db"
+    },
+    {
+      "ztf_id": "ZTF25ablvccx",
+      "provider_class": "SN Ia",
+      "ra_deg": 75.09133333333334,
+      "dec_deg": 6.808277777777778,
+      "selection_sha256": "00ca64b403f9c5654a7f7277e007a69b72b923c522a7c93736baa8a52c8614d6"
+    },
+    {
+      "ztf_id": "ZTF23abvbwys",
+      "provider_class": "SN Ia-91T",
+      "ra_deg": 55.39104166666667,
+      "dec_deg": -2.7805555555555554,
+      "selection_sha256": "00d95118bbb4aee2ed8d2b3a4db9a5821a20b058e7b59c3d228e2b6585cc73ab"
+    },
+    {
+      "ztf_id": "ZTF19aawmkja",
+      "provider_class": "SN Ia",
+      "ra_deg": 283.91795833333333,
+      "dec_deg": 51.23775,
+      "selection_sha256": "00da8b2c490c354b675d2a906e9d19f921ee9f995f8c8f95d05ae14a3830cfcd"
+    },
+    {
+      "ztf_id": "ZTF21aaoqbbw",
+      "provider_class": "SN IIn",
+      "ra_deg": 254.66241666666664,
+      "dec_deg": 26.492333333333335,
+      "selection_sha256": "00e6e403a8ccd2f6f578c62fbc0b049bc2c83c571e7fb803756a4a4b51c41c3f"
+    },
+    {
+      "ztf_id": "ZTF23aajkfls",
+      "provider_class": "SN II",
+      "ra_deg": 276.709375,
+      "dec_deg": 25.399694444444442,
+      "selection_sha256": "00e88665001454126a92ed508402f43f3113e4a224306674459a8b2c1b7279f7"
+    }
+  ],
+  "first_object_archive_query": {
+    "query_url": "https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE+159.8109166667+20.2983888889+0.0004166667&BANDNAME=g%2Cr&BAD_CATFLAGS_MASK=32768&COLLECTION=ztf_dr24&FORMAT=CSV",
+    "object_id": "ZTF21acfaugw",
+    "query_started_utc": "2026-10-19T02:26:17.027750+00:00",
+    "http_status": 200,
+    "status": "public response parsed",
+    "bytes": 162,
+    "sha256": "d35b7925f47f608072ad81c389b36e208216ae1a595ed8ba811c945cf77d7a34",
+    "snapshot_saved_utc": "2026-10-19T02:26:51.438163+00:00",
+    "rows": 0,
+    "columns": [
+      "oid",
+      "expid",
+      "hjd",
+      "mjd",
+      "mag",
+      "magerr",
+      "catflags",
+      "filtercode",
+      "ra",
+      "dec",
+      "chi",
+      "sharp",
+      "filefracday",
+      "field",
+      "ccdid",
+      "qid",
+      "limitmag",
+      "magzp",
+      "magzprms",
+      "clrcoeff",
+      "clrcounc",
+      "exptime",
+      "airmass",
+      "programid"
+    ],
+    "candidate_archive_ids": 0
+  },
+  "admission": {
+    "admitted_for_scoring": false,
+    "reasons": [
+      "no photometry rows returned for the fixed first-selected cone",
+      "filter system differs: ZTF versus LSST; no verified response mapping",
+      "required model fields absent: detected_bool, flux, flux_err, object_id, passband",
+      "difference-image flux/uncertainty convention not established by this catalog query",
+      "broker first-alert/detection history not established",
+      "cone candidates require explicit source-identity crossmatch"
+    ],
+    "model_scores_computed": false,
+    "performance_metrics": null
+  },
+  "permissions": {
+    "catalog": "official public BTS explorer asks research users to cite its paper; no blanket redistribution license asserted",
+    "archive_terms": "https://irsa.ipac.caltech.edu/data_use_terms.html",
+    "acknowledgments": "https://irsa.ipac.caltech.edu/ack.html"
+  },
+  "limits": [
+    "provider classifications not independently adjudicated",
+    "20 deterministic negative controls, only first archive cone queried",
+    "no kilonova positives or representative alert population",
+    "no full source-table redistribution",
+    "this mapping failure does not prove all observed-data comparisons impossible"
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "status": "completed bounded RAPID-inspired adaptation; not paper/package reproduction or real-event validation",
+  "seed": 42,
+  "epochs": 25,
+  "selected_epoch": 23,
+  "selected_validation_ap": 0.1071309640104095,
+  "training_history": [
+    {
+      "epoch": 1,
+      "training_loss": 0.6215762495994568,
+      "source_validation_ap": 0.04114492139047874
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.5029981136322021,
+      "source_validation_ap": 0.03411096030480928
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.3705736994743347,
+      "source_validation_ap": 0.036438435189871686
+    },
+    {
+      "epoch": 4,
+      "training_loss": 0.36537185311317444,
+      "source_validation_ap": 0.048657054299096336
+    },
+    {
+      "epoch": 5,
+      "training_loss": 0.3207360506057739,
+      "source_validation_ap": 0.08720047159227322
+    },
+    {
+      "epoch": 6,
+      "training_loss": 0.44111210107803345,
+      "source_validation_ap": 0.03468495926456576
+    },
+    {
+      "epoch": 7,
+      "training_loss": 0.7746325731277466,
+      "source_validation_ap": 0.06185097916714959
+    },
+    {
+      "epoch": 8,
+      "training_loss": 0.2665115296840668,
+      "source_validation_ap": 0.06374079703221139
+    },
+    {
+      "epoch": 9,
+      "training_loss": 0.2939716577529907,
+      "source_validation_ap": 0.07107662196577935
+    },
+    {
+      "epoch": 10,
+      "training_loss": 0.5373485088348389,
+      "source_validation_ap": 0.10611492077614132
+    },
+    {
+      "epoch": 11,
+      "training_loss": 0.32025256752967834,
+      "source_validation_ap": 0.04635198575076682
+    },
+    {
+      "epoch": 12,
+      "training_loss": 4.65916633605957,
+      "source_validation_ap": 0.044029761407884976
+    },
+    {
+      "epoch": 13,
+      "training_loss": 0.5509302616119385,
+      "source_validation_ap": 0.03996522447745718
+    },
+    {
+      "epoch": 14,
+      "training_loss": 0.2879446744918823,
+      "source_validation_ap": 0.037369807816343914
+    },
+    {
+      "epoch": 15,
+      "training_loss": 0.4059142470359802,
+      "source_validation_ap": 0.057389705000656925
+    },
+    {
+      "epoch": 16,
+      "training_loss": 0.2935490608215332,
+      "source_validation_ap": 0.10194273503115754
+    },
+    {
+      "epoch": 17,
+      "training_loss": 0.35736319422721863,
+      "source_validation_ap": 0.0860699174122208
+    },
+    {
+      "epoch": 18,
+      "training_loss": 0.2964305579662323,
+      "source_validation_ap": 0.0776353596483683
+    },
+    {
+      "epoch": 19,
+      "training_loss": 0.29356303811073303,
+      "source_validation_ap": 0.10569593112051097
+    },
+    {
+      "epoch": 20,
+      "training_loss": 1.4302598237991333,
+      "source_validation_ap": 0.06346697846026407
+    },
+    {
+      "epoch": 21,
+      "training_loss": 0.6296889781951904,
+      "source_validation_ap": 0.08044399431200473
+    },
+    {
+      "epoch": 22,
+      "training_loss": 0.3045438528060913,
+      "source_validation_ap": 0.10134445381048003
+    },
+    {
+      "epoch": 23,
+      "training_loss": 0.23052389919757843,
+      "source_validation_ap": 0.1071309640104095
+    },
+    {
+      "epoch": 24,
+      "training_loss": 0.26625218987464905,
+      "source_validation_ap": 0.07488140089060079
+    },
+    {
+      "epoch": 25,
+      "training_loss": 0.5720220804214478,
+      "source_validation_ap": 0.06246548799508627
+    }
+  ],
+  "scales_training_only": [
+    33.78968,
+    25.296219,
+    47.17285699999999,
+    54.451168,
+    75.61827450000001,
+    57.8271445
+  ],
+  "class_weights": [
+    0.5064543889845095,
+    39.233333333333334
+  ],
+  "split": {
+    "train": {
+      "objects": 4708,
+      "positives": 60
+    },
+    "validation": {
+      "objects": 1570,
+      "positives": 21
+    },
+    "test": {
+      "objects": 1570,
+      "positives": 21
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "tensorflow": "2.21.0",
+  "keras": "3.15.1",
+  "wall_seconds": 199.3598493720001,
+  "wall_time_scope": "recovery evaluation only; original training duration not separately persisted",
+  "recovered_from_bookkeeping_error": true,
+  "peak_process_rss_kib": 2664920,
+  "parameter_count": 97602,
+  "local_model_sha256": "ee454867c89c58467120eb8bfa67b957d67b89464dea951f43751e4e6df4c6c0",
+  "frozen_forest_sha256": "d1e0bf6dece9af03fdd817a68218dd461a67ecb738fa1c8410e38a74678417c4",
+  "source_results": [
+    {
+      "model": "rapid_inspired_gru",
+      "n": 1570,
+      "positives": 21,
+      "average_precision": 0.08931253228435171,
+      "roc_auc": 0.8235113283531618,
+      "brier": 0.18751247220789785,
+      "f1": 0.06118546845124283,
+      "recall": 0.7619047619047619,
+      "precision": 0.03187250996015936,
+      "false_positive_rate": 0.31375080697224017,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 1063,
+        "fp": 486,
+        "fn": 5,
+        "tp": 16
+      },
+      "selected": 79,
+      "rare_found": 8,
+      "precision_at_budget": 0.10126582278481013,
+      "recall_at_budget": 0.38095238095238093,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 1570,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.042578761325026554,
+          0.1985929629334916
+        ],
+        "recall_percentile_95": [
+          0.5588541666666667,
+          0.9245726495726495
+        ],
+        "paired_ap_difference_percentile_95": [
+          -0.16006661095516342,
+          0.028352718455091422
+        ],
+        "precision_at_budget_percentile_95": [
+          0.0379746835443038,
+          0.16455696202531644
+        ],
+        "recall_at_budget_percentile_95": [
+          0.13633540372670808,
+          0.547840909090909
+        ],
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "model": "frozen_forest",
+      "n": 1570,
+      "positives": 21,
+      "average_precision": 0.1458519227066263,
+      "roc_auc": 0.8743121522333918,
+      "brier": 0.014024240779526007,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 1549,
+        "fp": 0,
+        "fn": 21,
+        "tp": 0
+      },
+      "selected": 79,
+      "rare_found": 7,
+      "precision_at_budget": 0.08860759493670886,
+      "recall_at_budget": 0.3333333333333333,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 1570,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.058731065540080396,
+          0.302537237954461
+        ],
+        "recall_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": [
+          0.0379746835443038,
+          0.1518987341772152
+        ],
+        "recall_at_budget_percentile_95": [
+          0.15475,
+          0.5734374999999996
+        ],
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    }
+  ],
+  "independent_results": [
+    {
+      "model": "rapid_inspired_gru",
+      "evaluation_status": "two-class evaluation completed",
+      "metrics": {
+        "n": 27925,
+        "positives": 2,
+        "average_precision": 0.0007671815953983648,
+        "roc_auc": 0.9309708842173119,
+        "brier": 0.018684309052534622,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "false_positive_rate": 0.0016115746875335745,
+        "threshold": 0.5,
+        "confusion": {
+          "tn": 27878,
+          "fp": 45,
+          "fn": 2,
+          "tp": 0
+        }
+      },
+      "budget": {
+        "selected": 1397,
+        "rare_found": 0,
+        "precision_at_budget": 0.0,
+        "recall_at_budget": 0.0
+      },
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 27925,
+        "requested_resamples": 300,
+        "valid_resamples": 262,
+        "ap_percentile_95": [
+          0.0004867667670228886,
+          0.0022535035432077488
+        ],
+        "recall_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "recall_at_budget_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      },
+      "recall_binomial_diagnostic": {
+        "clopper_pearson_95": [
+          0.0,
+          0.841886116991581
+        ],
+        "positive_events": 2,
+        "assumption": "independent exchangeable positive events; illustrative diagnostic, not a guarantee",
+        "note": "Added as a post-outcome diagnostic because a rare-event bootstrap can be degenerate"
+      },
+      "paired_ap_interval": [
+        0.0004509565611142046,
+        0.002074452513664329
+      ]
+    },
+    {
+      "model": "frozen_forest",
+      "evaluation_status": "two-class evaluation completed",
+      "metrics": {
+        "n": 27925,
+        "positives": 2,
+        "average_precision": 7.162041181736795e-05,
+        "roc_auc": 0.42103284031085486,
+        "brier": 9.439836518699673e-05,
+        "f1": 0.0,
+        "recall": 0.0,
+        "precision": 0.0,
+        "false_positive_rate": 0.0,
+        "threshold": 0.5,
+        "confusion": {
+          "tn": 27923,
+          "fp": 0,
+          "fn": 2,
+          "tp": 0
+        }
+      },
+      "budget": {
+        "selected": 1397,
+        "rare_found": 0,
+        "precision_at_budget": 0.0,
+        "recall_at_budget": 0.0
+      },
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 27925,
+        "requested_resamples": 300,
+        "valid_resamples": 262,
+        "ap_percentile_95": [
+          3.5810205908683974e-05,
+          0.00017905102954341988
+        ],
+        "recall_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "recall_at_budget_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      },
+      "recall_binomial_diagnostic": {
+        "clopper_pearson_95": [
+          0.0,
+          0.841886116991581
+        ],
+        "positive_events": 2,
+        "assumption": "independent exchangeable positive events; illustrative diagnostic, not a guarantee",
+        "note": "Added as a post-outcome diagnostic because a rare-event bootstrap can be degenerate"
+      },
+      "paired_ap_interval": null
+    }
+  ],
+  "input_sha256": {
+    "plasticc_train_lightcurves.csv.gz": "1c49a9df7e11a96f774b3d111741ea081321a72a169e311600a7e5ecba0424d3",
+    "plasticc_train_metadata.csv.gz": "58b008e50426e12aae6a0b9df4d0901bf63e7f9a0da579011988c628a63f23d4",
+    "plasticc_test_lightcurves_01.csv.gz": "388c76d92b3a9572f9beff646ec240e852c4be164c2a63d735247d0b810899f3",
+    "plasticc_test_metadata.csv.gz": "8048d59cf84ab30fa539ad69aeeebdac6c7347a149b8724e4a32adc9bbf6897e"
+  },
+  "limits": [
+    "one seed; exposed/reused simulated test outcomes",
+    "adapted representation, endpoint binary task and training budget differ from RAPID",
+    "neural checkpoint uses source validation; original forest has no such checkpoint selection",
+    "same allowed observations and ranking budget, different compressed representations",
+    "only two independent target events; no population-level assurance",
+    "class-weighted scores are not calibrated probabilities"
+  ]
+}

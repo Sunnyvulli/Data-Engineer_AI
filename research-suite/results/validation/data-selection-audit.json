@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "reconciled_fits": 26,
+  "full_data_references_reused": 10,
+  "tolerance": 1e-12,
+  "note": "Recomputed metrics from saved predictions; not independent new labels or expert peer review."
+}

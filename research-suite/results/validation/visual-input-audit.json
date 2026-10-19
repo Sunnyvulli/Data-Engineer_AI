@@ -1,0 +1,15 @@
+{
+  "counts": {
+    "images": 7062,
+    "ambiguous": 8,
+    "unmatched": 4
+  },
+  "retained": 7050,
+  "positives": 1765,
+  "negatives": 5285,
+  "components": 4598,
+  "largest_component": 2035,
+  "mixed_label_components": 10,
+  "provider_cross_split_components": 102,
+  "descriptor_count": 179
+}

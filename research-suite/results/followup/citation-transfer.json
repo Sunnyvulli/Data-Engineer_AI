@@ -1,0 +1,455 @@
+{
+  "status": "ALCE domain-transfer evaluation; no new factual-truth or learning-outcome trial",
+  "input_sha256": "cfed9293752413d7c7631f36524dd4ee9ef58b209cdf9c63f6fc1e280b43cca6",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "splits": [
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "train": 639,
+      "validation": 172,
+      "test": 1793,
+      "train_questions": 81,
+      "test_questions": 100,
+      "question_overlap": 0
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "train": 1430,
+      "validation": 363,
+      "test": 811,
+      "train_questions": 81,
+      "test_questions": 100,
+      "question_overlap": 0
+    }
+  ],
+  "released_automatic_note": "Uses already-released automatic_recall_scores; evaluator was not rerun or newly trained",
+  "experiments": [
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "policy": "learned_lexical",
+      "n": 1793,
+      "positives": 894,
+      "average_precision": 0.9193978913072465,
+      "roc_auc": 0.8998757008159701,
+      "brier": 0.12485919715503778,
+      "f1": 0.7703016241299304,
+      "recall": 0.9284116331096197,
+      "precision": 0.6582077716098335,
+      "false_positive_rate": 0.4794215795328142,
+      "threshold": 0.24421833595776518,
+      "confusion": {
+        "tn": 468,
+        "fp": 431,
+        "fn": 64,
+        "tp": 830
+      },
+      "review_fraction": 0.7032905744562187,
+      "missed_unsupported": 64,
+      "unsupported_fraction_among_unflagged": 0.12030075187969924,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.9028101624162038,
+          0.9351957548022087
+        ],
+        "recall_percentile_95": [
+          0.9067323943490098,
+          0.9484241088595192
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "policy": "lexical",
+      "n": 1793,
+      "positives": 894,
+      "average_precision": 0.9082181993643206,
+      "roc_auc": 0.896786262638328,
+      "brier": 0.12939149732440833,
+      "f1": 0.7690892364305428,
+      "recall": 0.9351230425055929,
+      "precision": 0.653125,
+      "false_positive_rate": 0.4938820912124583,
+      "threshold": 0.125,
+      "confusion": {
+        "tn": 455,
+        "fp": 444,
+        "fn": 58,
+        "tp": 836
+      },
+      "review_fraction": 0.7138873396542108,
+      "missed_unsupported": 58,
+      "unsupported_fraction_among_unflagged": 0.11306042884990253,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.8905540846989469,
+          0.9238234969163068
+        ],
+        "recall_percentile_95": [
+          0.9155002291509989,
+          0.9538180507917974
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "policy": "released_automatic",
+      "n": 1793,
+      "positives": 894,
+      "average_precision": 0.7980333611571722,
+      "roc_auc": 0.8488259388383315,
+      "brier": 0.15114333519241493,
+      "f1": 0.8468061051441492,
+      "recall": 0.8378076062639821,
+      "precision": 0.856,
+      "false_positive_rate": 0.14015572858731926,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 773,
+        "fp": 126,
+        "fn": 145,
+        "tp": 749
+      },
+      "review_fraction": 0.4880089235917457,
+      "missed_unsupported": 145,
+      "unsupported_fraction_among_unflagged": 0.1579520697167756,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.7640660568658345,
+          0.8266134216704737
+        ],
+        "recall_percentile_95": [
+          0.8051704895320198,
+          0.8689180899878911
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "policy": "review_all",
+      "n": 1793,
+      "positives": 894,
+      "average_precision": 0.4986056887897379,
+      "roc_auc": 0.5,
+      "brier": 0.5013943112102621,
+      "f1": 0.6654261257908448,
+      "recall": 1.0,
+      "precision": 0.4986056887897379,
+      "false_positive_rate": 1.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 0,
+        "fp": 899,
+        "fn": 0,
+        "tp": 894
+      },
+      "review_fraction": 1.0,
+      "missed_unsupported": 0,
+      "unsupported_fraction_among_unflagged": null,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.45811135020953536,
+          0.5370318695626441
+        ],
+        "recall_percentile_95": [
+          1.0,
+          1.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "asqa",
+      "target": "eli5",
+      "policy": "review_none",
+      "n": 1793,
+      "positives": 894,
+      "average_precision": 0.4986056887897379,
+      "roc_auc": 0.5,
+      "brier": 0.4986056887897379,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 899,
+        "fp": 0,
+        "fn": 894,
+        "tp": 0
+      },
+      "review_fraction": 0.0,
+      "missed_unsupported": 894,
+      "unsupported_fraction_among_unflagged": 0.4986056887897379,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.45811135020953536,
+          0.5370318695626441
+        ],
+        "recall_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "policy": "learned_lexical",
+      "n": 811,
+      "positives": 278,
+      "average_precision": 0.8569583916080443,
+      "roc_auc": 0.884848218985787,
+      "brier": 0.11649001246953002,
+      "f1": 0.6818181818181818,
+      "recall": 0.8633093525179856,
+      "precision": 0.5633802816901409,
+      "false_positive_rate": 0.34896810506566606,
+      "threshold": 0.19986564867263254,
+      "confusion": {
+        "tn": 347,
+        "fp": 186,
+        "fn": 38,
+        "tp": 240
+      },
+      "review_fraction": 0.5252774352651048,
+      "missed_unsupported": 38,
+      "unsupported_fraction_among_unflagged": 0.0987012987012987,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.8094298853197203,
+          0.8996328122479228
+        ],
+        "recall_percentile_95": [
+          0.8130442358915636,
+          0.9096222109533468
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "policy": "lexical",
+      "n": 811,
+      "positives": 278,
+      "average_precision": 0.8210531428586307,
+      "roc_auc": 0.8792264499844777,
+      "brier": 0.11995764832243275,
+      "f1": 0.6918604651162791,
+      "recall": 0.8561151079136691,
+      "precision": 0.5804878048780487,
+      "false_positive_rate": 0.3227016885553471,
+      "threshold": 0.17647058823529416,
+      "confusion": {
+        "tn": 361,
+        "fp": 172,
+        "fn": 40,
+        "tp": 238
+      },
+      "review_fraction": 0.5055487053020962,
+      "missed_unsupported": 40,
+      "unsupported_fraction_among_unflagged": 0.09975062344139651,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.7629592424526741,
+          0.8709625276471251
+        ],
+        "recall_percentile_95": [
+          0.8061052183919548,
+          0.9065717299578059
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "policy": "released_automatic",
+      "n": 811,
+      "positives": 278,
+      "average_precision": 0.6957378991952061,
+      "roc_auc": 0.8368944619163956,
+      "brier": 0.1442663378545006,
+      "f1": 0.7868852459016393,
+      "recall": 0.7769784172661871,
+      "precision": 0.7970479704797048,
+      "false_positive_rate": 0.10318949343339587,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 478,
+        "fp": 55,
+        "fn": 62,
+        "tp": 216
+      },
+      "review_fraction": 0.33415536374845867,
+      "missed_unsupported": 62,
+      "unsupported_fraction_among_unflagged": 0.11481481481481481,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.6294627531820172,
+          0.7501684472826256
+        ],
+        "recall_percentile_95": [
+          0.7176880879950425,
+          0.8308563918096292
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "policy": "review_all",
+      "n": 811,
+      "positives": 278,
+      "average_precision": 0.34278668310727495,
+      "roc_auc": 0.5,
+      "brier": 0.657213316892725,
+      "f1": 0.5105601469237833,
+      "recall": 1.0,
+      "precision": 0.34278668310727495,
+      "false_positive_rate": 1.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 0,
+        "fp": 533,
+        "fn": 0,
+        "tp": 278
+      },
+      "review_fraction": 1.0,
+      "missed_unsupported": 0,
+      "unsupported_fraction_among_unflagged": null,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.3016311138627793,
+          0.3880900955042756
+        ],
+        "recall_percentile_95": [
+          1.0,
+          1.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    },
+    {
+      "source": "eli5",
+      "target": "asqa",
+      "policy": "review_none",
+      "n": 811,
+      "positives": 278,
+      "average_precision": 0.34278668310727495,
+      "roc_auc": 0.5,
+      "brier": 0.34278668310727495,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.0,
+      "threshold": 0.5,
+      "confusion": {
+        "tn": 533,
+        "fp": 0,
+        "fn": 278,
+        "tp": 0
+      },
+      "review_fraction": 0.0,
+      "missed_unsupported": 278,
+      "unsupported_fraction_among_unflagged": 0.34278668310727495,
+      "uncertainty": {
+        "resampling_unit": "complete supplied cluster",
+        "clusters": 100,
+        "requested_resamples": 300,
+        "valid_resamples": 300,
+        "ap_percentile_95": [
+          0.3016311138627793,
+          0.3880900955042756
+        ],
+        "recall_percentile_95": [
+          0.0,
+          0.0
+        ],
+        "paired_ap_difference_percentile_95": null,
+        "precision_at_budget_percentile_95": null,
+        "recall_at_budget_percentile_95": null,
+        "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+      }
+    }
+  ]
+}

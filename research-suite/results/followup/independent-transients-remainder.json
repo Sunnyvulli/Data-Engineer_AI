@@ -1,0 +1,82 @@
+{
+  "status": "independent simulated objects; no real-world external validation",
+  "selection": {
+    "policy": "stage-two remaining objects after pilot; final object excluded",
+    "excluded_pilot_through_id": 53125,
+    "excluded_final_id": 342868,
+    "selected_complete_objects": 27925
+  },
+  "eligible_detected_objects": 27925,
+  "excluded_without_detection": 0,
+  "original_metadata_id_overlap": 0,
+  "frozen_model_sha256": "d1e0bf6dece9af03fdd817a68218dd461a67ecb738fa1c8410e38a74678417c4",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "evaluation_status": "two-class evaluation completed",
+  "metrics": {
+    "n": 27925,
+    "positives": 2,
+    "average_precision": 7.162041181736795e-05,
+    "roc_auc": 0.42103284031085486,
+    "brier": 9.439836518699673e-05,
+    "f1": 0.0,
+    "recall": 0.0,
+    "precision": 0.0,
+    "false_positive_rate": 0.0,
+    "threshold": 0.5,
+    "confusion": {
+      "tn": 27923,
+      "fp": 0,
+      "fn": 2,
+      "tp": 0
+    }
+  },
+  "budget": {
+    "selected": 1397,
+    "rare_found": 0,
+    "precision_at_budget": 0.0,
+    "recall_at_budget": 0.0
+  },
+  "uncertainty": {
+    "resampling_unit": "complete supplied cluster",
+    "clusters": 27925,
+    "requested_resamples": 300,
+    "valid_resamples": 262,
+    "ap_percentile_95": [
+      3.5810205908683974e-05,
+      0.00017905102954341988
+    ],
+    "recall_percentile_95": [
+      0.0,
+      0.0
+    ],
+    "paired_ap_difference_percentile_95": null,
+    "precision_at_budget_percentile_95": [
+      0.0,
+      0.0
+    ],
+    "recall_at_budget_percentile_95": [
+      0.0,
+      0.0
+    ],
+    "limitation": "conditional on fitted model; does not account for corpus bias or model-selection uncertainty"
+  },
+  "expected_random_precision": 7.162041181736795e-05,
+  "input_sha256": {
+    "plasticc_test_metadata.csv.gz": "8048d59cf84ab30fa539ad69aeeebdac6c7347a149b8724e4a32adc9bbf6897e",
+    "plasticc_test_lightcurves_01.csv.gz": "388c76d92b3a9572f9beff646ec240e852c4be164c2a63d735247d0b810899f3"
+  },
+  "recall_binomial_diagnostic": {
+    "clopper_pearson_95": [
+      0.0,
+      0.841886116991581
+    ],
+    "positive_events": 2,
+    "assumption": "independent exchangeable positive events; illustrative diagnostic, not a guarantee",
+    "note": "Added as a post-outcome diagnostic because a rare-event bootstrap can be degenerate"
+  }
+}

@@ -1,0 +1,9 @@
+data/raw/
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+results/models/
+
+data/models/
+data/source-audits/

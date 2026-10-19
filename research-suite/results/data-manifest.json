@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "alce_annotations.json",
+    "url": "https://raw.githubusercontent.com/princeton-nlp/ALCE/246c476a4edfc564266b7346b6e29ef4861ae937/human_eval/human_eval_citations_completed.json",
+    "bytes": 4566797,
+    "sha256": "cfed9293752413d7c7631f36524dd4ee9ef58b209cdf9c63f6fc1e280b43cca6"
+  },
+  {
+    "filename": "phishing.zip",
+    "url": "https://archive.ics.uci.edu/static/public/327/phishing+websites.zip",
+    "bytes": 1011184,
+    "sha256": "514f582cb44cba17251baf1d59f64cddff16efa2b644d091ce8d2a1e8d492940"
+  },
+  {
+    "filename": "plasticc_train_metadata.csv.gz",
+    "url": "https://zenodo.org/api/records/2539456/files/plasticc_train_metadata.csv.gz/content",
+    "bytes": 370350,
+    "sha256": "58b008e50426e12aae6a0b9df4d0901bf63e7f9a0da579011988c628a63f23d4"
+  },
+  {
+    "filename": "plasticc_train_lightcurves.csv.gz",
+    "url": "https://zenodo.org/api/records/2539456/files/plasticc_train_lightcurves.csv.gz/content",
+    "bytes": 21553100,
+    "sha256": "1c49a9df7e11a96f774b3d111741ea081321a72a169e311600a7e5ecba0424d3"
+  }
+]

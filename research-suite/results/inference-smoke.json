@@ -1,0 +1,17 @@
+[
+  {
+    "project": "phishing",
+    "scored_records": 10,
+    "finite_scores_in_unit_interval": true
+  },
+  {
+    "project": "checkpoints",
+    "scored_records": 1,
+    "finite_scores_in_unit_interval": true
+  },
+  {
+    "project": "transients",
+    "scored_records": 10,
+    "finite_scores_in_unit_interval": true
+  }
+]

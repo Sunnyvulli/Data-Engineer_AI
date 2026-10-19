@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite the software when using this implementation; separately cite the original datasets and papers listed in docs/PROVENANCE.md."
+title: "Applied ML Research Suite"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Vulli
+    given-names: Hanumantha Rao
+repository-code: "https://github.com/Sunnyvulli/Data-Engineer_AI/tree/main/research-suite"
+abstract: "Executed research baselines for phishing feature robustness, citation-support triage, and simulated early transient prioritisation. Developed."

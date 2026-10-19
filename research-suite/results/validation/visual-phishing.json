@@ -1,0 +1,328 @@
+{
+  "status": "bounded provider-labelled paired screenshot/URL benchmark; not deployment validation",
+  "source": "https://doi.org/10.5281/zenodo.21379702",
+  "archive_md5": "85937228498c1efffb2ee497389482a2",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "wall_seconds": 676.5405140769999,
+  "input_audit": {
+    "counts": {
+      "images": 7062,
+      "ambiguous": 8,
+      "unmatched": 4
+    },
+    "retained": 7050,
+    "positives": 1765,
+    "negatives": 5285,
+    "components": 4598,
+    "largest_component": 2035,
+    "mixed_label_components": 10,
+    "provider_cross_split_components": 102,
+    "descriptor_count": 179
+  },
+  "splits": [
+    {
+      "seed": 17,
+      "train": 3325,
+      "validation": 1109,
+      "test": 2616,
+      "test_positives": 1559,
+      "group_overlap": 0
+    },
+    {
+      "seed": 42,
+      "train": 3325,
+      "validation": 1109,
+      "test": 2616,
+      "test_positives": 1559,
+      "group_overlap": 0
+    },
+    {
+      "seed": 91,
+      "train": 3325,
+      "validation": 1109,
+      "test": 2616,
+      "test_positives": 1559,
+      "group_overlap": 0
+    }
+  ],
+  "experiments": [
+    {
+      "seed": 17,
+      "policy": "url",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.9035146172087256,
+      "roc_auc": 0.8402615994169419,
+      "brier": 0.31422075156537366,
+      "f1": 0.6683673469387755,
+      "recall": 0.504169339320077,
+      "precision": 0.9911727616645649,
+      "false_positive_rate": 0.006622516556291391,
+      "threshold": 0.3086494991233291,
+      "confusion": {
+        "tn": 1050,
+        "fp": 7,
+        "fn": 773,
+        "tp": 786
+      }
+    },
+    {
+      "seed": 17,
+      "policy": "image",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.7621054822667921,
+      "roc_auc": 0.689152556978341,
+      "brier": 0.26365917347452267,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.007568590350047304,
+      "threshold": 0.9910322026179251,
+      "confusion": {
+        "tn": 1049,
+        "fp": 8,
+        "fn": 1559,
+        "tp": 0
+      }
+    },
+    {
+      "seed": 17,
+      "policy": "fusion",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.8475558538021485,
+      "roc_auc": 0.7876516433708385,
+      "brier": 0.22789659004328056,
+      "f1": 0.38999489535477283,
+      "recall": 0.2450288646568313,
+      "precision": 0.955,
+      "false_positive_rate": 0.017029328287606435,
+      "threshold": 0.5488877799580034,
+      "confusion": {
+        "tn": 1039,
+        "fp": 18,
+        "fn": 1177,
+        "tp": 382
+      }
+    },
+    {
+      "seed": 42,
+      "policy": "url",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.8963082851417817,
+      "roc_auc": 0.8286811464302554,
+      "brier": 0.30401741021105705,
+      "f1": 0.6982150269821503,
+      "recall": 0.5394483643361129,
+      "precision": 0.9894117647058823,
+      "false_positive_rate": 0.008514664143803218,
+      "threshold": 0.29284157999342636,
+      "confusion": {
+        "tn": 1048,
+        "fp": 9,
+        "fn": 718,
+        "tp": 841
+      },
+      "cluster_uncertainty": {
+        "unit": "complete input-derived screenshot/hostname component",
+        "clusters": 582,
+        "requested": 300,
+        "valid": 179,
+        "percentile_95": {
+          "ap": [
+            0.8927621330048178,
+            0.9286278091918221
+          ],
+          "unsupported_recall": [
+            0.5394483643361129,
+            0.5394483643361129
+          ],
+          "supported_fpr": [
+            0.005676442762535478,
+            0.012402088772845953
+          ],
+          "review_fraction": [
+            0.3237767584097859,
+            0.38069269898264513
+          ],
+          "paired_ap_difference": null
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee; all held-out positives belong to one component; intervals cannot estimate variation across phishing components"
+      }
+    },
+    {
+      "seed": 42,
+      "policy": "image",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.5954990109660082,
+      "roc_auc": 0.5304227353851625,
+      "brier": 0.36594217380222716,
+      "f1": 0.007551919446192574,
+      "recall": 0.003848620910840282,
+      "precision": 0.2,
+      "false_positive_rate": 0.02270577105014191,
+      "threshold": 0.9487412082142335,
+      "confusion": {
+        "tn": 1033,
+        "fp": 24,
+        "fn": 1553,
+        "tp": 6
+      },
+      "cluster_uncertainty": {
+        "unit": "complete input-derived screenshot/hostname component",
+        "clusters": 582,
+        "requested": 300,
+        "valid": 179,
+        "percentile_95": {
+          "ap": [
+            0.5893555166012643,
+            0.6267274711337837
+          ],
+          "unsupported_recall": [
+            0.003848620910840282,
+            0.003848620910840282
+          ],
+          "supported_fpr": [
+            0.01892147587511826,
+            0.029386426228825743
+          ],
+          "review_fraction": [
+            0.009564913335419652,
+            0.013589449541284397
+          ],
+          "paired_ap_difference": [
+            -0.3078782262672223,
+            -0.2948858791198381
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee; all held-out positives belong to one component; intervals cannot estimate variation across phishing components"
+      }
+    },
+    {
+      "seed": 42,
+      "policy": "fusion",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.7504399042222671,
+      "roc_auc": 0.6659412827401306,
+      "brier": 0.2816335643183956,
+      "f1": 0.3259958071278826,
+      "recall": 0.1994868505452213,
+      "precision": 0.8911174785100286,
+      "false_positive_rate": 0.03595080416272469,
+      "threshold": 0.533186445774929,
+      "confusion": {
+        "tn": 1019,
+        "fp": 38,
+        "fn": 1248,
+        "tp": 311
+      },
+      "cluster_uncertainty": {
+        "unit": "complete input-derived screenshot/hostname component",
+        "clusters": 582,
+        "requested": 300,
+        "valid": 179,
+        "percentile_95": {
+          "ap": [
+            0.7438968321182454,
+            0.7697903102987409
+          ],
+          "unsupported_recall": [
+            0.1994868505452213,
+            0.1994868505452213
+          ],
+          "supported_fpr": [
+            0.03122043519394513,
+            0.04802452187578461
+          ],
+          "review_fraction": [
+            0.13149847094801223,
+            0.1537327947336924
+          ],
+          "paired_ap_difference": [
+            -0.15971383325234054,
+            -0.1401734501682769
+          ]
+        },
+        "limits": "conditional on fitted policies; no corpus, annotation or selection-bias guarantee; all held-out positives belong to one component; intervals cannot estimate variation across phishing components"
+      }
+    },
+    {
+      "seed": 91,
+      "policy": "url",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.9501173009305207,
+      "roc_auc": 0.919237824989092,
+      "brier": 0.26652547793223824,
+      "f1": 0.8505663134819145,
+      "recall": 0.7466324567030147,
+      "precision": 0.9881154499151104,
+      "false_positive_rate": 0.013245033112582781,
+      "threshold": 0.2929682351697355,
+      "confusion": {
+        "tn": 1043,
+        "fp": 14,
+        "fn": 395,
+        "tp": 1164
+      }
+    },
+    {
+      "seed": 91,
+      "policy": "image",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.6229491747758427,
+      "roc_auc": 0.5693822848137254,
+      "brier": 0.30528905516390775,
+      "f1": 0.0,
+      "recall": 0.0,
+      "precision": 0.0,
+      "false_positive_rate": 0.015137180700094607,
+      "threshold": 0.9685556114015178,
+      "confusion": {
+        "tn": 1041,
+        "fp": 16,
+        "fn": 1559,
+        "tp": 0
+      }
+    },
+    {
+      "seed": 91,
+      "policy": "fusion",
+      "n": 2616,
+      "positives": 1559,
+      "average_precision": 0.8256527981099187,
+      "roc_auc": 0.7451638880173899,
+      "brier": 0.23218844539761832,
+      "f1": 0.5636928539724811,
+      "recall": 0.40731237973059653,
+      "precision": 0.9149855907780979,
+      "false_positive_rate": 0.05581835383159887,
+      "threshold": 0.5258671610627144,
+      "confusion": {
+        "tn": 998,
+        "fp": 59,
+        "fn": 924,
+        "tp": 635
+      }
+    }
+  ],
+  "limits": [
+    "provider labels not manually adjudicated here",
+    "collection and source shortcuts possible",
+    "near-duplicate hashes do not prove campaign independence",
+    "single corpus, no prospective deployment validation",
+    "cluster intervals conditional on fitted policies",
+    "compact descriptors are not state of the art visual recognition",
+    "All 1559 held-out positives belong to one input-derived component in every seed; three seeds do not establish independent positive-component replication."
+  ]
+}

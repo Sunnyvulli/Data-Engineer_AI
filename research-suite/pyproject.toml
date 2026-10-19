@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vulli-research-suite"
+version = "0.1.0"
+description = "Reproducible phishing, evidence-checking, and early-transient research baselines"
+requires-python = ">=3.11"
+dependencies = ["numpy>=2.0,<3", "pandas>=2.2,<3", "scipy>=1.14,<2", "scikit-learn>=1.6,<2", "Pillow>=12.3,<13", "openpyxl>=3.1.5,<4"]
+
+[project.scripts]
+research-suite = "research_suite.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

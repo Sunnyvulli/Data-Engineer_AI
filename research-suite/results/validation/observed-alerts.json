@@ -1,0 +1,22 @@
+{
+  "status": "blocked observed-data access; sample incomplete, no classifier experiment",
+  "selected": 20,
+  "attempted_unique_objects": 2,
+  "remaining_unattempted": 18,
+  "objects_with_valid_detections": 0,
+  "classifier_metrics": null,
+  "objects": [
+    {
+      "oid": "ZTF21acfaugw",
+      "error": "Initial request: remote end closed connection; recovery request: proxy tunnel 403 Forbidden",
+      "valid_rows": null
+    },
+    {
+      "oid": "ZTF24abmtnee",
+      "error": "Initial request: connection refused",
+      "valid_rows": null
+    }
+  ],
+  "blocker": "Public ALeRCE API access failed from this environment. No raw packets obtained. Recovery process did not complete. No alternative objects or inferred photometry substituted.",
+  "next_action": "When the official API is accessible, inspect this checkpoint and query the remaining frozen IDs under OBSERVED_ALERT_PROTOCOL.md; preserve all access failures and do not rerun completed scientific experiments."
+}

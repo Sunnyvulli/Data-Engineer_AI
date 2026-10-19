@@ -1,0 +1,71 @@
+{
+  "repository": "https://github.com/daniel-muthukrishna/astrorapid",
+  "revision": "7f28499ff71f8520ed6fcf530929587336a0c5de",
+  "license": "MIT, copyright Daniel Muthukrishna 2019",
+  "inspected_files": [
+    {
+      "path": "astrorapid/neural_network_model.py",
+      "sha256": "171088cd2d1d75c55bafc0dc7e179d84bd50d0d88608af785666bd859bd329f0",
+      "bytes": 4041,
+      "verified_git_blob_sha": "4636dc8dce4f8d074286d171a1df869f17563f43"
+    },
+    {
+      "path": "astrorapid/process_light_curves.py",
+      "sha256": "999c2b293c4c8838b8dd70890dce63fb8ebfce80efde227b50330aa372e2eecc",
+      "bytes": 7676,
+      "verified_git_blob_sha": "c9482e04d2e46e9f4d24a869f770e0dd46a3c862"
+    },
+    {
+      "path": "astrorapid/classify.py",
+      "sha256": "34eea1d237cc1d167808e3032e3a8808d2001b325d606164e7f019f2889c4019",
+      "bytes": 32499,
+      "verified_git_blob_sha": "933917d0f420c734eca8bf1fd6ad252ee2bdb6f3"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7368bf85e327afa32211d1afede3e740762e53aa38399b090f2900473dc26005",
+      "bytes": 1076,
+      "verified_git_blob_sha": "2e9c8761e6814c508a7ebf69bcff9a7a13173234"
+    },
+    {
+      "path": "astrorapid/prepare_arrays.py",
+      "sha256": "38d72bb8ba32dfe7f3cee98b3c2d265da9a329d031868863c19698e13b0a879b",
+      "bytes": 5380,
+      "verified_git_blob_sha": "69877afec0326dffb2c32aab6e642bdcbe24ce92"
+    },
+    {
+      "path": "astrorapid/custom_classifier.py",
+      "sha256": "6ebf3d1defad335bdd5581b98d6af2bd0783aa2b0ef471173c75b3306bdef384",
+      "bytes": 7671,
+      "verified_git_blob_sha": "7dc46d8ab354c177ac796a1813bc825d6ec44213"
+    },
+    {
+      "path": "setup.py",
+      "sha256": "af7614428d283e4a964944535961fac69f7b4c2a166ab078c1e3264afdd2c3b0",
+      "bytes": 3510,
+      "verified_git_blob_sha": "094dbbb2067b6b892ab46131a58355f94e114818"
+    }
+  ],
+  "released_weights": [
+    {
+      "path": "astrorapid/PS1_known_redshift_Ia_CC_SLSN.hdf5",
+      "bytes": 247584,
+      "git_blob_sha": "e36eb8cff105340e60079edef323e5e506251de0"
+    },
+    {
+      "path": "astrorapid/PS1_known_redshift_Ia_II_IIn_Ibc_SLSN.hdf5",
+      "bytes": 247888,
+      "git_blob_sha": "55c0d8cf2cf9b58ec16d2d8d49a55e8a3dbfaa19"
+    },
+    {
+      "path": "astrorapid/ZTF_known_redshift.hdf5",
+      "bytes": 1798784,
+      "git_blob_sha": "173e0a11d6ed2e6c3e8674f2d1396d5ebb756fbe"
+    },
+    {
+      "path": "astrorapid/ZTF_unknown_redshift.hdf5",
+      "bytes": 1513072,
+      "git_blob_sha": "91c262ad27105d603dced989d931621b78e57bed"
+    }
+  ]
+}

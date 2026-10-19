@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-19T02:28:45.245854+00:00",
+  "failure": "KeyError reading old independent AP at top level; actual schema is metrics.average_precision",
+  "action": "recover evaluation from previously selected weights; no retraining, new checkpoint or protocol change",
+  "selected_model_sha256": "ee454867c89c58467120eb8bfa67b957d67b89464dea951f43751e4e6df4c6c0",
+  "source_sha256": {
+    "plasticc_train_lightcurves.csv.gz": "1c49a9df7e11a96f774b3d111741ea081321a72a169e311600a7e5ecba0424d3",
+    "plasticc_train_metadata.csv.gz": "58b008e50426e12aae6a0b9df4d0901bf63e7f9a0da579011988c628a63f23d4"
+  }
+}

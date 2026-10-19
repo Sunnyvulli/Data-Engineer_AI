@@ -1,0 +1,1213 @@
+{
+  "pair_sha256": "a5f288d4b209c255ca66ae1644f9578c27f79e8dd8daee72706539833f9a4650",
+  "model_revision": "fa2804872c3b4bd748f38c0185cc85775361e735",
+  "policy_version": "e384s320_c120s100_maxmin_v1",
+  "risk": [
+    0.9069204534963848,
+    0.9994368727271367,
+    0.9977463652497421,
+    0.9654438640948501,
+    0.06952984380807081,
+    0.7661057488555083,
+    0.46627612847394617,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.9961207641996154,
+    0.9994346067368531,
+    0.8823778798040736,
+    0.037358754463038046,
+    0.23950426044712814,
+    0.9870102839390861,
+    0.13371853402246536,
+    0.9956871111047267,
+    1.0,
+    1.0,
+    1.0,
+    0.5859782452976504,
+    0.1730108526340347,
+    0.9996094672242952,
+    1.0,
+    0.9951183715411682,
+    0.9995831374815408,
+    0.3047406746749163,
+    0.012947461777254143,
+    0.9989882660451799,
+    0.02312082289217443,
+    0.9999077788278729,
+    0.9995921077347621,
+    0.9978902520056696,
+    0.008496658013191882,
+    0.9978782475798342,
+    0.9957744021655596,
+    0.9995534457658244,
+    0.9990732448487707,
+    0.9990570430699653,
+    0.9989750571948428,
+    0.9938158151343465,
+    0.9941511739648284,
+    0.9997256801804176,
+    0.9987514922044401,
+    0.9970152371728424,
+    0.9994850606190367,
+    0.9990252724069908,
+    0.9904168042378119,
+    0.9929205500136802,
+    0.3047103757519263,
+    0.9957845402991025,
+    0.9990798523327404,
+    0.8468717942210007,
+    0.9623499644800505,
+    0.9709573889193217,
+    0.020646139106454187,
+    0.9917524197846614,
+    0.14046218093949692,
+    1.0,
+    0.9722724711109708,
+    0.9998040996626746,
+    1.0,
+    0.3466122113831148,
+    0.9998702587808537,
+    0.9995831374815408,
+    0.9999009360006322,
+    0.9898110104764857,
+    1.0,
+    0.9998301504952345,
+    0.9992925313798466,
+    0.9154857482164843,
+    0.99155815155248,
+    0.991192056019447,
+    1.0,
+    1.0,
+    1.0,
+    0.9563380558794288,
+    0.037979403657645294,
+    1.0,
+    1.0,
+    1.0,
+    0.9957571996419758,
+    0.9956179127439398,
+    0.9983600684172939,
+    0.168014458265346,
+    0.9989097483844362,
+    0.7791800283013467,
+    0.9626435535457583,
+    0.9069204534963848,
+    0.9994368727271367,
+    0.9977463652497421,
+    0.9654438640948501,
+    0.027297834592675985,
+    0.8620610407113293,
+    0.3404303456237946,
+    1.0,
+    0.08995120090394093,
+    0.9320285391960021,
+    0.9996048286943154,
+    0.9991279254229376,
+    0.9985941869334047,
+    0.9686604706141478,
+    0.9985981595944363,
+    0.8823778798040736,
+    0.037358754463038046,
+    0.5158048782635404,
+    0.9997766487305386,
+    0.9749719539240526,
+    0.9941282106149332,
+    1.0,
+    1.0,
+    0.9996109563666391,
+    0.9973477793066119,
+    0.9981515667235213,
+    0.9988672307449912,
+    0.999846033096236,
+    1.0,
+    0.15716278266087835,
+    0.08000788611664256,
+    0.9996094672242952,
+    1.0,
+    0.9951183715411682,
+    0.9995831374815408,
+    0.3047406746749163,
+    0.012947461777254143,
+    0.9989882660451799,
+    0.02312082289217443,
+    0.9998544557382043,
+    0.9995921077347621,
+    0.9988805158372477,
+    0.9978782475798342,
+    0.9985696655114209,
+    0.024130390258152112,
+    0.9989004579724307,
+    0.9990732448487707,
+    0.9995960995886574,
+    0.9987608385409799,
+    0.9970152371728424,
+    0.9994850606190367,
+    0.9990252724069908,
+    0.9843661466754091,
+    0.998110053894699,
+    0.9994880796406844,
+    1.0,
+    0.9942793079279217,
+    0.9902848572170767,
+    0.9953603312931694,
+    1.0,
+    1.0,
+    0.994013490797745,
+    0.09568749927918219,
+    0.9984747853738702,
+    0.9994414481473636,
+    0.9999653579537024,
+    1.0,
+    0.9973210542603853,
+    0.9682737033649637,
+    0.010536524424671567,
+    0.9999077788278729,
+    0.983713440404431,
+    0.9986610681001049,
+    0.4730434572897232,
+    0.9923236394124115,
+    0.8243122904201823,
+    0.9316060471474242,
+    0.9996015486294813,
+    0.9843014111660361,
+    1.0,
+    0.5117348400089041,
+    0.9626435535457583
+  ],
+  "audit": [
+    {
+      "evidence_tokens": 273,
+      "claim_tokens": 58,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 46,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 34,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 441,
+      "claim_tokens": 15,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 131,
+      "claim_tokens": 22,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 135,
+      "claim_tokens": 23,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 141,
+      "claim_tokens": 18,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 9,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 10,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 16,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 19,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 440,
+      "claim_tokens": 21,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 255,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 263,
+      "claim_tokens": 18,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 280,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 249,
+      "claim_tokens": 18,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 124,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 16,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 18,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 22,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 237,
+      "claim_tokens": 13,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 144,
+      "claim_tokens": 11,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 26,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 14,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 236,
+      "claim_tokens": 29,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 119,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 245,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 273,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 134,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 111,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 117,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 148,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 265,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 266,
+      "claim_tokens": 13,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 15,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 19,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 31,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 11,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 8,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 136,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 52,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 32,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 412,
+      "claim_tokens": 18,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 139,
+      "claim_tokens": 48,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 272,
+      "claim_tokens": 39,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 313,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 183,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 136,
+      "claim_tokens": 27,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 126,
+      "claim_tokens": 22,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 140,
+      "claim_tokens": 32,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 126,
+      "claim_tokens": 33,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 536,
+      "claim_tokens": 21,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 45,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 255,
+      "claim_tokens": 29,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 136,
+      "claim_tokens": 19,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 10,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 252,
+      "claim_tokens": 33,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 145,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 119,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 114,
+      "claim_tokens": 13,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 435,
+      "claim_tokens": 31,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 1,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 355,
+      "claim_tokens": 10,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 134,
+      "claim_tokens": 37,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 112,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 23,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 126,
+      "claim_tokens": 25,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 24,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 29,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 21,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 133,
+      "claim_tokens": 53,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 34,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 28,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 23,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 24,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 147,
+      "claim_tokens": 26,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 484,
+      "claim_tokens": 16,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 131,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 260,
+      "claim_tokens": 57,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 379,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 412,
+      "claim_tokens": 12,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 273,
+      "claim_tokens": 58,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 46,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 34,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 441,
+      "claim_tokens": 15,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 131,
+      "claim_tokens": 27,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 135,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 141,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 10,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 158,
+      "claim_tokens": 15,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 158,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 27,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 149,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 156,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 156,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 156,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 255,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 263,
+      "claim_tokens": 29,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 136,
+      "claim_tokens": 27,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 251,
+      "claim_tokens": 41,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 18,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 22,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 135,
+      "claim_tokens": 8,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 127,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 138,
+      "claim_tokens": 38,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 124,
+      "claim_tokens": 31,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 128,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 13,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 237,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 144,
+      "claim_tokens": 15,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 26,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 14,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 236,
+      "claim_tokens": 29,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 119,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 245,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 273,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 134,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 111,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 117,
+      "claim_tokens": 45,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 148,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 267,
+      "claim_tokens": 22,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 129,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 366,
+      "claim_tokens": 17,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 34,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 23,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 19,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 130,
+      "claim_tokens": 37,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 136,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 52,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 32,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 132,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 412,
+      "claim_tokens": 12,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 139,
+      "claim_tokens": 46,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 235,
+      "claim_tokens": 67,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 23,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 441,
+      "claim_tokens": 24,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 272,
+      "claim_tokens": 36,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 258,
+      "claim_tokens": 14,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 33,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 16,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 262,
+      "claim_tokens": 42,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 144,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 374,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 138,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 16,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 369,
+      "claim_tokens": 28,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 381,
+      "claim_tokens": 12,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 111,
+      "claim_tokens": 10,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 117,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 134,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 133,
+      "claim_tokens": 25,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 368,
+      "claim_tokens": 20,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 366,
+      "claim_tokens": 24,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 125,
+      "claim_tokens": 32,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 118,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 123,
+      "claim_tokens": 21,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 267,
+      "claim_tokens": 16,
+      "inference_pairs": 1,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 0,
+      "claim_tokens": 51,
+      "inference_pairs": 0,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 388,
+      "claim_tokens": 25,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    },
+    {
+      "evidence_tokens": 412,
+      "claim_tokens": 12,
+      "inference_pairs": 2,
+      "reencoding_truncations": 0
+    }
+  ]
+}
