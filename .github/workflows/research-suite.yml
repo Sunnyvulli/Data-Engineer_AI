@@ -1,9 +1,7 @@
 name: Research suite integrity
 on:
   push:
-    paths: ['research-suite/**', '.github/workflows/research-suite.yml']
   pull_request:
-    paths: ['research-suite/**', '.github/workflows/research-suite.yml']
 permissions:
   contents: read
 jobs:
@@ -21,5 +19,27 @@ jobs:
       - run: python -m pip install --no-deps -e .
       - run: python -m unittest discover -s tests -v
       - run: research-suite triage examples/claim.json
-      - run: python docs/paper/audit_outputs.py
-      - run: python docs/paper/audit_three_studies.py
+      - name: Audit retained outputs
+        run: |
+          mkdir -p .local-ci
+          python docs/paper/audit_outputs.py > .local-ci/output-checks.txt
+          python docs/paper/audit_three_studies.py > .local-ci/study-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: saved-output-integrity-audits
+          path: research-suite/.local-ci/
+  history-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scan all reachable Git history
+        run: >-
+          docker run --rm
+          -e GIT_CONFIG_COUNT=1
+          -e GIT_CONFIG_KEY_0=safe.directory
+          -e GIT_CONFIG_VALUE_0=/repo
+          -v "$PWD:/repo:ro"
+          ghcr.io/gitleaks/gitleaks:v8.24.2
+          git /repo --log-opts=--all --redact --no-banner
