@@ -1,0 +1,8 @@
+# Reviewed false positives: public tokenizer artifact SHA-256 checksums, not credentials.
+# Exact commit/path/rule/line fingerprints only; all default rules remain enabled.
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/results/followup/nli-comparison.json:generic-api-key:9
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/results/followup/nli-comparison.json:generic-api-key:10
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/results/followup/nli-comparison.json:generic-api-key:11
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:29
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:30
+3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:31

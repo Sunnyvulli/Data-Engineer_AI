@@ -42,4 +42,4 @@ jobs:
           -e GIT_CONFIG_VALUE_0=/repo
           -v "$PWD:/repo:ro"
           ghcr.io/gitleaks/gitleaks:v8.24.2
-          git /repo --log-opts=--all --redact --no-banner
+          git /repo --log-opts=--all --gitleaks-ignore-path .gitleaksignore --redact --no-banner
