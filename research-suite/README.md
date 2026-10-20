@@ -97,3 +97,7 @@ Optional CPU runtime: `requirements-recurrent-runtime-lock.txt`. After recreatin
 ## Independent research and manuscript
 
 Read the [900-answer and paired visual validation report](results/validation/REPORT.md), [manuscript draft](docs/paper/MANUSCRIPT.md), [PDF](docs/paper/MANUSCRIPT.pdf), [source attribution](docs/validation/DATA_ATTRIBUTION.md) and [free dissemination guidance](docs/paper/FREE_DISSEMINATION.md). The independent [research programme](docs/validation/INDEPENDENT_RESEARCH_PROGRAMME.md) and [26-fit data-selection pilot](docs/validation/DATA_SELECTION_REPORT.md) preserve exploratory status, exposed targets and negative findings. These are not university-affiliated projects or accepted publications. Observed astronomy validation remains incomplete. Current work: [checkpoint](docs/validation/PAPER_CHECKPOINT.md).
+
+## Citation manuscript review response (20 October 2026)
+
+[Response and unresolved checks](docs/paper/REVIEW_RESPONSE.md) · [Protocol](docs/paper/REVIEW_RESPONSE_PROTOCOL.md). A post-hoc answer-length ranking gives AP 0.386 against coverage NLI 0.281 on the exposed 900-answer set; semantic detection advantage is not established. Generator strata and grouped diagnostic predictions are retained. AttrScore and AttributionBench are cited, but a matched AttrScore run and independent human review remain pending.

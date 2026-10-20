@@ -22,6 +22,8 @@ jobs:
       - name: Audit retained outputs
         run: |
           mkdir -p .local-ci
+          python docs/paper/review_diagnostics.py > .local-ci/review-diagnostics.txt
+          git diff --exit-code -- results/validation/review-diagnostics.json
           python docs/paper/audit_outputs.py > .local-ci/output-checks.txt
           python docs/paper/audit_three_studies.py > .local-ci/study-audit.json
       - uses: actions/upload-artifact@v4

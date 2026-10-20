@@ -16,3 +16,7 @@ The workflow now runs on every push and PR, including root-only documentation ch
 
 ## Reviewed scanner findings
 The first full-history scan reported six generic-api-key matches: three public tokenizer artifact SHA-256 checksums in `src/research_suite/entailment.py` and the same three checksums in `results/followup/nli-comparison.json`, all in snapshot 3f3797b. Each matched line has a tokenizer filename and a 64-character hexadecimal SHA-256 used for model-file integrity, not authentication. `.gitleaksignore` records only these six exact commit/path/rule/line fingerprints. No rule, directory, file or future commit is broadly excluded. A separate temporary synthetic-key probe confirms default detection remains active; that probe is not committed or a real credential.
+
+## 20 October citation-review follow-up
+
+See [review response](paper/REVIEW_RESPONSE.md) and [diagnostic protocol](paper/REVIEW_RESPONSE_PROTOCOL.md). The added post-hoc length ranking has AP 0.385779, exceeding the tested detectors, and the manuscript now states that limitation. All 58 existing tests, diagnostic self-checks, 19 saved-output reconciliations and multi-study audit pass locally. New results retain hashes and all grouped fold assignments; CI requires deterministic regeneration. The original model outputs are unchanged. This is not a new independent test or peer review. Career qualification facts and publication status remain unchanged.

@@ -1,12 +1,12 @@
 # Four-perspective self-review and claim audit
 
-October 19, 2026. This is an internal critical review performed within the project, not independent expert peer review. The 19 scored policies were independently reconciled from saved predictions with aggregate AP, ROC, recall, FPR and confusion counts to absolute tolerance1e-12. Evidence: results/validation/output-audit.json. All55 integrity tests passed locally after the new implementations.
+October 19, 2026. This is an internal critical review performed within the project, not independent expert peer review. The 19 scored policies were independently reconciled from saved predictions with aggregate AP, ROC, recall, FPR and confusion counts to absolute tolerance1e-12. Evidence: results/validation/output-audit.json. The original run recorded 55 integrity tests; the 20 October follow-up passes all 58 current integrity tests plus the post-hoc diagnostic self-checks.
 
 | Perspective | Challenge | Evidence and response | Residual gap |
 | --- | --- | --- | --- |
 | Student/reproducer | Can someone reproduce results without copied text or hidden labels? | Original scripts, immutable hashes, frozen protocols, tests and derived predictions are provided. Labels, prompts, quality and generator metadata are excluded from citation predictors. | Data/model downloads and optional packages are required; pretraining overlap remains unknown. |
 | Professor/researcher | Is this a novel algorithm or causal domain-shift study? | No. It is a bounded transfer audit. Corpus, annotation unit and evidence presentation shift together. Window coverage and aggregation also change together. | Stronger matched detectors, unit-matched human annotations, formal novelty review and external critique remain needed. |
-| Industry user | Does higher recall reduce review work or improve live detection? | ASQA lexical recall100% requires98.9% review. ELI5 coverage catches91.3% but flags70.9% and misses14/160. Visual fusion reduces AP on all three splits. | No representative prospective alert/website population, real user trial, deployment cost or security guarantee. |
+| Industry user | Does higher recall reduce review work or improve live detection? | ASQA lexical recall100% requires98.9% review. ELI5 coverage catches91.25% but flags70.9% and misses14/160. Visual fusion reduces AP on all three splits. | No representative prospective alert/website population, real user trial, deployment cost or security guarantee. |
 | Critical reviewer/judge | Are uncertainty, negative results and implementation failures hidden? | Question/component bootstrap intervals are conditional, no target tuning occurred, all seeds and failures are retained. A preprocessing initializer error was corrected before any visual fitting. | Three seeds are not a population sample. A large visual component strongly distorts held-out prevalence; observed astronomical evidence remains unavailable. |
 
 ## Claims allowed by evidence
