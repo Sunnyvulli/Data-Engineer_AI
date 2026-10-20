@@ -101,3 +101,7 @@ Read the [900-answer and paired visual validation report](results/validation/REP
 ## Citation manuscript review response (20 October 2026)
 
 [Response and unresolved checks](docs/paper/REVIEW_RESPONSE.md) · [Protocol](docs/paper/REVIEW_RESPONSE_PROTOCOL.md). A post-hoc answer-length ranking gives AP 0.386 against coverage NLI 0.281 on the exposed 900-answer set; semantic detection advantage is not established. Generator strata and grouped diagnostic predictions are retained. AttrScore and AttributionBench are cited, but a matched AttrScore run and independent human review remain pending.
+
+## Within-generator follow-up — 20 October 2026
+
+CI now regenerates length AP/AUC within all six generators and pooled average tied ranks divided by generator sample size. Within-generator length ranks yield AP 0.295864 / AUC 0.632204; symmetrically normalized coverage NLI yields AP 0.236435 / AUC 0.625422. Every row retains both ranks. No equivalence, superiority or causal decomposition is established. The GPT-4 one-positive stratum remains visible and explicitly unstable. Original model outputs, source thresholds, test counts and unpublished status are unchanged.
