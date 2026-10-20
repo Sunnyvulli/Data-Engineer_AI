@@ -1,0 +1,36 @@
+# Response to manuscript flags — 20 October 2026
+
+This responds to the critique supplied by the portfolio owner. It is an author-side evidence audit, not independent peer review. The original target has been exposed; new diagnostics are explicitly post hoc.
+
+| Flag | Evidence and action | Remaining work |
+| --- | --- | --- |
+| Generator / length confounding | Added reproducible cached-length rankings, within-generator AP/AUC, counts, and five-fold question-group cross-fitted generator priors. Length AP 0.385779 / AUC 0.726976 exceeds every tested detector; generator-prior AP 0.273537 / AUC 0.685220 uses other target groups' labels. Manuscript abstract, interpretation and conclusion now disclose the adverse length result. | Causal separation, stable small-generator estimates and fresh confirmation are unresolved. Target-supervised prior is not a source-only comparator. |
+| Weak absolute performance | Retained prevalence 160/900, review-all extremes and missed positives; explicitly disclaimed semantic detection advantage in light of the length ranking. | A stronger task-specific detector has not been run. |
+| Selective abstract interval | Abstract now gives both coverage-versus-lexical intervals and their exploratory, 300-resample, uncorrected status. | No family-wise inference or new larger bootstrap study is claimed. |
+| Thin calibration / cutoff gap | Added exact ASQA 0.989811 / ELI5 0.451716 cutoffs, 172 / 363 rows and 19 groups each. State lack of sensitivity evidence and that scores are not calibrated probabilities. | Source-group calibration uncertainty and a cause for the cutoff gap are not established. |
+| Methods / tables / formatting | Table 2 includes ROC AUC. Percentages use two decimals, including 146/160 = 91.25%; corrected audit rounding and text spacing. Embedded fonts replace renderer-dependent standard fonts; keep tables together. | None for these reporting fixes; model execution itself was not repeated. |
+| Missing direct prior work | Verified and cited AttrScore (Yue et al., 2023) and AttributionBench (Li et al., 2024) using ACL primary records; updated related-work notes. | A focused reference update is not an exhaustive literature review. Protocol precedes new diagnostic computation, but not earlier target exposure. |
+| Broad title | Added an explicit restriction to ALCE sentences → RAGTruth whole answers in interpretation. Kept manuscript identity stable across existing career links. | A narrower formal title remains a candidate for the submission revision, with synchronized citations then. |
+
+## Checks and reproducibility
+
+Run from `research-suite`:
+
+```sh
+PYTHONPATH=src python -m unittest discover -s tests -q
+python docs/paper/review_diagnostics.py
+python docs/paper/audit_outputs.py
+python docs/paper/audit_three_studies.py
+```
+
+58 existing integrity tests pass; the diagnostic script additionally checks synthetic exact metrics, complete-group folds and held-out-label invariance. All 19 saved-output policy checks reconcile. The multi-study audit passes while retaining its negative validity findings. CI regenerates the diagnostic JSON and requires a zero diff. Report includes input SHA-256s, seed 20261020, all 900 row IDs, lengths, folds and prior scores; restricted text is not redistributed. A per-row cache permutation that preserved the entire exact risk vector would remain an alignment limitation because the old token audit has no row IDs. Do not claim a fresh raw-data reproduction.
+
+## Prospective reviewer contact (not contacted)
+
+Verified on 20 October 2026: [Huan Sun's official Ohio State CSE profile](https://cse.osu.edu/people/sun.397) lists her as Associate Professor with tenure and gives `sun.397@osu.edu`. AttrScore's ACL record confirms authorship with Yu Su and four other authors. This is a possible contact, not an agreement to review or an endorsement. No email, review request, paper submission or public attribution of this critique to her has been sent.
+
+A useful future request should ask about length/generator confounding, the exploratory multiple contrasts, and calibration on only 19 question groups. First finish the matched-comparator work and obtain the named author's review of the artifacts.
+
+## Career-material consistency
+
+No qualification, employment fact, publication status, enrollment, flagship engineering metric or integrity-test count changed. The research remains an unpublished audit with stronger comparators and independent human review pending. Existing career claims of reproducible experiments remain accurate; no new detector-performance boast should be added to the resume or cover letters. Portfolio/resume/CV/letter wording should retain those boundaries. No PDFs outside this manuscript were regenerated merely for activity.

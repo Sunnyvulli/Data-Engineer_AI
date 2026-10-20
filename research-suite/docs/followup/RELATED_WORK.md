@@ -20,3 +20,10 @@ No new scientific method or first discovery is claimed. The present contribution
 ## Released-prediction comparison boundary
 
 ALCE's released automatic support judgments are binary. Our lexical policies output continuous scores. Average precision from a binary operating point is not a fair comparison of the original entailment model's full ranking capability. Its operating-point precision, recall, and review fraction can be inspected, but this release does not claim that a lexical model outperforms AutoAIS or a modern entailment model. Thresholds also use different policies, so comparisons are descriptive tradeoffs rather than a matched-cost superiority test.
+
+## Citation-support references verified 20 October 2026
+
+- Yue, Wang, Chen, Zhang, Su & Sun (2023), [Automatic Evaluation of Attribution by Large Language Models](https://aclanthology.org/2023.findings-emnlp.307/), Findings EMNLP, 4615-4635, DOI 10.18653/v1/2023.findings-emnlp.307. [Official implementation](https://github.com/OSU-NLP-Group/AttrScore). Directly relevant attribution classifier and evaluation work; not executed in this release. A matched checkpoint, context policy, class mapping and source-only threshold are required before numerical comparison.
+- Li, Yue, Liao & Sun (2024), [AttributionBench: How Hard is Automatic Attribution Evaluation?](https://aclanthology.org/2024.findings-acl.886/), Findings ACL, 14919-14935, DOI 10.18653/v1/2024.findings-acl.886. Benchmark and error-analysis context; its macro-F1 is not this study's AP.
+
+The current audit is an exposed-target transfer analysis. Post-hoc length AP 0.386 exceeds coverage NLI AP 0.281, so no semantic detector advantage is established. See docs/paper/REVIEW_RESPONSE_PROTOCOL.md for outstanding comparator requirements.
