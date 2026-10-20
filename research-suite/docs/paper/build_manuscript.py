@@ -20,6 +20,7 @@ lex=json.loads((ROOT/'results/followup/citation-transfer.json').read_text())
 nli=json.loads((ROOT/'results/followup/nli-comparison.json').read_text())
 
 def pct(x):return f'{100*x:.2f}%'
+coverage=next(x for x in r['experiments'] if x['policy']=='coverage_nli')
 diag=json.loads((ROOT/'results/validation/review-diagnostics.json').read_text())
 def rowtext(row,source):
  return f"| {source.upper()} | {row['policy']} | {row['average_precision']:.3f} | {row['roc_auc']:.3f} | {pct(row['recall'])} | {pct(row['false_positive_rate'])} | {pct(row['review_fraction'])} | {row['missed_unsupported']} |"
@@ -35,7 +36,7 @@ for x in rows:
  ci=x['uncertainty']['percentile_95']
  d=ci['paired_ap_difference']
  intervals.append(f"| {x['source_policy'].upper()} / {x['policy']} | [{ci['ap'][0]:.3f}, {ci['ap'][1]:.3f}] | {'reference' if d is None else f'[{d[0]:.3f}, {d[1]:.3f}]'} |")
-body=f'''# Source Recall Does Not Guarantee Transfer: A Reproducible Audit of Evidence-Support Triage
+body=f'''# Length Baselines and Evidence-Support Triage: An ALCE-to-RAGTruth Audit
 
 Hanumantha Rao Vulli
 
@@ -43,11 +44,13 @@ Research manuscript draft for author review. Revised October 20, 2026 UTC. Not p
 
 ## Abstract
 
-Evidence-support triage can reduce manual review only if its recall and workload transfer beyond its calibration corpus. We audit six lexical features and an openly licensed small natural-language-inference (NLI) model under frozen source-only thresholds. Earlier ALCE sentence experiments are contrasted with a separately selected RAGTruth QA test set containing {r['selection']['retained_responses']} whole answers in {r['selection']['retained_source_groups']} question groups, with {r['positives']} positive annotations. At the original ASQA threshold, lexical triage catches every positive but flags 98.9% of answers. At the original ELI5 threshold, it catches 81.9% and flags 67.2%. The fixed bounded NLI representation has average precision 0.210. A precommitted coverage-window diagnostic raises this to 0.281, but at the ELI5-calibrated cutoff still misses 14 of 160 positives while flagging 70.9% of answers. The paired AP intervals versus ELI5 lexical [0.017, 0.117] and ASQA lexical [-0.053, 0.054] are exploratory, uncorrected contrasts from 300 cluster resamples. A post-hoc length-only ranking has AP 0.386, exceeding every tested detector; this exposes a major alternative explanation rather than demonstrating semantic detection. These are conditional benchmark findings, not a general ranking or deployment guarantee. We release original code, frozen protocols, derived predictions and failure audits, keeping restricted source text local.
+Do evidence-reading triage scores on whole answers establish an advantage over answer length? We revisit source-calibrated lexical and small natural-language-inference (NLI) policies on {r['selection']['retained_responses']} RAGTruth QA answers from {r['selection']['retained_source_groups']} question groups, with {r['positives']} positives. In a post-hoc diagnostic, longer-answer ranking yields average precision (AP) {diag['length_longer_risk']['ap']:.3f} and ROC AUC {diag['length_longer_risk']['roc_auc']:.3f}, compared with coverage NLI AP 0.281 and AUC 0.699. Length ranked within each generator and pooled yields AP {diag['length_within_generator_rank']['ap']:.3f} and AUC {diag['length_within_generator_rank']['roc_auc']:.3f}; identically normalized coverage NLI yields AP {diag['coverage_within_generator_rank']['ap']:.3f} and AUC {diag['coverage_within_generator_rank']['roc_auc']:.3f}. These point estimates do not establish equivalence or superiority. Generator positive counts range from 1 to 52 per 150 answers. Length has above-chance AUC in five generator strata; the remaining GPT-4 stratum has only one positive and length AUC 0.074. Generator mixture, answer length and annotation exposure cannot be causally separated. Historical ALCE sentence comparisons and frozen RAGTruth thresholds provide context: ASQA lexical flags 98.9% of answers; ELI5-calibrated coverage NLI misses 14 of 160 positives while flagging 70.9%. The original coverage-versus-lexical AP intervals, ELI5 [0.017, 0.117] and ASQA [-0.053, 0.054], are exploratory, uncorrected contrasts from 300 question-cluster resamples. The later length diagnostics and this reframing were prompted by exposed outcomes and critique, not preregistered confirmation. We release code, derived scores and failure audits, with restricted source text kept local.
 
 ## 1. Research question and bounded contribution
 
-A high unsupported-claim recall on source validation does not specify the fraction of answers a user must inspect elsewhere. This audit asks: how do source-calibrated triage policies behave when the evidence task changes corpus and annotation unit? A second, diagnostic question asks whether covering all input tokens changes the behavior of the same NLI weights relative to a fixed truncation policy.
+The primary question in this revised manuscript is whether the tested evidence-reading rankings establish an advantage beyond a trivial answer-length control on this particular benchmark. The empirical result is negative: raw length has a higher pooled AP point estimate than all tested detectors, and within-generator rank diagnostics do not establish an NLI advantage. This is not a claim that length is a reliable detector or that the methods are statistically equivalent.
+
+The original study asked whether source-calibrated policies retain recall and manageable workload across ALCE sentences and RAGTruth whole answers, with a diagnostic comparison of bounded and coverage NLI representations. That protocol preceded target scoring. Length and generator controls were introduced after the outcomes and critiques were exposed, and motivated the revised framing. They are post-hoc observational diagnostics; the original source-transfer question remains secondary context. Stronger matched detectors and a fresh frozen confirmation set remain untested.
 
 ALCE evaluates answers with citations and provides human sentence-support annotations (Gao et al., 2023). RAGTruth provides manually annotated hallucination spans in generated responses grounded in supplied material (Niu et al., 2024). Their annotations serve related purposes but are not identical constructs. This manuscript reports an empirical audit; it does not introduce a new learning algorithm, claim a first use of window aggregation, establish state-of-the-art performance, or establish a comprehensive novelty result. Previously exposed ALCE comparisons are historical context. The new RAGTruth protocol was committed before its model outcomes were computed.
 
@@ -93,13 +96,31 @@ Table 3 gives the conditional 95% percentile intervals for AP and its paired dif
 
 The coverage-versus-ELI5 lexical AP interval excludes zero under this conditional procedure. The coverage-versus-ASQA lexical difference includes zero. Review-all obtains recall 100%, FPR 100% and review 100%; review-none obtains recall 0%, FPR 0% and review 0%. Both constant-score controls have AP equal to prevalence, 0.178. Neither is a practical efficiency success. The ASQA lexical policy's perfect recall with 98.9% review approaches the review-all extreme, so recall alone obscures its operational weakness.
 
+### 4.1. Post-hoc generator and length controls
+
+These controls were added after the target outcomes and the owner's critique were visible. Every generator is retained, including GPT-4 with only one positive. Table 4 reports within-generator length and coverage NLI ROC AUC; AP and both length directions are retained in review-diagnostics.json. Sparse positive strata are descriptive only.
+
+| Generator | Answers | Positives | Length AUC | Coverage NLI AUC |
+| --- | --- | --- | --- | --- |
+{chr(10).join("| " + x['generator'] + " | " + str(x['n']) + " | " + str(x['positives']) + " | " + format(x['length_longer_risk']['roc_auc'], '.3f') + " | " + format(x['detectors']['coverage_nli']['roc_auc'], '.3f') + " |" for x in diag['strata'])}
+
+Average ranks handle ties within each generator and are divided by that generator's answer count, then pooled over all 900 rows. This uses the unlabeled target score distribution and generator identities: a transductive diagnostic, not a source-frozen deployment policy. The identical transformation is applied to coverage NLI for symmetry. Table 5 includes both transformed and untransformed scores; a normalized length score versus raw NLI is not a matched normalization comparison.
+
+| Ranking | AP | ROC AUC |
+| --- | --- | --- |
+| Raw length, longer risk | {diag['length_longer_risk']['ap']:.3f} | {diag['length_longer_risk']['roc_auc']:.3f} |
+| Raw length, shorter risk | {diag['length_shorter_risk']['ap']:.3f} | {diag['length_shorter_risk']['roc_auc']:.3f} |
+| Raw coverage NLI | {coverage['average_precision']:.3f} | {coverage['roc_auc']:.3f} |
+| Within-generator length ranks | {diag['length_within_generator_rank']['ap']:.3f} | {diag['length_within_generator_rank']['roc_auc']:.3f} |
+| Within-generator coverage ranks | {diag['coverage_within_generator_rank']['ap']:.3f} | {diag['coverage_within_generator_rank']['roc_auc']:.3f} |
+
+Length has ROC AUC above 0.5 in five generator samples. GPT-4 instead has length AUC 0.074 and only one positive; this unstable, opposite-direction result is retained rather than excluded. Normalizing within generators changes cross-generator comparisons and pooled AP/AUC; the reduction from raw length AUC 0.727 to rank-normalized AUC 0.632 is not an additive estimate of a generator effect. No uncertainty or equivalence margin has been established for these new differences. Longer answers may also have more opportunities for at least one annotated hallucination, without greater per-claim error. These data do not separate that exposure effect from semantic quality or generator behavior.
+
 ## 5. Interpretation and alternative explanations
 
-The title is limited to the observed ALCE-sentence to RAGTruth-whole-answer setting. It is not a universal transfer theorem. The useful finding is a failure of easy transfer, not a universally superior policy.
+The revised title focuses on baseline adequacy in this ALCE-to-RAGTruth audit. The most useful negative result is that the tested evidence-reading scores do not establish an advantage over length. Failure of source recall and review workload to transfer is supporting context, not a universal transfer theorem.
 
-Post-hoc diagnostics, specified in REVIEW_RESPONSE_PROTOCOL.md after the original outcomes and critique were exposed, use cached answer token counts aligned against identical coverage risk vectors. Longer-is-riskier length ranking has AP {diag['length_longer_risk']['ap']:.3f} and ROC AUC {diag['length_longer_risk']['roc_auc']:.3f}; shorter-is-riskier has AP {diag['length_shorter_risk']['ap']:.3f} and ROC AUC {diag['length_shorter_risk']['roc_auc']:.3f}. Both directions are reported without selecting one as a confirmatory result. Length alone ranks better than coverage NLI here. This finding materially weakens an interpretation of the detector scores as semantic support detection, but does not identify a causal mechanism.
-
-All six generators contribute 150 answers. Positive counts are GPT-3.5: 5; GPT-4: 1; Llama-2-13B: 36; Llama-2-70B: 35; Llama-2-7B: 52; Mistral-7B: 31. Within-generator detector metrics and row-level diagnostics are retained in review-diagnostics.json; tiny positive counts prevent stable conclusions for some strata. A five-fold complete-question cross-fitted generator prior yields AP {diag['generator_prior_target_supervised']['ap']:.3f}, ROC AUC {diag['generator_prior_target_supervised']['roc_auc']:.3f}. It uses target labels from other question groups and is a target-supervised diagnostic, NOT a source-only comparator or an evidence-reading detector.
+The within-generator controls in Section 4.1 weaken a semantic-support interpretation without identifying a causal explanation. The five-fold complete-question cross-fitted generator prior from the earlier response has AP {diag['generator_prior_target_supervised']['ap']:.3f}, ROC AUC {diag['generator_prior_target_supervised']['roc_auc']:.3f}. It uses target labels from other question groups; unlike the label-free rank transform, it is a target-supervised diagnostic and not a source-only comparator.
 
 Coverage thresholds are 0.989811 for ASQA (172 sentences, 19 questions) and 0.451716 for ELI5 (363 sentences, 19 questions). They are empirical source recall cutoffs, not calibrated probabilities. Different source score distributions can produce different cutoffs, but the cached data do not establish why this gap occurs. Calibration sensitivity across independent question-group splits has not been measured; a 90% empirical source target is not a population recall guarantee. High historical sentence-level AP does not transfer unchanged to this answer-level benchmark. The target differs in generator mixture, response length, citation presentation, evidence and positive-label definition. These shifts occur together. Accordingly, the numerical AP drop cannot be attributed solely to domain shift, answer granularity or model architecture. A controlled unit-matched annotation study would be needed to separate those explanations.
 
@@ -119,7 +140,7 @@ The named human author must inspect the artifacts, verify the claims and confirm
 
 ## 7. Conclusion
 
-Under the frozen conditions tested here, source recall and historical sentence-level ranking do not establish efficient whole-answer triage. A coverage diagnostic improves one fixed NLI representation but still trades missed positives against substantial review workload. The evidence supports a bounded, reproducible transfer audit. A post-hoc length-only ranking exceeds every tested detector, so a semantic detection advantage is not established. Representative deployment validity, causal explanations for the shift, stronger matched comparators and independent human review remain open.
+On this exposed RAGTruth whole-answer set, a trivial length ranking has higher pooled AP than the tested lexical and small NLI scores. Within-generator length and symmetrically normalized NLI controls do not establish an evidence-reading advantage. This is a useful negative result about the adequacy of these baselines on this benchmark, not causal decomposition, equivalence testing or a general detector ranking. The original source-threshold workload failures remain relevant, but stronger matched comparators, calibration/window studies, fresh confirmation and independent human review are still required.
 
 ## References
 
@@ -154,16 +175,17 @@ while i<len(lines):
    parts=[x.strip() for x in lines[i].strip('|').split('|')]
    if not all(re.fullmatch(r'[-: ]+',x) for x in parts):cells.append([Paragraph(escape(x),styles['Cell']) for x in parts])
    i+=1
-  cols=len(cells[0]);widths=([58,95,42,45,50,50,52,42] if cols==8 else [90,110,48,48,48,48,48] if cols==7 else [130,105,50,50,55,50] if cols==6 else [220,110,210])
+  cols=len(cells[0]);widths=([58,95,42,45,50,50,52,42] if cols==8 else [90,110,48,48,48,48,48] if cols==7 else [130,105,50,50,55,50] if cols==6 else [160,65,65,85,105] if cols==5 else [280,100,100])
   t=Table(cells,colWidths=[x*492/sum(widths) for x in widths],repeatRows=1,hAlign='LEFT')
-  t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e7edf4')),('VALIGN',(0,0),(-1,-1),'TOP'),('BOTTOMPADDING',(0,0),(-1,-1),6),('TOPPADDING',(0,0),(-1,-1),6),('LINEBELOW',(0,0),(-1,0),.5,colors.HexColor('#586a7e')),('LINEBELOW',(0,1),(-1,-1),.2,colors.HexColor('#d4dbe4'))]))
+  t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e7edf4')),('VALIGN',(0,0),(-1,-1),'TOP'),('BOTTOMPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),5),('LINEBELOW',(0,0),(-1,0),.5,colors.HexColor('#586a7e')),('LINEBELOW',(0,1),(-1,-1),.2,colors.HexColor('#d4dbe4'))]))
   story.append(KeepTogether([t,Spacer(1,10)]));continue
  if line.startswith('# '):story.append(Paragraph(escape(line[2:]),styles['PaperTitle']))
+ elif line.startswith('### '):story.append(Paragraph(escape(line[4:]),styles['Heading2']))
  elif line.startswith('## '):story.append(Paragraph(escape(line[3:]),styles['Heading2']))
  elif line.strip():story.append(Paragraph(escape(line),styles['BodyText']))
  i+=1
 
 def footer(canvas,doc):
  canvas.setFont('PaperSans',8);canvas.setFillColor(colors.HexColor('#586a7e'));canvas.drawString(54,30,'Research draft for author review | 20 October 2026');canvas.drawRightString(558,30,str(doc.page))
-SimpleDocTemplate(str(OUT/'MANUSCRIPT.pdf'),pagesize=(612,792),rightMargin=60,leftMargin=60,topMargin=48,bottomMargin=48,title='Source Recall Does Not Guarantee Transfer',author='Hanumantha Rao Vulli').build(story,onFirstPage=footer,onLaterPages=footer)
+SimpleDocTemplate(str(OUT/'MANUSCRIPT.pdf'),pagesize=(612,792),rightMargin=60,leftMargin=60,topMargin=48,bottomMargin=48,title='Length Baselines and Evidence-Support Triage: An ALCE-to-RAGTruth Audit',author='Hanumantha Rao Vulli').build(story,onFirstPage=footer,onLaterPages=footer)
 print('Created manuscript Markdown and PDF')

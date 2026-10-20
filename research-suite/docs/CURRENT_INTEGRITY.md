@@ -20,3 +20,7 @@ The first full-history scan reported six generic-api-key matches: three public t
 ## 20 October citation-review follow-up
 
 See [review response](paper/REVIEW_RESPONSE.md) and [diagnostic protocol](paper/REVIEW_RESPONSE_PROTOCOL.md). The added post-hoc length ranking has AP 0.385779, exceeding the tested detectors, and the manuscript now states that limitation. All 58 existing tests, diagnostic self-checks, 19 saved-output reconciliations and multi-study audit pass locally. New results retain hashes and all grouped fold assignments; CI requires deterministic regeneration. The original model outputs are unchanged. This is not a new independent test or peer review. Career qualification facts and publication status remain unchanged.
+
+## Within-generator control and revised framing — 2026-10-20
+
+The diagnostic script reports per-generator length AP/AUC and pooled average tied ranks divided by stratum n. Within-generator length ranks yield AP 0.295864 / AUC 0.632204; identically normalized coverage NLI yields AP 0.236435 / AUC 0.625422. All six strata remain visible, including GPT-4's opposite-direction length AUC 0.074 with only one positive. Checks cover ties, rank invariance to within-generator monotone scale changes, permutation alignment, invalid inputs and an independent pair-count AUC oracle. Reframing is explicitly post hoc; no causal effect, equivalence or superiority is established.

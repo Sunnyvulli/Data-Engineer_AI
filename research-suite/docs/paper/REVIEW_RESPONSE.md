@@ -10,7 +10,7 @@ This responds to the critique supplied by the portfolio owner. It is an author-s
 | Thin calibration / cutoff gap | Added exact ASQA 0.989811 / ELI5 0.451716 cutoffs, 172 / 363 rows and 19 groups each. State lack of sensitivity evidence and that scores are not calibrated probabilities. | Source-group calibration uncertainty and a cause for the cutoff gap are not established. |
 | Methods / tables / formatting | Table 2 includes ROC AUC. Percentages use two decimals, including 146/160 = 91.25%; corrected audit rounding and text spacing. Embedded fonts replace renderer-dependent standard fonts; keep tables together. | None for these reporting fixes; model execution itself was not repeated. |
 | Missing direct prior work | Verified and cited AttrScore (Yue et al., 2023) and AttributionBench (Li et al., 2024) using ACL primary records; updated related-work notes. | A focused reference update is not an exhaustive literature review. Protocol precedes new diagnostic computation, but not earlier target exposure. |
-| Broad title | Added an explicit restriction to ALCE sentences → RAGTruth whole answers in interpretation. Kept manuscript identity stable across existing career links. | A narrower formal title remains a candidate for the submission revision, with synchronized citations then. |
+| Broad title | Added an explicit restriction to ALCE sentences → RAGTruth whole answers in interpretation. Initial response kept the old title; the follow-up now reframes title, abstract, section 1 and conclusion around length controls. Canonical file URLs remain stable. | New title: Length Baselines and Evidence-Support Triage: An ALCE-to-RAGTruth Audit. Academic CV citation and public research-card interpretation are synchronized in the portfolio follow-up. |
 
 ## Checks and reproducibility
 
@@ -34,3 +34,7 @@ A useful future request should ask about length/generator confounding, the explo
 ## Career-material consistency
 
 No qualification, employment fact, publication status, enrollment, flagship engineering metric or integrity-test count changed. The research remains an unpublished audit with stronger comparators and independent human review pending. Existing career claims of reproducible experiments remain accurate; no new detector-performance boast should be added to the resume or cover letters. Portfolio/resume/CV/letter wording should retain those boundaries. No PDFs outside this manuscript were regenerated merely for activity.
+
+## Within-generator follow-up — 20 October 2026
+
+CI now regenerates length AP/AUC within all six generators and pooled average tied ranks divided by generator sample size. Within-generator length ranks yield AP 0.295864 / AUC 0.632204; symmetrically normalized coverage NLI yields AP 0.236435 / AUC 0.625422. Every row retains both ranks. No equivalence, superiority or causal decomposition is established. The GPT-4 one-positive stratum remains visible and explicitly unstable. Original model outputs, source thresholds, test counts and unpublished status are unchanged.
