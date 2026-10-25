@@ -1,0 +1,13 @@
+{
+  "zero_annotated_token_draws": {
+    "gpt-3.5-turbo-0613": 28,
+    "gpt-4-0613": 1826,
+    "llama-2-13b-chat": 0,
+    "llama-2-70b-chat": 0,
+    "llama-2-7b-chat": 0,
+    "mistral-7B-instruct": 0
+  },
+  "overflow_warning_count": 4,
+  "draws": 5000,
+  "action": "no refitting or retrospective exclusion; retain and flag boundary nonidentification"
+}

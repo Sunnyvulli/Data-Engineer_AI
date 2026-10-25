@@ -1,0 +1,928 @@
+{
+  "status": "exploratory_exposed_target",
+  "plan_commit": "9002e048b42cec344165f8f8e4fe94f59a0e8bd6",
+  "plan_sha256": "cb0c8273d69dd7c145ecd46bf9f8fa3ab2033d688ecd27e78d0084fcb1a2dbe8",
+  "code_commit": "b040c4d548bad9369f366bdeeef49bc59ce352c7",
+  "script_sha256": "fcf7605d893f2702c50882a74726aaa9774a85df1b1a2f26c84dbb0f59a5421b",
+  "inputs_sha256": {
+    "external-support-scores.json": "793cc7f33161783a4fab6324e7fbeca3415f627d6b976fbfba106122874b1526",
+    "ragtruth-coverage-risks.json": "d04c1bd89769f12833a99591a5729579ef72e678d5c47839ba57c059f9f928d3",
+    "review-diagnostics.json": "54348715337cc8af4f3caeaa2b85c3de5b662e78bb288c02d338cdfb8cb4c84a"
+  },
+  "seed": 20261025,
+  "requested_draws": 5000,
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  },
+  "limitations": [
+    "exposed target; exploratory uncorrected intervals",
+    "fixed OOF prediction intervals omit training and fold uncertainty",
+    "sparse-stratum intervals conditional on valid draws",
+    "passing tests cannot validate statistical conclusions",
+    "not equivalence, causal inference or general superiority"
+  ],
+  "populations": {
+    "all_generators": {
+      "n": 900,
+      "positives": 160,
+      "contrasts": {
+        "raw_length_minus_coverage": {
+          "ap_difference": 0.10453970452822364,
+          "auc_difference": 0.02791385135135127,
+          "ap_ci95": [
+            0.025526981966344967,
+            0.1847992642217216
+          ],
+          "auc_ci95": [
+            -0.029057458443724895,
+            0.08312660418293
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "rank_length_minus_coverage": {
+          "ap_difference": 0.05942917265513023,
+          "auc_difference": 0.006782094594594668,
+          "ap_ci95": [
+            0.000514373602360123,
+            0.12138135631978081
+          ],
+          "auc_ci95": [
+            -0.05494269576103871,
+            0.07085666389402843
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "increment_M1_minus_M0": {
+          "ap_difference": 0.029701637013580973,
+          "auc_difference": 0.017031249999999942,
+          "ap_ci95": [
+            0.010933362204790192,
+            0.04862494989528782
+          ],
+          "auc_ci95": [
+            0.003613317909660216,
+            0.03067776903420887
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/gpt-3.5-turbo-0613": {
+          "ap_difference": 0.1515007280717663,
+          "auc_difference": -0.1537931034482759,
+          "ap_ci95": [
+            -0.26358195376052523,
+            0.6067322648024135
+          ],
+          "auc_ci95": [
+            -0.42567567567567566,
+            0.11643835616438356
+          ],
+          "valid_draws": 4972,
+          "invalid_draws": 28
+        },
+        "generator/gpt-4-0613": {
+          "ap_difference": -0.010987573577501634,
+          "auc_difference": -0.5637583892617449,
+          "ap_ci95": [
+            -0.04137323943661972,
+            -0.00800865800865801
+          ],
+          "auc_ci95": [
+            -0.6544862772695285,
+            -0.4697986577181208
+          ],
+          "valid_draws": 3174,
+          "invalid_draws": 1826
+        },
+        "generator/llama-2-13b-chat": {
+          "ap_difference": 0.10293456632432935,
+          "auc_difference": 0.08369883040935677,
+          "ap_ci95": [
+            -0.04302587716210862,
+            0.26045043841008436
+          ],
+          "auc_ci95": [
+            -0.04944802449965489,
+            0.21517030423280428
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/llama-2-70b-chat": {
+          "ap_difference": -0.015684381465487396,
+          "auc_difference": -0.06223602484472046,
+          "ap_ci95": [
+            -0.16647377525414625,
+            0.1346207544843418
+          ],
+          "auc_ci95": [
+            -0.1950308862547952,
+            0.07068853392866548
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/llama-2-7b-chat": {
+          "ap_difference": 0.0158605151109128,
+          "auc_difference": -0.03836342229199374,
+          "ap_ci95": [
+            -0.12503892073225364,
+            0.16081357270502936
+          ],
+          "auc_ci95": [
+            -0.16298573325819712,
+            0.09016853488978835
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/mistral-7B-instruct": {
+          "ap_difference": 0.275857028565561,
+          "auc_difference": 0.11724044456492277,
+          "ap_ci95": [
+            0.09312000796249599,
+            0.42672070152532043
+          ],
+          "auc_ci95": [
+            -0.01443517080745347,
+            0.24266917194986937
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "macro_length_minus_coverage": {
+          "ap_difference": 0.08658014717159673,
+          "auc_difference": -0.10286861081207592,
+          "ap_ci95": [
+            -0.008294897663360414,
+            0.1785578833524196
+          ],
+          "auc_ci95": [
+            -0.17296649627784721,
+            -0.03255490512145064
+          ],
+          "valid_draws": 3156,
+          "invalid_draws": 1844
+        }
+      },
+      "model_metrics": {
+        "M0": {
+          "ap": 0.39482058802468945,
+          "auc": 0.7747170608108108
+        },
+        "M1": {
+          "ap": 0.4245222250382704,
+          "auc": 0.7917483108108108
+        }
+      },
+      "fits": {
+        "M0": [
+          {
+            "fold": 0,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.720489951093465
+            ],
+            "scaler_scale": [
+              0.6927019654064883
+            ],
+            "coefficient": [
+              1.0276994620479911,
+              -1.7093356228727983,
+              0.9135242530356741,
+              1.039080013801819,
+              1.278210361107424,
+              1.2796073859371702
+            ],
+            "intercept": -2.5888261654299707,
+            "iterations": 19
+          },
+          {
+            "fold": 1,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.732541084147852
+            ],
+            "scaler_scale": [
+              0.6694260639213122
+            ],
+            "coefficient": [
+              0.910797312887548,
+              -1.346761857184931,
+              0.9593336948877027,
+              1.1023970382500716,
+              1.3130313999963708,
+              1.2196028388312383
+            ],
+            "intercept": -2.6152532256729963,
+            "iterations": 18
+          },
+          {
+            "fold": 2,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.73664736392378
+            ],
+            "scaler_scale": [
+              0.672553780760594
+            ],
+            "coefficient": [
+              0.9547681897275628,
+              -1.5251945315071371,
+              0.8107232285935948,
+              0.766361598770416,
+              0.7746284859330825,
+              1.2151399791891715
+            ],
+            "intercept": -2.3720423091174463,
+            "iterations": 24
+          },
+          {
+            "fold": 3,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7057490386351635
+            ],
+            "scaler_scale": [
+              0.6904585402965151
+            ],
+            "coefficient": [
+              0.9919476475210367,
+              -1.5317232657269872,
+              0.547384371758634,
+              0.7695843406707367,
+              0.9811990828106238,
+              0.9605538488753972
+            ],
+            "intercept": -2.3895176612773015,
+            "iterations": 22
+          },
+          {
+            "fold": 4,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.730423261509922
+            ],
+            "scaler_scale": [
+              0.6874147053635064
+            ],
+            "coefficient": [
+              0.9510316734337019,
+              -1.5399282933626046,
+              0.7103521114554568,
+              0.7953759510018897,
+              0.909563503809875,
+              1.1532239288776713
+            ],
+            "intercept": -2.361744697331979,
+            "iterations": 21
+          }
+        ],
+        "M1": [
+          {
+            "fold": 0,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.72048995109347,
+              0.6756019694965987
+            ],
+            "scaler_scale": [
+              0.6927019654064887,
+              0.4034286959599524
+            ],
+            "coefficient": [
+              0.9026346167892374,
+              0.5495793991446105,
+              -1.5292162000580882,
+              0.754429924985983,
+              0.927536395166067,
+              1.0957008668431125,
+              1.2530056139117998
+            ],
+            "intercept": -2.6112426403164775,
+            "iterations": 22
+          },
+          {
+            "fold": 1,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.732541084147854,
+              0.6985920814999186
+            ],
+            "scaler_scale": [
+              0.6694260639213125,
+              0.3912530668324426
+            ],
+            "coefficient": [
+              0.8334909628923886,
+              0.5207679546811935,
+              -1.1683988963025649,
+              0.806508484374514,
+              0.9708972723469608,
+              1.1291499223750725,
+              1.2068501634575401
+            ],
+            "intercept": -2.6374007012236844,
+            "iterations": 19
+          },
+          {
+            "fold": 2,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.736647363923786,
+              0.6926396835428912
+            ],
+            "scaler_scale": [
+              0.672553780760594,
+              0.39707506352424093
+            ],
+            "coefficient": [
+              0.8417878330609555,
+              0.5614529812353757,
+              -1.3412610456683256,
+              0.6829002394571705,
+              0.6515006978233235,
+              0.5906410148970974,
+              1.2033272554460734
+            ],
+            "intercept": -2.405346129863232,
+            "iterations": 21
+          },
+          {
+            "fold": 3,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.70574903863517,
+              0.7068396752608738
+            ],
+            "scaler_scale": [
+              0.6904585402965148,
+              0.3960483112333832
+            ],
+            "coefficient": [
+              0.9047962657708614,
+              0.6085821006873517,
+              -1.3535640931645112,
+              0.35256286412734306,
+              0.6367464007412091,
+              0.7515139383581383,
+              0.9357717345849719
+            ],
+            "intercept": -2.4146137810558415,
+            "iterations": 23
+          },
+          {
+            "fold": 4,
+            "n_train": 720,
+            "n_test": 180,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "gpt-4-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.730423261509925,
+              0.714543739285114
+            ],
+            "scaler_scale": [
+              0.6874147053635059,
+              0.3871032380105546
+            ],
+            "coefficient": [
+              0.8537338403146367,
+              0.5195605296724274,
+              -1.3830015472198003,
+              0.5652373072407175,
+              0.7092077050267539,
+              0.7610087125774162,
+              1.1238841869933518
+            ],
+            "intercept": -2.390698326142823,
+            "iterations": 20
+          }
+        ]
+      }
+    },
+    "without_gpt4": {
+      "n": 750,
+      "positives": 159,
+      "contrasts": {
+        "raw_length_minus_coverage": {
+          "ap_difference": 0.1043306830112391,
+          "auc_difference": 0.04864902254998993,
+          "ap_ci95": [
+            0.02558273357203842,
+            0.1827397596732459
+          ],
+          "auc_ci95": [
+            -0.010677721158002938,
+            0.10612336706125843
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "rank_length_minus_coverage": {
+          "ap_difference": 0.07336272548684197,
+          "auc_difference": 0.011684704530217416,
+          "ap_ci95": [
+            0.0018339971297613737,
+            0.14656351799966363
+          ],
+          "auc_ci95": [
+            -0.05246338911477223,
+            0.07723487312739312
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "increment_M1_minus_M0": {
+          "ap_difference": 0.028469214932851816,
+          "auc_difference": 0.021086741372154605,
+          "ap_ci95": [
+            0.010477329654860501,
+            0.046957863750099985
+          ],
+          "auc_ci95": [
+            0.004522020101940503,
+            0.037973646646964496
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/gpt-3.5-turbo-0613": {
+          "ap_difference": 0.1515007280717663,
+          "auc_difference": -0.1537931034482759,
+          "ap_ci95": [
+            -0.26358195376052523,
+            0.6067322648024135
+          ],
+          "auc_ci95": [
+            -0.42567567567567566,
+            0.11643835616438356
+          ],
+          "valid_draws": 4972,
+          "invalid_draws": 28
+        },
+        "generator/llama-2-13b-chat": {
+          "ap_difference": 0.10293456632432935,
+          "auc_difference": 0.08369883040935677,
+          "ap_ci95": [
+            -0.04302587716210862,
+            0.26045043841008436
+          ],
+          "auc_ci95": [
+            -0.04944802449965489,
+            0.21517030423280428
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/llama-2-70b-chat": {
+          "ap_difference": -0.015684381465487396,
+          "auc_difference": -0.06223602484472046,
+          "ap_ci95": [
+            -0.16647377525414625,
+            0.1346207544843418
+          ],
+          "auc_ci95": [
+            -0.1950308862547952,
+            0.07068853392866548
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/llama-2-7b-chat": {
+          "ap_difference": 0.0158605151109128,
+          "auc_difference": -0.03836342229199374,
+          "ap_ci95": [
+            -0.12503892073225364,
+            0.16081357270502936
+          ],
+          "auc_ci95": [
+            -0.16298573325819712,
+            0.09016853488978835
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "generator/mistral-7B-instruct": {
+          "ap_difference": 0.275857028565561,
+          "auc_difference": 0.11724044456492277,
+          "ap_ci95": [
+            0.09312000796249599,
+            0.42672070152532043
+          ],
+          "auc_ci95": [
+            -0.01443517080745347,
+            0.24266917194986937
+          ],
+          "valid_draws": 5000,
+          "invalid_draws": 0
+        },
+        "macro_length_minus_coverage": {
+          "ap_difference": 0.10609369132141641,
+          "auc_difference": -0.010690655122142113,
+          "ap_ci95": [
+            -0.005929249257043765,
+            0.21597958820577276
+          ],
+          "auc_ci95": [
+            -0.09252628050982899,
+            0.06872198740149561
+          ],
+          "valid_draws": 4972,
+          "invalid_draws": 28
+        }
+      },
+      "model_metrics": {
+        "M0": {
+          "ap": 0.3980513935358921,
+          "auc": 0.7238184933329077
+        },
+        "M1": {
+          "ap": 0.4265206084687439,
+          "auc": 0.7449052347050623
+        }
+      },
+      "fits": {
+        "M0": [
+          {
+            "fold": 0,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7325426926292025
+            ],
+            "scaler_scale": [
+              0.7307244436399283
+            ],
+            "coefficient": [
+              1.08250694729191,
+              0.7445573344932347,
+              0.8699870494092107,
+              1.1077087369394911,
+              1.1111739906870761
+            ],
+            "intercept": -2.3927435618429063,
+            "iterations": 16
+          },
+          {
+            "fold": 1,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.743637063638501
+            ],
+            "scaler_scale": [
+              0.7079564659064373
+            ],
+            "coefficient": [
+              1.0011019269852446,
+              0.7981598143178937,
+              0.9471412763454766,
+              1.1432005222513162,
+              1.0785274547738735
+            ],
+            "intercept": -2.452549659256422,
+            "iterations": 17
+          },
+          {
+            "fold": 2,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.750013103751967
+            ],
+            "scaler_scale": [
+              0.7056300616700828
+            ],
+            "coefficient": [
+              1.0381455093727572,
+              0.6565001154384297,
+              0.6172124958650391,
+              0.6122616638449133,
+              1.0779303591580558
+            ],
+            "intercept": -2.211335105885725,
+            "iterations": 16
+          },
+          {
+            "fold": 3,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7151566266139
+            ],
+            "scaler_scale": [
+              0.7284302446786126
+            ],
+            "coefficient": [
+              1.0865489787959342,
+              0.38593151824804184,
+              0.6146660047270122,
+              0.8117471124031134,
+              0.8197743658641863
+            ],
+            "intercept": -2.2298928171021895,
+            "iterations": 16
+          },
+          {
+            "fold": 4,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7390819249507
+            ],
+            "scaler_scale": [
+              0.7299171343965644
+            ],
+            "coefficient": [
+              1.0463249457855703,
+              0.5546653254895966,
+              0.6442095103150577,
+              0.7453892005700343,
+              1.0147933251854855
+            ],
+            "intercept": -2.2062516858277577,
+            "iterations": 15
+          }
+        ],
+        "M1": [
+          {
+            "fold": 0,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.732542692629202,
+              0.7342867215877386
+            ],
+            "scaler_scale": [
+              0.7307244436399286,
+              0.3747834521014733
+            ],
+            "coefficient": [
+              0.9528787257293044,
+              0.4960923571145344,
+              0.5994384101490815,
+              0.7714462736224917,
+              0.9398110072825753,
+              1.0954524558142202
+            ],
+            "intercept": -2.347078206631899,
+            "iterations": 17
+          },
+          {
+            "fold": 1,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7436370636385,
+              0.7556878480523788
+            ],
+            "scaler_scale": [
+              0.7079564659064372,
+              0.3587619653787741
+            ],
+            "coefficient": [
+              0.9189768881055103,
+              0.46192311292061516,
+              0.6630020227645194,
+              0.8322618159418852,
+              0.9778457363371754,
+              1.0791411919111373
+            ],
+            "intercept": -2.411898298762261,
+            "iterations": 15
+          },
+          {
+            "fold": 2,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.750013103751965,
+              0.7462230169396848
+            ],
+            "scaler_scale": [
+              0.7056300616700831,
+              0.3686620679544758
+            ],
+            "coefficient": [
+              0.9194149186023302,
+              0.5059960561784902,
+              0.5439847740781287,
+              0.516762696575739,
+              0.44477458209427434,
+              1.0777533493819555
+            ],
+            "intercept": -2.180736774091498,
+            "iterations": 19
+          },
+          {
+            "fold": 3,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.715156626613901,
+              0.7609339377630694
+            ],
+            "scaler_scale": [
+              0.728430244678613,
+              0.3653683921581389
+            ],
+            "coefficient": [
+              0.9928129386031072,
+              0.5494009754153308,
+              0.2052030590140919,
+              0.49439952888784766,
+              0.5965481589422655,
+              0.8047173011713701
+            ],
+            "intercept": -2.180987658549498,
+            "iterations": 16
+          },
+          {
+            "fold": 4,
+            "n_train": 600,
+            "n_test": 150,
+            "categories": [
+              "gpt-3.5-turbo-0613",
+              "llama-2-13b-chat",
+              "llama-2-70b-chat",
+              "llama-2-7b-chat",
+              "mistral-7B-instruct"
+            ],
+            "scaler_mean": [
+              4.7390819249507,
+              0.7666212030538344
+            ],
+            "scaler_scale": [
+              0.7299171343965639,
+              0.35591338437684866
+            ],
+            "coefficient": [
+              0.942745955136849,
+              0.4647172231796778,
+              0.4227738214552441,
+              0.5697744762863607,
+              0.610335356171272,
+              0.9957876593650997
+            ],
+            "intercept": -2.1747320793799587,
+            "iterations": 16
+          }
+        ]
+      }
+    }
+  }
+}

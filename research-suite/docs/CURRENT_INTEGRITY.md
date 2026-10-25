@@ -24,3 +24,8 @@ See [review response](paper/REVIEW_RESPONSE.md) and [diagnostic protocol](paper/
 ## Within-generator control and revised framing — 2026-10-20
 
 The diagnostic script reports per-generator length AP/AUC and pooled average tied ranks divided by stratum n. Within-generator length ranks yield AP 0.295864 / AUC 0.632204; identically normalized coverage NLI yields AP 0.236435 / AUC 0.625422. All six strata remain visible, including GPT-4's opposite-direction length AUC 0.074 with only one positive. Checks cover ties, rank invariance to within-generator monotone scale changes, permutation alignment, invalid inputs and an independent pair-count AUC oracle. Reframing is explicitly post hoc; no causal effect, equivalence or superiority is established.
+
+
+## 25 October exploratory-analysis history scan
+
+PR #7 passed the research integrity job but its first history scan flagged two generic-api-key matches. Inspection showed both are the same public pinned tokenizer SHA-256: token_rate_analysis.py line 15 at 400f5481 and token-rate-analysis.json line 5 at c7fe2e2e. The value independently matches the existing pinned tokenizer file and the already-audited NLI provenance. Added only the exact commit/path/rule/line fingerprints to .gitleaksignore; no default rule or scan scope was disabled. Analysis code, results, plan and derived intervals remain unchanged.

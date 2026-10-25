@@ -6,3 +6,7 @@
 3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:29
 3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:30
 3f3797b64176e24a15e9b2b813cce87768917ef1:research-suite/src/research_suite/entailment.py:generic-api-key:31
+
+# 25 October 2026: same public tokenizer SHA-256 verified against the pinned file.
+400f5481c732a1b33f95a64dbee3cf17949f7520:research-suite/docs/paper/token_rate_analysis.py:generic-api-key:15
+c7fe2e2eddffb685eb4a7a3d9af3388b15772daa:research-suite/results/validation/token-rate-analysis.json:generic-api-key:5
