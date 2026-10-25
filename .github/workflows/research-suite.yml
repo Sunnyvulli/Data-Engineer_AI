@@ -25,6 +25,7 @@ jobs:
           python docs/paper/review_diagnostics.py > .local-ci/review-diagnostics.txt
           git diff --exit-code -- results/validation/review-diagnostics.json
           python docs/paper/audit_outputs.py > .local-ci/output-checks.txt
+          python docs/paper/audit_exploratory.py > .local-ci/exploratory-output-checks.txt
           python docs/paper/audit_three_studies.py > .local-ci/study-audit.json
       - uses: actions/upload-artifact@v4
         with:

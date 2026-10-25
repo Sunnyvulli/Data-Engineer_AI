@@ -1,0 +1,6570 @@
+{
+  "status": "exploratory_exposed_target_bounded_annotation_check",
+  "amendment_commit": "d57efc0d87aacccd22ee1d51c7edb2118f69b994",
+  "raw_sha256": "e4c2e4ac24fff676d8984cc61c35d791612fadc58015335d97dd632375e18073",
+  "tokenizer_sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+  "script_sha256": "479a71feb87ae3b192b0d531efe84cfffb429a2174a8b09930c1986298c8eea1",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "statsmodels": "0.14.6",
+    "patsy": "1.0.2",
+    "tokenizers": "0.21.4"
+  },
+  "span_offset_validation": "every retained annotation exactly equals its Unicode [start,end) answer slice",
+  "cached_length_mismatches": 0,
+  "zero_token_answers": 0,
+  "validated_annotation_spans": 235,
+  "generators": {
+    "gpt-3.5-turbo-0613": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 144,
+      "answer_tokens": 11889,
+      "ratio_of_totals": 0.012112036336109008,
+      "mean_answer_fraction": 0.007029066680889753,
+      "length_min_median_max": [
+        8,
+        77.5,
+        239
+      ],
+      "length_quartiles": [
+        44.25,
+        77.5,
+        109.0
+      ],
+      "slope_and_predicted_fractions": [
+        3.739166239148904,
+        0.00023910920316764844,
+        0.001872774924006957,
+        0.006581214009693155
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          -1.0407424767702529,
+          1.1252228172616705e-11,
+          4.353799538972735e-08,
+          6.032966167929303e-06
+        ],
+        [
+          13.728870505547649,
+          0.010681109832690328,
+          0.009822079371823807,
+          0.015671539401606763
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    },
+    "gpt-4-0613": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 19,
+      "answer_tokens": 17153,
+      "ratio_of_totals": 0.0011076779572086516,
+      "mean_answer_fraction": 0.0020430107526881723,
+      "length_min_median_max": [
+        8,
+        113.5,
+        270
+      ],
+      "length_quartiles": [
+        89.5,
+        113.5,
+        137.75
+      ],
+      "slope_and_predicted_fractions": [
+        -2.3549724491010373,
+        0.001364016664195087,
+        0.0007843230925860895,
+        0.0004990562458735749
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          -3.9182505548231377,
+          7.639227828572535e-14,
+          7.639227835525957e-14,
+          7.639227834922054e-14
+        ],
+        [
+          4.452179771329753e-09,
+          0.004343116274049197,
+          0.0024389493601165092,
+          0.0015914971698158143
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    },
+    "llama-2-13b-chat": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 1530,
+      "answer_tokens": 24164,
+      "ratio_of_totals": 0.06331733156762126,
+      "mean_answer_fraction": 0.055287474946343756,
+      "length_min_median_max": [
+        17,
+        153.0,
+        350
+      ],
+      "length_quartiles": [
+        111.75,
+        153.0,
+        204.0
+      ],
+      "slope_and_predicted_fractions": [
+        0.9522339589095913,
+        0.04000809864018532,
+        0.05310305510548019,
+        0.06858939697524712
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          -0.07373237334781146,
+          0.01862119083234875,
+          0.03211729274714906,
+          0.04118426973439586
+        ],
+        [
+          2.1349854277676856,
+          0.06574449451993902,
+          0.07516228704937569,
+          0.09829283540015094
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    },
+    "llama-2-70b-chat": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 1591,
+      "answer_tokens": 21745,
+      "ratio_of_totals": 0.07316624511381926,
+      "mean_answer_fraction": 0.05725796963920447,
+      "length_min_median_max": [
+        23,
+        139.0,
+        340
+      ],
+      "length_quartiles": [
+        104.75,
+        139.0,
+        175.75
+      ],
+      "slope_and_predicted_fractions": [
+        2.182390125933392,
+        0.023564527761439365,
+        0.04262049111307232,
+        0.06893513627922808
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          -0.1413058894833338,
+          0.006691892900585849,
+          0.020780708246135773,
+          0.03861699815435345
+        ],
+        [
+          4.214222133216336,
+          0.0523762565094108,
+          0.06209222363346023,
+          0.09327855384312884
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    },
+    "llama-2-7b-chat": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 2198,
+      "answer_tokens": 29361,
+      "ratio_of_totals": 0.07486121044923538,
+      "mean_answer_fraction": 0.06986501176570975,
+      "length_min_median_max": [
+        59,
+        189.0,
+        410
+      ],
+      "length_quartiles": [
+        148.25,
+        189.0,
+        242.0
+      ],
+      "slope_and_predicted_fractions": [
+        0.6803476721764887,
+        0.058950676283951536,
+        0.0687495776888184,
+        0.0802712934503648
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          -0.30802079660519843,
+          0.035076398431665705,
+          0.04698848560412926,
+          0.05234741003758591
+        ],
+        [
+          1.695077857033931,
+          0.08386932064782553,
+          0.09121911808521951,
+          0.11053352034468457
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    },
+    "mistral-7B-instruct": {
+      "n": 150,
+      "nonempty": 150,
+      "annotated_tokens": 1076,
+      "answer_tokens": 15720,
+      "ratio_of_totals": 0.06844783715012723,
+      "mean_answer_fraction": 0.04736296593256783,
+      "length_min_median_max": [
+        8,
+        103.5,
+        333
+      ],
+      "length_quartiles": [
+        72.25,
+        103.5,
+        136.5
+      ],
+      "slope_and_predicted_fractions": [
+        1.8759600085814918,
+        0.020020238250214394,
+        0.038263535448490815,
+        0.06242033920211522
+      ],
+      "ci95_columns_slope_p25_p50_p75": [
+        [
+          0.2603027626800536,
+          0.0049631175129929974,
+          0.016707928665188363,
+          0.03637146252830879
+        ],
+        [
+          3.5290727029820386,
+          0.052272946994474254,
+          0.06354164210388706,
+          0.08773123845680456
+        ]
+      ],
+      "valid_draws": 5000,
+      "invalid_draws": 0
+    }
+  },
+  "limitations": [
+    "annotation boundaries and guidelines may vary by generator",
+    "flat or rising rates do not settle causal exposure, semantic quality or per-claim errors",
+    "tokens are not treated as independent observations for uncertainty"
+  ],
+  "point_fit_failure": null,
+  "bootstrap_failure_counts": {},
+  "requested_draws": 5000,
+  "rows": [
+    {
+      "id": "11904",
+      "source_id": "14300",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 136,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "11905",
+      "source_id": "14300",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "11906",
+      "source_id": "14300",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "11907",
+      "source_id": "14300",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 205,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "11908",
+      "source_id": "14300",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 149,
+      "annotated_tokens": 21
+    },
+    {
+      "id": "11909",
+      "source_id": "14300",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12012",
+      "source_id": "14318",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 141,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12013",
+      "source_id": "14318",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 108,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12014",
+      "source_id": "14318",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12015",
+      "source_id": "14318",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 136,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12016",
+      "source_id": "14318",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 145,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12017",
+      "source_id": "14318",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12018",
+      "source_id": "14319",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 136,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12019",
+      "source_id": "14319",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 142,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12020",
+      "source_id": "14319",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 94,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12021",
+      "source_id": "14319",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 169,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12022",
+      "source_id": "14319",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12023",
+      "source_id": "14319",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12042",
+      "source_id": "14323",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12043",
+      "source_id": "14323",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12044",
+      "source_id": "14323",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 183,
+      "annotated_tokens": 95
+    },
+    {
+      "id": "12045",
+      "source_id": "14323",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 207,
+      "annotated_tokens": 65
+    },
+    {
+      "id": "12046",
+      "source_id": "14323",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 166,
+      "annotated_tokens": 16
+    },
+    {
+      "id": "12047",
+      "source_id": "14323",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12066",
+      "source_id": "14327",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 110,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12067",
+      "source_id": "14327",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12068",
+      "source_id": "14327",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 159,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12069",
+      "source_id": "14327",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 165,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12070",
+      "source_id": "14327",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 103,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12071",
+      "source_id": "14327",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 110,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12102",
+      "source_id": "14334",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 177,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12103",
+      "source_id": "14334",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 190,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12104",
+      "source_id": "14334",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 210,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12105",
+      "source_id": "14334",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 239,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12106",
+      "source_id": "14334",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 212,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12107",
+      "source_id": "14334",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12132",
+      "source_id": "14339",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12133",
+      "source_id": "14339",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12134",
+      "source_id": "14339",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12135",
+      "source_id": "14339",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 279,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12136",
+      "source_id": "14339",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 198,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12137",
+      "source_id": "14339",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 125,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12180",
+      "source_id": "14347",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 182,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12181",
+      "source_id": "14347",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12182",
+      "source_id": "14347",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 185,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12183",
+      "source_id": "14347",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 190,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12184",
+      "source_id": "14347",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 189,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12185",
+      "source_id": "14347",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 340,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12216",
+      "source_id": "14353",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12217",
+      "source_id": "14353",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12218",
+      "source_id": "14353",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12219",
+      "source_id": "14353",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 265,
+      "annotated_tokens": 11
+    },
+    {
+      "id": "12220",
+      "source_id": "14353",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 148,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12221",
+      "source_id": "14353",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 181,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12228",
+      "source_id": "14355",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 117,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12229",
+      "source_id": "14355",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 72,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12230",
+      "source_id": "14355",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 47,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12231",
+      "source_id": "14355",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12232",
+      "source_id": "14355",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 103,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12233",
+      "source_id": "14355",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 113,
+      "annotated_tokens": 24
+    },
+    {
+      "id": "12240",
+      "source_id": "14357",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 128,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12241",
+      "source_id": "14357",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12242",
+      "source_id": "14357",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 87,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12243",
+      "source_id": "14357",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 237,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12244",
+      "source_id": "14357",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12245",
+      "source_id": "14357",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12258",
+      "source_id": "14360",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12259",
+      "source_id": "14360",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 20,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12260",
+      "source_id": "14360",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 99,
+      "annotated_tokens": 38
+    },
+    {
+      "id": "12261",
+      "source_id": "14360",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 292,
+      "annotated_tokens": 78
+    },
+    {
+      "id": "12262",
+      "source_id": "14360",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 215,
+      "annotated_tokens": 31
+    },
+    {
+      "id": "12263",
+      "source_id": "14360",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 226,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12294",
+      "source_id": "14366",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 52,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12295",
+      "source_id": "14366",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 33,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12296",
+      "source_id": "14366",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 58,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12297",
+      "source_id": "14366",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 154,
+      "annotated_tokens": 48
+    },
+    {
+      "id": "12298",
+      "source_id": "14366",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 72,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12299",
+      "source_id": "14366",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 92,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12330",
+      "source_id": "14373",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 88,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12331",
+      "source_id": "14373",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12332",
+      "source_id": "14373",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12333",
+      "source_id": "14373",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 131,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12334",
+      "source_id": "14373",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 242,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12335",
+      "source_id": "14373",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 195,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12342",
+      "source_id": "14375",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 174,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12343",
+      "source_id": "14375",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12344",
+      "source_id": "14375",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12345",
+      "source_id": "14375",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 295,
+      "annotated_tokens": 40
+    },
+    {
+      "id": "12346",
+      "source_id": "14375",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 188,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12347",
+      "source_id": "14375",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 165,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12432",
+      "source_id": "14390",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12433",
+      "source_id": "14390",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 122,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12434",
+      "source_id": "14390",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 103,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12435",
+      "source_id": "14390",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 201,
+      "annotated_tokens": 9
+    },
+    {
+      "id": "12436",
+      "source_id": "14390",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12437",
+      "source_id": "14390",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 170,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12438",
+      "source_id": "14391",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12439",
+      "source_id": "14391",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 108,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12440",
+      "source_id": "14391",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 121,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12441",
+      "source_id": "14391",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 211,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12442",
+      "source_id": "14391",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12443",
+      "source_id": "14391",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 187,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12444",
+      "source_id": "14392",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 160,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12445",
+      "source_id": "14392",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12446",
+      "source_id": "14392",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 122,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12447",
+      "source_id": "14392",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 174,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12448",
+      "source_id": "14392",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 202,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12449",
+      "source_id": "14392",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 249,
+      "annotated_tokens": 80
+    },
+    {
+      "id": "12456",
+      "source_id": "14394",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 92,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12457",
+      "source_id": "14394",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 87,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12458",
+      "source_id": "14394",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 94,
+      "annotated_tokens": 7
+    },
+    {
+      "id": "12459",
+      "source_id": "14394",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 224,
+      "annotated_tokens": 12
+    },
+    {
+      "id": "12460",
+      "source_id": "14394",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 329,
+      "annotated_tokens": 152
+    },
+    {
+      "id": "12461",
+      "source_id": "14394",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 19
+    },
+    {
+      "id": "12468",
+      "source_id": "14396",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 131,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12469",
+      "source_id": "14396",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 149,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12470",
+      "source_id": "14396",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 99,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12471",
+      "source_id": "14396",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 410,
+      "annotated_tokens": 24
+    },
+    {
+      "id": "12472",
+      "source_id": "14396",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 311,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12473",
+      "source_id": "14396",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 242,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12516",
+      "source_id": "14404",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12517",
+      "source_id": "14404",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12518",
+      "source_id": "14404",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 93,
+      "annotated_tokens": 71
+    },
+    {
+      "id": "12519",
+      "source_id": "14404",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 323,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12520",
+      "source_id": "14404",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 96,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12521",
+      "source_id": "14404",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 176,
+      "annotated_tokens": 79
+    },
+    {
+      "id": "12522",
+      "source_id": "14405",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 67,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12523",
+      "source_id": "14405",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12524",
+      "source_id": "14405",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12525",
+      "source_id": "14405",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12526",
+      "source_id": "14405",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12527",
+      "source_id": "14405",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 95,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12552",
+      "source_id": "14410",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12553",
+      "source_id": "14410",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12554",
+      "source_id": "14410",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12555",
+      "source_id": "14410",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 254,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12556",
+      "source_id": "14410",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12557",
+      "source_id": "14410",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 161,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12600",
+      "source_id": "14418",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12601",
+      "source_id": "14418",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12602",
+      "source_id": "14418",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 99,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "12603",
+      "source_id": "14418",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12604",
+      "source_id": "14418",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12605",
+      "source_id": "14418",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12618",
+      "source_id": "14421",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 184,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12619",
+      "source_id": "14421",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12620",
+      "source_id": "14421",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 166,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12621",
+      "source_id": "14421",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 156,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12622",
+      "source_id": "14421",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 171,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12623",
+      "source_id": "14421",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 28,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12690",
+      "source_id": "14433",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 147,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12691",
+      "source_id": "14433",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12692",
+      "source_id": "14433",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 104,
+      "annotated_tokens": 18
+    },
+    {
+      "id": "12693",
+      "source_id": "14433",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 204,
+      "annotated_tokens": 8
+    },
+    {
+      "id": "12694",
+      "source_id": "14433",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 190,
+      "annotated_tokens": 23
+    },
+    {
+      "id": "12695",
+      "source_id": "14433",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 203,
+      "annotated_tokens": 82
+    },
+    {
+      "id": "12702",
+      "source_id": "14435",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 161,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12703",
+      "source_id": "14435",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 129,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12704",
+      "source_id": "14435",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 177,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12705",
+      "source_id": "14435",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 172,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12706",
+      "source_id": "14435",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 230,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12707",
+      "source_id": "14435",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 203,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12762",
+      "source_id": "14445",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12763",
+      "source_id": "14445",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12764",
+      "source_id": "14445",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12765",
+      "source_id": "14445",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 243,
+      "annotated_tokens": 10
+    },
+    {
+      "id": "12766",
+      "source_id": "14445",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 195,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12767",
+      "source_id": "14445",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12840",
+      "source_id": "14458",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 270,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12841",
+      "source_id": "14458",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12842",
+      "source_id": "14458",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 333,
+      "annotated_tokens": 13
+    },
+    {
+      "id": "12843",
+      "source_id": "14458",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 246,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12844",
+      "source_id": "14458",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 350,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12845",
+      "source_id": "14458",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 230,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12900",
+      "source_id": "14468",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12901",
+      "source_id": "14468",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 80,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12902",
+      "source_id": "14468",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 148,
+      "annotated_tokens": 43
+    },
+    {
+      "id": "12903",
+      "source_id": "14468",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 401,
+      "annotated_tokens": 85
+    },
+    {
+      "id": "12904",
+      "source_id": "14468",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 154,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12905",
+      "source_id": "14468",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 56,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12912",
+      "source_id": "14470",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12913",
+      "source_id": "14470",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 28,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12914",
+      "source_id": "14470",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12915",
+      "source_id": "14470",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12916",
+      "source_id": "14470",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 39,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "12917",
+      "source_id": "14470",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 69,
+      "annotated_tokens": 14
+    },
+    {
+      "id": "13038",
+      "source_id": "15092",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 121,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13039",
+      "source_id": "15092",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 43,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13040",
+      "source_id": "15092",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13041",
+      "source_id": "15092",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 223,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13042",
+      "source_id": "15092",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 214,
+      "annotated_tokens": 31
+    },
+    {
+      "id": "13043",
+      "source_id": "15092",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 240,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13068",
+      "source_id": "15097",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13069",
+      "source_id": "15097",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 62,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13070",
+      "source_id": "15097",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 159,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "13071",
+      "source_id": "15097",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 258,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13072",
+      "source_id": "15097",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13073",
+      "source_id": "15097",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 158,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13104",
+      "source_id": "15103",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 146,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13105",
+      "source_id": "15103",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 239,
+      "annotated_tokens": 85
+    },
+    {
+      "id": "13106",
+      "source_id": "15103",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13107",
+      "source_id": "15103",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 396,
+      "annotated_tokens": 14
+    },
+    {
+      "id": "13108",
+      "source_id": "15103",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 319,
+      "annotated_tokens": 32
+    },
+    {
+      "id": "13109",
+      "source_id": "15103",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 311,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13128",
+      "source_id": "15107",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 147,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13129",
+      "source_id": "15107",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13130",
+      "source_id": "15107",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13131",
+      "source_id": "15107",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 209,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13132",
+      "source_id": "15107",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 225,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13133",
+      "source_id": "15107",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13134",
+      "source_id": "15108",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 77,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13135",
+      "source_id": "15108",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 17,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13136",
+      "source_id": "15108",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 208,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "13137",
+      "source_id": "15108",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 381,
+      "annotated_tokens": 120
+    },
+    {
+      "id": "13138",
+      "source_id": "15108",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 293,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13139",
+      "source_id": "15108",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 226,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13152",
+      "source_id": "15111",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 100,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13153",
+      "source_id": "15111",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 49,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13154",
+      "source_id": "15111",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13155",
+      "source_id": "15111",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 194,
+      "annotated_tokens": 104
+    },
+    {
+      "id": "13156",
+      "source_id": "15111",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 179,
+      "annotated_tokens": 91
+    },
+    {
+      "id": "13157",
+      "source_id": "15111",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 107,
+      "annotated_tokens": 1
+    },
+    {
+      "id": "13158",
+      "source_id": "15112",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 136,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13159",
+      "source_id": "15112",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 194,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13160",
+      "source_id": "15112",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 165,
+      "annotated_tokens": 12
+    },
+    {
+      "id": "13161",
+      "source_id": "15112",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 336,
+      "annotated_tokens": 101
+    },
+    {
+      "id": "13162",
+      "source_id": "15112",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 232,
+      "annotated_tokens": 40
+    },
+    {
+      "id": "13163",
+      "source_id": "15112",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 255,
+      "annotated_tokens": 55
+    },
+    {
+      "id": "13206",
+      "source_id": "15120",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 58,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13207",
+      "source_id": "15120",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 35,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13208",
+      "source_id": "15120",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 66,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13209",
+      "source_id": "15120",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13210",
+      "source_id": "15120",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 124,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "13211",
+      "source_id": "15120",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 155,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13230",
+      "source_id": "15124",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 227,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13231",
+      "source_id": "15124",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 89,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13232",
+      "source_id": "15124",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 159,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13233",
+      "source_id": "15124",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 307,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13234",
+      "source_id": "15124",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 215,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13235",
+      "source_id": "15124",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 186,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13260",
+      "source_id": "15130",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 110,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13261",
+      "source_id": "15130",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 59,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13262",
+      "source_id": "15130",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 143,
+      "annotated_tokens": 18
+    },
+    {
+      "id": "13263",
+      "source_id": "15130",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 159,
+      "annotated_tokens": 17
+    },
+    {
+      "id": "13264",
+      "source_id": "15130",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13265",
+      "source_id": "15130",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 98,
+      "annotated_tokens": 16
+    },
+    {
+      "id": "13290",
+      "source_id": "15135",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 128,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13291",
+      "source_id": "15135",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 75,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13292",
+      "source_id": "15135",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13293",
+      "source_id": "15135",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 8
+    },
+    {
+      "id": "13294",
+      "source_id": "15135",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 129,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13295",
+      "source_id": "15135",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13308",
+      "source_id": "15138",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13309",
+      "source_id": "15138",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13310",
+      "source_id": "15138",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 94,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13311",
+      "source_id": "15138",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 200,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13312",
+      "source_id": "15138",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 131,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13313",
+      "source_id": "15138",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13338",
+      "source_id": "15143",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 126,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13339",
+      "source_id": "15143",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13340",
+      "source_id": "15143",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 173,
+      "annotated_tokens": 43
+    },
+    {
+      "id": "13341",
+      "source_id": "15143",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 164,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13342",
+      "source_id": "15143",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 225,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "13343",
+      "source_id": "15143",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 191,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13362",
+      "source_id": "15147",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 192,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13363",
+      "source_id": "15147",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 185,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "13364",
+      "source_id": "15147",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13365",
+      "source_id": "15147",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 159,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13366",
+      "source_id": "15147",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 258,
+      "annotated_tokens": 13
+    },
+    {
+      "id": "13367",
+      "source_id": "15147",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 192,
+      "annotated_tokens": 17
+    },
+    {
+      "id": "13374",
+      "source_id": "15149",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13375",
+      "source_id": "15149",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 77,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13376",
+      "source_id": "15149",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 146,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "13377",
+      "source_id": "15149",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13378",
+      "source_id": "15149",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13379",
+      "source_id": "15149",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 151,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13428",
+      "source_id": "15158",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 196,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13429",
+      "source_id": "15158",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 188,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13430",
+      "source_id": "15158",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 167,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13431",
+      "source_id": "15158",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 237,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13432",
+      "source_id": "15158",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 143,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13433",
+      "source_id": "15158",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 271,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13440",
+      "source_id": "15160",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 133,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13441",
+      "source_id": "15160",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 119,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13442",
+      "source_id": "15160",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 83,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "13443",
+      "source_id": "15160",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 202,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13444",
+      "source_id": "15160",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 204,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13445",
+      "source_id": "15160",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13464",
+      "source_id": "15164",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13465",
+      "source_id": "15164",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13466",
+      "source_id": "15164",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13467",
+      "source_id": "15164",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 172,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13468",
+      "source_id": "15164",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 154,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13469",
+      "source_id": "15164",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 133,
+      "annotated_tokens": 30
+    },
+    {
+      "id": "13488",
+      "source_id": "15168",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 155,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13489",
+      "source_id": "15168",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 58,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13490",
+      "source_id": "15168",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13491",
+      "source_id": "15168",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 291,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13492",
+      "source_id": "15168",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 150,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13493",
+      "source_id": "15168",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 173,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13530",
+      "source_id": "15175",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13531",
+      "source_id": "15175",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 43,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13532",
+      "source_id": "15175",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 130,
+      "annotated_tokens": 35
+    },
+    {
+      "id": "13533",
+      "source_id": "15175",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 158,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13534",
+      "source_id": "15175",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 159,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13535",
+      "source_id": "15175",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13560",
+      "source_id": "15180",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13561",
+      "source_id": "15180",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13562",
+      "source_id": "15180",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 121,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13563",
+      "source_id": "15180",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 239,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13564",
+      "source_id": "15180",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 181,
+      "annotated_tokens": 78
+    },
+    {
+      "id": "13565",
+      "source_id": "15180",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 160,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13716",
+      "source_id": "15206",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 170,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13717",
+      "source_id": "15206",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 187,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13718",
+      "source_id": "15206",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 88,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13719",
+      "source_id": "15206",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 252,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13720",
+      "source_id": "15206",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 179,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13721",
+      "source_id": "15206",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 163,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13740",
+      "source_id": "15210",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13741",
+      "source_id": "15210",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 52,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13742",
+      "source_id": "15210",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 34,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13743",
+      "source_id": "15210",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13744",
+      "source_id": "15210",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13745",
+      "source_id": "15210",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13908",
+      "source_id": "15238",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 126,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13909",
+      "source_id": "15238",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13910",
+      "source_id": "15238",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 96,
+      "annotated_tokens": 39
+    },
+    {
+      "id": "13911",
+      "source_id": "15238",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 201,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13912",
+      "source_id": "15238",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 189,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13913",
+      "source_id": "15238",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 187,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13914",
+      "source_id": "15239",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13915",
+      "source_id": "15239",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 24,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13916",
+      "source_id": "15239",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 44,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13917",
+      "source_id": "15239",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 113,
+      "annotated_tokens": 33
+    },
+    {
+      "id": "13918",
+      "source_id": "15239",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13919",
+      "source_id": "15239",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 27
+    },
+    {
+      "id": "13938",
+      "source_id": "15243",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 64,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13939",
+      "source_id": "15243",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 67,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13940",
+      "source_id": "15243",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 83,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13941",
+      "source_id": "15243",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 124,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13942",
+      "source_id": "15243",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 52,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "13943",
+      "source_id": "15243",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14004",
+      "source_id": "15254",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 130,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14005",
+      "source_id": "15254",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 66,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14006",
+      "source_id": "15254",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 28,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14007",
+      "source_id": "15254",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 192,
+      "annotated_tokens": 5
+    },
+    {
+      "id": "14008",
+      "source_id": "15254",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 241,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14009",
+      "source_id": "15254",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 120,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14052",
+      "source_id": "15262",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 176,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14053",
+      "source_id": "15262",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 94,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14054",
+      "source_id": "15262",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 119,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14055",
+      "source_id": "15262",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 337,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14056",
+      "source_id": "15262",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 260,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14057",
+      "source_id": "15262",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 168,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14094",
+      "source_id": "15269",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 181,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14095",
+      "source_id": "15269",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 179,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14096",
+      "source_id": "15269",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14097",
+      "source_id": "15269",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 199,
+      "annotated_tokens": 11
+    },
+    {
+      "id": "14098",
+      "source_id": "15269",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 221,
+      "annotated_tokens": 4
+    },
+    {
+      "id": "14099",
+      "source_id": "15269",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 103,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14130",
+      "source_id": "15275",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14131",
+      "source_id": "15275",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 49,
+      "annotated_tokens": 8
+    },
+    {
+      "id": "14132",
+      "source_id": "15275",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14133",
+      "source_id": "15275",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 67
+    },
+    {
+      "id": "14134",
+      "source_id": "15275",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 141,
+      "annotated_tokens": 34
+    },
+    {
+      "id": "14135",
+      "source_id": "15275",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 24
+    },
+    {
+      "id": "14196",
+      "source_id": "15286",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14197",
+      "source_id": "15286",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 59,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14198",
+      "source_id": "15286",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14199",
+      "source_id": "15286",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 162,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14200",
+      "source_id": "15286",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14201",
+      "source_id": "15286",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 110,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14208",
+      "source_id": "15288",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14209",
+      "source_id": "15288",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 43,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14210",
+      "source_id": "15288",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14211",
+      "source_id": "15288",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 126,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14212",
+      "source_id": "15288",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14213",
+      "source_id": "15288",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14280",
+      "source_id": "15300",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 76,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14281",
+      "source_id": "15300",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 45,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14282",
+      "source_id": "15300",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14283",
+      "source_id": "15300",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 281,
+      "annotated_tokens": 36
+    },
+    {
+      "id": "14284",
+      "source_id": "15300",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 72,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "14285",
+      "source_id": "15300",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 136,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14286",
+      "source_id": "15301",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14287",
+      "source_id": "15301",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14288",
+      "source_id": "15301",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14289",
+      "source_id": "15301",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 279,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14290",
+      "source_id": "15301",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 263,
+      "annotated_tokens": 8
+    },
+    {
+      "id": "14291",
+      "source_id": "15301",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 181,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14292",
+      "source_id": "15302",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 126,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14293",
+      "source_id": "15302",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 72,
+      "annotated_tokens": 13
+    },
+    {
+      "id": "14294",
+      "source_id": "15302",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 77,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14295",
+      "source_id": "15302",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 162,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "14296",
+      "source_id": "15302",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 117,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14297",
+      "source_id": "15302",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 34
+    },
+    {
+      "id": "14322",
+      "source_id": "15308",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14323",
+      "source_id": "15308",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 84,
+      "annotated_tokens": 23
+    },
+    {
+      "id": "14324",
+      "source_id": "15308",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 161,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "14325",
+      "source_id": "15308",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14326",
+      "source_id": "15308",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 262,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14327",
+      "source_id": "15308",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14352",
+      "source_id": "15313",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 76,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14353",
+      "source_id": "15313",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 77,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14354",
+      "source_id": "15313",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14355",
+      "source_id": "15313",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 224,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14356",
+      "source_id": "15313",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 154,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14357",
+      "source_id": "15313",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14364",
+      "source_id": "15315",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14365",
+      "source_id": "15315",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14366",
+      "source_id": "15315",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14367",
+      "source_id": "15315",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 130,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14368",
+      "source_id": "15315",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 173,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14369",
+      "source_id": "15315",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 144,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14376",
+      "source_id": "15317",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 188,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14377",
+      "source_id": "15317",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 140,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14378",
+      "source_id": "15317",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 218,
+      "annotated_tokens": 31
+    },
+    {
+      "id": "14379",
+      "source_id": "15317",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 289,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14380",
+      "source_id": "15317",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14381",
+      "source_id": "15317",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 216,
+      "annotated_tokens": 9
+    },
+    {
+      "id": "14394",
+      "source_id": "15320",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14395",
+      "source_id": "15320",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 37,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14396",
+      "source_id": "15320",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 65,
+      "annotated_tokens": 27
+    },
+    {
+      "id": "14397",
+      "source_id": "15320",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 114,
+      "annotated_tokens": 6
+    },
+    {
+      "id": "14398",
+      "source_id": "15320",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 96,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14399",
+      "source_id": "15320",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 96,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14466",
+      "source_id": "15332",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 141,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14467",
+      "source_id": "15332",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 99,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14468",
+      "source_id": "15332",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 92,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14469",
+      "source_id": "15332",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 209,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "14470",
+      "source_id": "15332",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 200,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14471",
+      "source_id": "15332",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 296,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14502",
+      "source_id": "15338",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14503",
+      "source_id": "15338",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 80,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14504",
+      "source_id": "15338",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14505",
+      "source_id": "15338",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 151,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14506",
+      "source_id": "15338",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 128,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14507",
+      "source_id": "15338",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 143,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14508",
+      "source_id": "15339",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14509",
+      "source_id": "15339",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 90,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14510",
+      "source_id": "15339",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14511",
+      "source_id": "15339",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 184,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "14512",
+      "source_id": "15339",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 144,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14513",
+      "source_id": "15339",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14688",
+      "source_id": "15369",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 153,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14689",
+      "source_id": "15369",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14690",
+      "source_id": "15369",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 213,
+      "annotated_tokens": 51
+    },
+    {
+      "id": "14691",
+      "source_id": "15369",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 267,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14692",
+      "source_id": "15369",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 221,
+      "annotated_tokens": 52
+    },
+    {
+      "id": "14693",
+      "source_id": "15369",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 185,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14700",
+      "source_id": "15371",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14701",
+      "source_id": "15371",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14702",
+      "source_id": "15371",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 118,
+      "annotated_tokens": 35
+    },
+    {
+      "id": "14703",
+      "source_id": "15371",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14704",
+      "source_id": "15371",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 190,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14705",
+      "source_id": "15371",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 132,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14712",
+      "source_id": "15373",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 131,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14713",
+      "source_id": "15373",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 124,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14714",
+      "source_id": "15373",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 60,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14715",
+      "source_id": "15373",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 251,
+      "annotated_tokens": 77
+    },
+    {
+      "id": "14716",
+      "source_id": "15373",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14717",
+      "source_id": "15373",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 162,
+      "annotated_tokens": 33
+    },
+    {
+      "id": "14742",
+      "source_id": "15378",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14743",
+      "source_id": "15378",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 36,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14744",
+      "source_id": "15378",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 72,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14745",
+      "source_id": "15378",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 208,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14746",
+      "source_id": "15378",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14747",
+      "source_id": "15378",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 148,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14748",
+      "source_id": "15379",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 100,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14749",
+      "source_id": "15379",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 54,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14750",
+      "source_id": "15379",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 108,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14751",
+      "source_id": "15379",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 226,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14752",
+      "source_id": "15379",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 200,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14753",
+      "source_id": "15379",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 172,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14760",
+      "source_id": "15381",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14761",
+      "source_id": "15381",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 37,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14762",
+      "source_id": "15381",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14763",
+      "source_id": "15381",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 103,
+      "annotated_tokens": 37
+    },
+    {
+      "id": "14764",
+      "source_id": "15381",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 204,
+      "annotated_tokens": 71
+    },
+    {
+      "id": "14765",
+      "source_id": "15381",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 15
+    },
+    {
+      "id": "14772",
+      "source_id": "15383",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 130,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14773",
+      "source_id": "15383",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14774",
+      "source_id": "15383",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14775",
+      "source_id": "15383",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 187,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14776",
+      "source_id": "15383",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 250,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14777",
+      "source_id": "15383",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14802",
+      "source_id": "15388",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14803",
+      "source_id": "15388",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 30,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14804",
+      "source_id": "15388",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14805",
+      "source_id": "15388",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14806",
+      "source_id": "15388",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 89,
+      "annotated_tokens": 52
+    },
+    {
+      "id": "14807",
+      "source_id": "15388",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 53,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14814",
+      "source_id": "15390",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14815",
+      "source_id": "15390",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 63,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14816",
+      "source_id": "15390",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14817",
+      "source_id": "15390",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 158,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14818",
+      "source_id": "15390",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 126,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14819",
+      "source_id": "15390",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 146,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14844",
+      "source_id": "15395",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 122,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14845",
+      "source_id": "15395",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14846",
+      "source_id": "15395",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 184,
+      "annotated_tokens": 42
+    },
+    {
+      "id": "14847",
+      "source_id": "15395",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 262,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14848",
+      "source_id": "15395",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 240,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14849",
+      "source_id": "15395",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 170,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14856",
+      "source_id": "15397",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14857",
+      "source_id": "15397",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 40,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14858",
+      "source_id": "15397",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 63,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14859",
+      "source_id": "15397",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 174,
+      "annotated_tokens": 39
+    },
+    {
+      "id": "14860",
+      "source_id": "15397",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 249,
+      "annotated_tokens": 93
+    },
+    {
+      "id": "14861",
+      "source_id": "15397",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14886",
+      "source_id": "15402",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 89,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14887",
+      "source_id": "15402",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14888",
+      "source_id": "15402",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14889",
+      "source_id": "15402",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14890",
+      "source_id": "15402",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14891",
+      "source_id": "15402",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 76,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14994",
+      "source_id": "15420",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 83,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14995",
+      "source_id": "15420",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 50,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14996",
+      "source_id": "15420",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14997",
+      "source_id": "15420",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 145,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14998",
+      "source_id": "15420",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "14999",
+      "source_id": "15420",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 39,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15006",
+      "source_id": "15422",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 140,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15007",
+      "source_id": "15422",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15008",
+      "source_id": "15422",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 153,
+      "annotated_tokens": 12
+    },
+    {
+      "id": "15009",
+      "source_id": "15422",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15010",
+      "source_id": "15422",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 146,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "15011",
+      "source_id": "15422",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 25
+    },
+    {
+      "id": "15102",
+      "source_id": "15438",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 171,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15103",
+      "source_id": "15438",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15104",
+      "source_id": "15438",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 230,
+      "annotated_tokens": 6
+    },
+    {
+      "id": "15105",
+      "source_id": "15438",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15106",
+      "source_id": "15438",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 277,
+      "annotated_tokens": 16
+    },
+    {
+      "id": "15107",
+      "source_id": "15438",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15126",
+      "source_id": "15442",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15127",
+      "source_id": "15442",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15128",
+      "source_id": "15442",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 143,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15129",
+      "source_id": "15442",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 243,
+      "annotated_tokens": 54
+    },
+    {
+      "id": "15130",
+      "source_id": "15442",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 203,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15131",
+      "source_id": "15442",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 198,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15174",
+      "source_id": "15450",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15175",
+      "source_id": "15450",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 60,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15176",
+      "source_id": "15450",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15177",
+      "source_id": "15450",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 175,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15178",
+      "source_id": "15450",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 117,
+      "annotated_tokens": 22
+    },
+    {
+      "id": "15179",
+      "source_id": "15450",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15192",
+      "source_id": "15453",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15193",
+      "source_id": "15453",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15194",
+      "source_id": "15453",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15195",
+      "source_id": "15453",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 255,
+      "annotated_tokens": 24
+    },
+    {
+      "id": "15196",
+      "source_id": "15453",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 59,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15197",
+      "source_id": "15453",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15198",
+      "source_id": "15454",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15199",
+      "source_id": "15454",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15200",
+      "source_id": "15454",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15201",
+      "source_id": "15454",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 58
+    },
+    {
+      "id": "15202",
+      "source_id": "15454",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 89,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15203",
+      "source_id": "15454",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15204",
+      "source_id": "15455",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 130,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15205",
+      "source_id": "15455",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 166,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15206",
+      "source_id": "15455",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15207",
+      "source_id": "15455",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 257,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15208",
+      "source_id": "15455",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15209",
+      "source_id": "15455",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 191,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15270",
+      "source_id": "15466",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 57,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15271",
+      "source_id": "15466",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 29,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15272",
+      "source_id": "15466",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 41,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15273",
+      "source_id": "15466",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 178,
+      "annotated_tokens": 25
+    },
+    {
+      "id": "15274",
+      "source_id": "15466",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15275",
+      "source_id": "15466",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 65,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15342",
+      "source_id": "15478",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15343",
+      "source_id": "15478",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 120,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15344",
+      "source_id": "15478",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 58,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15345",
+      "source_id": "15478",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 219,
+      "annotated_tokens": 27
+    },
+    {
+      "id": "15346",
+      "source_id": "15478",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15347",
+      "source_id": "15478",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 60,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15456",
+      "source_id": "15497",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 71,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15457",
+      "source_id": "15497",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 68,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15458",
+      "source_id": "15497",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15459",
+      "source_id": "15497",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15460",
+      "source_id": "15497",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15461",
+      "source_id": "15497",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 140,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15462",
+      "source_id": "15498",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 124,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15463",
+      "source_id": "15498",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 47,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15464",
+      "source_id": "15498",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15465",
+      "source_id": "15498",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 232,
+      "annotated_tokens": 69
+    },
+    {
+      "id": "15466",
+      "source_id": "15498",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 22
+    },
+    {
+      "id": "15467",
+      "source_id": "15498",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 125,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15480",
+      "source_id": "15501",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 63,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15481",
+      "source_id": "15501",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15482",
+      "source_id": "15501",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15483",
+      "source_id": "15501",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 141,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15484",
+      "source_id": "15501",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15485",
+      "source_id": "15501",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 165,
+      "annotated_tokens": 45
+    },
+    {
+      "id": "15552",
+      "source_id": "15513",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15553",
+      "source_id": "15513",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15554",
+      "source_id": "15513",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15555",
+      "source_id": "15513",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 278,
+      "annotated_tokens": 59
+    },
+    {
+      "id": "15556",
+      "source_id": "15513",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 330,
+      "annotated_tokens": 48
+    },
+    {
+      "id": "15557",
+      "source_id": "15513",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 298,
+      "annotated_tokens": 85
+    },
+    {
+      "id": "15624",
+      "source_id": "15525",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15625",
+      "source_id": "15525",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 51,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15626",
+      "source_id": "15525",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15627",
+      "source_id": "15525",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 167,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15628",
+      "source_id": "15525",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 234,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15629",
+      "source_id": "15525",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 144,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15648",
+      "source_id": "15529",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15649",
+      "source_id": "15529",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 108,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15650",
+      "source_id": "15529",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 88,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15651",
+      "source_id": "15529",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 151,
+      "annotated_tokens": 29
+    },
+    {
+      "id": "15652",
+      "source_id": "15529",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15653",
+      "source_id": "15529",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 158,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15672",
+      "source_id": "15533",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15673",
+      "source_id": "15533",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15674",
+      "source_id": "15533",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 40,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15675",
+      "source_id": "15533",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 187,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15676",
+      "source_id": "15533",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 133,
+      "annotated_tokens": 35
+    },
+    {
+      "id": "15677",
+      "source_id": "15533",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 136,
+      "annotated_tokens": 43
+    },
+    {
+      "id": "15684",
+      "source_id": "15535",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 75,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15685",
+      "source_id": "15535",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 61,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15686",
+      "source_id": "15535",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 87,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15687",
+      "source_id": "15535",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 149,
+      "annotated_tokens": 4
+    },
+    {
+      "id": "15688",
+      "source_id": "15535",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 222,
+      "annotated_tokens": 12
+    },
+    {
+      "id": "15689",
+      "source_id": "15535",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15708",
+      "source_id": "15539",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 95,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15709",
+      "source_id": "15539",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 44,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15710",
+      "source_id": "15539",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 134,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15711",
+      "source_id": "15539",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15712",
+      "source_id": "15539",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 153,
+      "annotated_tokens": 19
+    },
+    {
+      "id": "15713",
+      "source_id": "15539",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 115,
+      "annotated_tokens": 8
+    },
+    {
+      "id": "15714",
+      "source_id": "15540",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15715",
+      "source_id": "15540",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 99,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15716",
+      "source_id": "15540",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 72,
+      "annotated_tokens": 4
+    },
+    {
+      "id": "15717",
+      "source_id": "15540",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 170,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15718",
+      "source_id": "15540",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 142,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15719",
+      "source_id": "15540",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 140,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15726",
+      "source_id": "15542",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15727",
+      "source_id": "15542",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15728",
+      "source_id": "15542",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 203,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "15729",
+      "source_id": "15542",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 279,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15730",
+      "source_id": "15542",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 199,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15731",
+      "source_id": "15542",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 166,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15732",
+      "source_id": "15543",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 46,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15733",
+      "source_id": "15543",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 27,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15734",
+      "source_id": "15543",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 63,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15735",
+      "source_id": "15543",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 95,
+      "annotated_tokens": 33
+    },
+    {
+      "id": "15736",
+      "source_id": "15543",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 121,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15737",
+      "source_id": "15543",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 28,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15750",
+      "source_id": "15546",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15751",
+      "source_id": "15546",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 68,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15752",
+      "source_id": "15546",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15753",
+      "source_id": "15546",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 208,
+      "annotated_tokens": 23
+    },
+    {
+      "id": "15754",
+      "source_id": "15546",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 161,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15755",
+      "source_id": "15546",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 126,
+      "annotated_tokens": 14
+    },
+    {
+      "id": "15774",
+      "source_id": "15550",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 86,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15775",
+      "source_id": "15550",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 45,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15776",
+      "source_id": "15550",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 57,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15777",
+      "source_id": "15550",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 216,
+      "annotated_tokens": 64
+    },
+    {
+      "id": "15778",
+      "source_id": "15550",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 133,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15779",
+      "source_id": "15550",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 97,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15780",
+      "source_id": "15551",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15781",
+      "source_id": "15551",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 48,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15782",
+      "source_id": "15551",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 69,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15783",
+      "source_id": "15551",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15784",
+      "source_id": "15551",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15785",
+      "source_id": "15551",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 33,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15786",
+      "source_id": "15552",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15787",
+      "source_id": "15552",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 50,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15788",
+      "source_id": "15552",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 112,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15789",
+      "source_id": "15552",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 111,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15790",
+      "source_id": "15552",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15791",
+      "source_id": "15552",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 77,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15900",
+      "source_id": "15572",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 147,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15901",
+      "source_id": "15572",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15902",
+      "source_id": "15572",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 143,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15903",
+      "source_id": "15572",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 244,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15904",
+      "source_id": "15572",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 324,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15905",
+      "source_id": "15572",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 172,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15924",
+      "source_id": "15576",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 40,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15925",
+      "source_id": "15576",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 35,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15926",
+      "source_id": "15576",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15927",
+      "source_id": "15576",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 84,
+      "annotated_tokens": 26
+    },
+    {
+      "id": "15928",
+      "source_id": "15576",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 46,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15929",
+      "source_id": "15576",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 65,
+      "annotated_tokens": 20
+    },
+    {
+      "id": "15930",
+      "source_id": "15577",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15931",
+      "source_id": "15577",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15932",
+      "source_id": "15577",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15933",
+      "source_id": "15577",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 253,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15934",
+      "source_id": "15577",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 117,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15935",
+      "source_id": "15577",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 86,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15966",
+      "source_id": "15583",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 16,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15967",
+      "source_id": "15583",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 22,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15968",
+      "source_id": "15583",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15969",
+      "source_id": "15583",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15970",
+      "source_id": "15583",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "15971",
+      "source_id": "15583",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 18
+    },
+    {
+      "id": "16056",
+      "source_id": "12167",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 62,
+      "annotated_tokens": 19
+    },
+    {
+      "id": "16057",
+      "source_id": "12167",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 41,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16058",
+      "source_id": "12167",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 62,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16059",
+      "source_id": "12167",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 80,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16060",
+      "source_id": "12167",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 117,
+      "annotated_tokens": 27
+    },
+    {
+      "id": "16061",
+      "source_id": "12167",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16116",
+      "source_id": "12177",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16117",
+      "source_id": "12177",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16118",
+      "source_id": "12177",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16119",
+      "source_id": "12177",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 148,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16120",
+      "source_id": "12177",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16121",
+      "source_id": "12177",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 72,
+      "annotated_tokens": 30
+    },
+    {
+      "id": "16146",
+      "source_id": "12182",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 83,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16147",
+      "source_id": "12182",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 29,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16148",
+      "source_id": "12182",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 121,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16149",
+      "source_id": "12182",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 122,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16150",
+      "source_id": "12182",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16151",
+      "source_id": "12182",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16152",
+      "source_id": "12183",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 22,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16153",
+      "source_id": "12183",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 22,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16154",
+      "source_id": "12183",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16155",
+      "source_id": "12183",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 99,
+      "annotated_tokens": 42
+    },
+    {
+      "id": "16156",
+      "source_id": "12183",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 17,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16157",
+      "source_id": "12183",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16356",
+      "source_id": "12218",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 52,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16357",
+      "source_id": "12218",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 40,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16358",
+      "source_id": "12218",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 78,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16359",
+      "source_id": "12218",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 150,
+      "annotated_tokens": 42
+    },
+    {
+      "id": "16360",
+      "source_id": "12218",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 57,
+      "annotated_tokens": 22
+    },
+    {
+      "id": "16361",
+      "source_id": "12218",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 73,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16416",
+      "source_id": "12228",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16417",
+      "source_id": "12228",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 129,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16418",
+      "source_id": "12228",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 323,
+      "annotated_tokens": 228
+    },
+    {
+      "id": "16419",
+      "source_id": "12228",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 264,
+      "annotated_tokens": 256
+    },
+    {
+      "id": "16420",
+      "source_id": "12228",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 214,
+      "annotated_tokens": 214
+    },
+    {
+      "id": "16421",
+      "source_id": "12228",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 322,
+      "annotated_tokens": 307
+    },
+    {
+      "id": "16452",
+      "source_id": "12234",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16453",
+      "source_id": "12234",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16454",
+      "source_id": "12234",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16455",
+      "source_id": "12234",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 185,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16456",
+      "source_id": "12234",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 53,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16457",
+      "source_id": "12234",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 23,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16464",
+      "source_id": "12236",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 83,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16465",
+      "source_id": "12236",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 18,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16466",
+      "source_id": "12236",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16467",
+      "source_id": "12236",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 176,
+      "annotated_tokens": 9
+    },
+    {
+      "id": "16468",
+      "source_id": "12236",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 188,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16469",
+      "source_id": "12236",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 65,
+      "annotated_tokens": 12
+    },
+    {
+      "id": "16506",
+      "source_id": "12243",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16507",
+      "source_id": "12243",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 82,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16508",
+      "source_id": "12243",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16509",
+      "source_id": "12243",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 254,
+      "annotated_tokens": 119
+    },
+    {
+      "id": "16510",
+      "source_id": "12243",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 197,
+      "annotated_tokens": 30
+    },
+    {
+      "id": "16511",
+      "source_id": "12243",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 323,
+      "annotated_tokens": 259
+    },
+    {
+      "id": "16560",
+      "source_id": "12252",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 133,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16561",
+      "source_id": "12252",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 109,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16562",
+      "source_id": "12252",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16563",
+      "source_id": "12252",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 229,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16564",
+      "source_id": "12252",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 178,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16565",
+      "source_id": "12252",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 149,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16632",
+      "source_id": "12264",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 138,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16633",
+      "source_id": "12264",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16634",
+      "source_id": "12264",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 156,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16635",
+      "source_id": "12264",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 257,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16636",
+      "source_id": "12264",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 251,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16637",
+      "source_id": "12264",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16662",
+      "source_id": "12269",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16663",
+      "source_id": "12269",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 37,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16664",
+      "source_id": "12269",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16665",
+      "source_id": "12269",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16666",
+      "source_id": "12269",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 83,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16667",
+      "source_id": "12269",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 154,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16686",
+      "source_id": "12273",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 60,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16687",
+      "source_id": "12273",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 62,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16688",
+      "source_id": "12273",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 69,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16689",
+      "source_id": "12273",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16690",
+      "source_id": "12273",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 123,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16691",
+      "source_id": "12273",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 92,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16770",
+      "source_id": "12287",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 91,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16771",
+      "source_id": "12287",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16772",
+      "source_id": "12287",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 163,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16773",
+      "source_id": "12287",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 188,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16774",
+      "source_id": "12287",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 194,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16775",
+      "source_id": "12287",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 101,
+      "annotated_tokens": 17
+    },
+    {
+      "id": "16794",
+      "source_id": "12291",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 72,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16795",
+      "source_id": "12291",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 55,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16796",
+      "source_id": "12291",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 50,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16797",
+      "source_id": "12291",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 211,
+      "annotated_tokens": 13
+    },
+    {
+      "id": "16798",
+      "source_id": "12291",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 213,
+      "annotated_tokens": 78
+    },
+    {
+      "id": "16799",
+      "source_id": "12291",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16848",
+      "source_id": "12300",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 94,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16849",
+      "source_id": "12300",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 86,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16850",
+      "source_id": "12300",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 108,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16851",
+      "source_id": "12300",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 270,
+      "annotated_tokens": 32
+    },
+    {
+      "id": "16852",
+      "source_id": "12300",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 145,
+      "annotated_tokens": 24
+    },
+    {
+      "id": "16853",
+      "source_id": "12300",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 203,
+      "annotated_tokens": 39
+    },
+    {
+      "id": "16878",
+      "source_id": "12305",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 217,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16879",
+      "source_id": "12305",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 129,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16880",
+      "source_id": "12305",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 167,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16881",
+      "source_id": "12305",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 334,
+      "annotated_tokens": 21
+    },
+    {
+      "id": "16882",
+      "source_id": "12305",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 162,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16883",
+      "source_id": "12305",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 211,
+      "annotated_tokens": 11
+    },
+    {
+      "id": "16890",
+      "source_id": "12307",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 120,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16891",
+      "source_id": "12307",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 60,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16892",
+      "source_id": "12307",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16893",
+      "source_id": "12307",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 93,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16894",
+      "source_id": "12307",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 190,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16895",
+      "source_id": "12307",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 123,
+      "annotated_tokens": 34
+    },
+    {
+      "id": "16896",
+      "source_id": "12308",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 159,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16897",
+      "source_id": "12308",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16898",
+      "source_id": "12308",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 181,
+      "annotated_tokens": 9
+    },
+    {
+      "id": "16899",
+      "source_id": "12308",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 250,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16900",
+      "source_id": "12308",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16901",
+      "source_id": "12308",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 242,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16902",
+      "source_id": "12309",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16903",
+      "source_id": "12309",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 27,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16904",
+      "source_id": "12309",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 104,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16905",
+      "source_id": "12309",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 177,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16906",
+      "source_id": "12309",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16907",
+      "source_id": "12309",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 197,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16932",
+      "source_id": "12314",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16933",
+      "source_id": "12314",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 102,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16934",
+      "source_id": "12314",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 115,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16935",
+      "source_id": "12314",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 173,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16936",
+      "source_id": "12314",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 182,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "16937",
+      "source_id": "12314",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 191,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17052",
+      "source_id": "12334",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 144,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17053",
+      "source_id": "12334",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 95,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17054",
+      "source_id": "12334",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 101,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17055",
+      "source_id": "12334",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 195,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17056",
+      "source_id": "12334",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 107,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17057",
+      "source_id": "12334",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 131,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17058",
+      "source_id": "12335",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 92,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17059",
+      "source_id": "12335",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 44,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17060",
+      "source_id": "12335",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 106,
+      "annotated_tokens": 42
+    },
+    {
+      "id": "17061",
+      "source_id": "12335",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 139,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17062",
+      "source_id": "12335",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 127,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17063",
+      "source_id": "12335",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 118,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17100",
+      "source_id": "12342",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17101",
+      "source_id": "12342",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 94,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17102",
+      "source_id": "12342",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 117,
+      "annotated_tokens": 4
+    },
+    {
+      "id": "17103",
+      "source_id": "12342",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 230,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17104",
+      "source_id": "12342",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 215,
+      "annotated_tokens": 38
+    },
+    {
+      "id": "17105",
+      "source_id": "12342",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 252,
+      "annotated_tokens": 10
+    },
+    {
+      "id": "17112",
+      "source_id": "12344",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 106,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17113",
+      "source_id": "12344",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17114",
+      "source_id": "12344",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17115",
+      "source_id": "12344",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 161,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17116",
+      "source_id": "12344",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 85,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17117",
+      "source_id": "12344",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 114,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17196",
+      "source_id": "12358",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 28,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17197",
+      "source_id": "12358",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 31,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17198",
+      "source_id": "12358",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 43,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17199",
+      "source_id": "12358",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 147,
+      "annotated_tokens": 46
+    },
+    {
+      "id": "17200",
+      "source_id": "12358",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 85,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17201",
+      "source_id": "12358",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 81,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17232",
+      "source_id": "12364",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 152,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17233",
+      "source_id": "12364",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17234",
+      "source_id": "12364",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 137,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17235",
+      "source_id": "12364",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 409,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17236",
+      "source_id": "12364",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 218,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17237",
+      "source_id": "12364",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 170,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17250",
+      "source_id": "12367",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 116,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17251",
+      "source_id": "12367",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 67,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17252",
+      "source_id": "12367",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 53,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17253",
+      "source_id": "12367",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 174,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17254",
+      "source_id": "12367",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 119,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17255",
+      "source_id": "12367",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 163,
+      "annotated_tokens": 55
+    },
+    {
+      "id": "17280",
+      "source_id": "12372",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 65,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17281",
+      "source_id": "12372",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 79,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17282",
+      "source_id": "12372",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 135,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17283",
+      "source_id": "12372",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 85,
+      "annotated_tokens": 2
+    },
+    {
+      "id": "17284",
+      "source_id": "12372",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17285",
+      "source_id": "12372",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 68,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17394",
+      "source_id": "12391",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 98,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17395",
+      "source_id": "12391",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 25,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17396",
+      "source_id": "12391",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 76,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17397",
+      "source_id": "12391",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 59,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17398",
+      "source_id": "12391",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 69,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17399",
+      "source_id": "12391",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 74,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17514",
+      "source_id": "12414",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 148,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17515",
+      "source_id": "12414",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17516",
+      "source_id": "12414",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 153,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17517",
+      "source_id": "12414",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 227,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17518",
+      "source_id": "12414",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 163,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17519",
+      "source_id": "12414",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 193,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17562",
+      "source_id": "12422",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 149,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17563",
+      "source_id": "12422",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 8,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17564",
+      "source_id": "12422",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 206,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17565",
+      "source_id": "12422",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17566",
+      "source_id": "12422",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 67,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17567",
+      "source_id": "12422",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 50,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17568",
+      "source_id": "12423",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 113,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17569",
+      "source_id": "12423",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 49,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17570",
+      "source_id": "12423",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 110,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17571",
+      "source_id": "12423",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 205,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17572",
+      "source_id": "12423",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 146,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17573",
+      "source_id": "12423",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 128,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17754",
+      "source_id": "12455",
+      "generator": "gpt-4-0613",
+      "answer_tokens": 105,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17755",
+      "source_id": "12455",
+      "generator": "gpt-3.5-turbo-0613",
+      "answer_tokens": 51,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17756",
+      "source_id": "12455",
+      "generator": "mistral-7B-instruct",
+      "answer_tokens": 84,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17757",
+      "source_id": "12455",
+      "generator": "llama-2-7b-chat",
+      "answer_tokens": 157,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17758",
+      "source_id": "12455",
+      "generator": "llama-2-13b-chat",
+      "answer_tokens": 232,
+      "annotated_tokens": 0
+    },
+    {
+      "id": "17759",
+      "source_id": "12455",
+      "generator": "llama-2-70b-chat",
+      "answer_tokens": 71,
+      "annotated_tokens": 0
+    }
+  ]
+}

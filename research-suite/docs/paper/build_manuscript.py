@@ -36,6 +36,7 @@ for x in rows:
  ci=x['uncertainty']['percentile_95']
  d=ci['paired_ap_difference']
  intervals.append(f"| {x['source_policy'].upper()} / {x['policy']} | [{ci['ap'][0]:.3f}, {ci['ap'][1]:.3f}] | {'reference' if d is None else f'[{d[0]:.3f}, {d[1]:.3f}]'} |")
+extension=(OUT/'EXPLORATORY_RESULTS.md').read_text()
 body=f'''# Length Baselines and Evidence-Support Triage: An ALCE-to-RAGTruth Audit
 
 Hanumantha Rao Vulli
@@ -44,11 +45,11 @@ Research manuscript draft for author review. Revised October 25, 2026 UTC. Not p
 
 ## Abstract
 
-No advantage for the tested evidence-reading scores over answer length was established on this set; neither approach was shown superior. We revisit source-calibrated lexical and small natural-language-inference (NLI) policies on {r['selection']['retained_responses']} RAGTruth QA answers from {r['selection']['retained_source_groups']} question groups, with {r['positives']} positives. In a post-hoc diagnostic, longer-answer ranking yields average precision (AP) {diag['length_longer_risk']['ap']:.3f} and ROC AUC {diag['length_longer_risk']['roc_auc']:.3f}, compared with coverage NLI AP 0.281 and AUC 0.699. Length ranked within each generator and pooled yields AP {diag['length_within_generator_rank']['ap']:.3f} and AUC {diag['length_within_generator_rank']['roc_auc']:.3f}; identically normalized coverage NLI yields AP {diag['coverage_within_generator_rank']['ap']:.3f} and AUC {diag['coverage_within_generator_rank']['roc_auc']:.3f}. These point estimates lack paired length-versus-NLI uncertainty intervals, and within-generator AUC comparisons are mixed. They do not establish equivalence or superiority. Generator positive counts range from 1 to 52 per 150 answers. Length has above-chance AUC in five generator strata; the remaining GPT-4 stratum has only one positive and length AUC 0.074. Generator mixture, answer length and annotation exposure cannot be causally separated. Historical ALCE sentence comparisons and frozen RAGTruth thresholds provide context: ASQA lexical flags 98.9% of answers; ELI5-calibrated coverage NLI misses 14 of 160 positives while flagging 70.9%. The original coverage-versus-lexical AP intervals, ELI5 [0.017, 0.117] and ASQA [-0.053, 0.054], are exploratory, uncorrected contrasts from 300 question-cluster resamples. The later length diagnostics and this reframing were prompted by exposed outcomes and critique, not preregistered confirmation. We release code, derived scores and failure audits, with restricted source text kept local.
+Exploratory comparisons on an exposed RAGTruth set depend on the estimand: answer length ranks higher on pooled average precision (AP), while NLI adds conditional incremental signal when combined with length and generator. On 900 QA answers from 150 question groups, raw length minus coverage NLI has AP difference 0.1045 (conditional 95% interval [0.0255, 0.1848]) and AUC difference 0.0279 [-0.0291, 0.0831]. Equal-weight generator macro AUC instead favors NLI but is unstable because GPT-4 has one positive; removing GPT-4 yields an interval crossing zero. Five-fold question-group cross-fitting gives AP 0.3948 for length plus generator and 0.4245 after adding NLI, with paired gain 0.0297 [0.0109, 0.0486]. These intervals resample fixed predictions and omit training and fold-selection uncertainty. All contrasts use 5,000 paired question-group draws under a committed post-exposure plan; none are confirmatory or multiplicity-adjusted. A character-span-to-token check yields heterogeneous generator-specific rates and a sparse-stratum boundary problem, without settling causal exposure. Earlier ALCE source calibration remains context, not a pooled endpoint. Restricted texts remain local; derived predictions, all planned contrasts, failures and execution limitations are released. The incremental signal is a hypothesis for fresh confirmation, not a general detector advantage or deployment guarantee.
 
 ## 1. Research question and bounded contribution
 
-The primary question in this revised manuscript is whether the tested evidence-reading rankings establish an advantage beyond a trivial answer-length control on this particular benchmark. No advantage for evidence-reading scores over length has been established on this set, and neither approach has been shown superior. Raw length has a higher pooled AP point estimate than the tested detectors, but paired uncertainty for that contrast is not yet available and coverage NLI has higher AUC in four of six generator strata. The comparison remains exploratory; it does not establish reliable detection or statistical equivalence.
+The primary question in this revised manuscript is whether the tested evidence-reading rankings establish an advantage beyond a trivial answer-length control on this particular benchmark. The updated evidence depends on the comparison: raw length has higher pooled AP under conditional exploratory intervals, but a fixed cross-fitted model gains AP and AUC when NLI is added to length and generator. Coverage NLI has higher raw AUC in four of six generator strata. The incremental result is a hypothesis for fresh confirmation; neither this audit nor its conditional intervals establish a general method ranking, reliable deployment or statistical equivalence.
 
 The original study asked whether source-calibrated policies retain recall and manageable workload across ALCE sentences and RAGTruth whole answers, with a diagnostic comparison of bounded and coverage NLI representations. That protocol preceded target scoring. Length and generator controls were introduced after the outcomes and critiques were exposed, and motivated the revised framing. They are post-hoc observational diagnostics; the original source-transfer question remains secondary context. Stronger matched detectors and a fresh frozen confirmation set remain untested.
 
@@ -114,11 +115,12 @@ Average ranks handle ties within each generator and are divided by that generato
 | Within-generator length ranks | {diag['length_within_generator_rank']['ap']:.3f} | {diag['length_within_generator_rank']['roc_auc']:.3f} |
 | Within-generator coverage ranks | {diag['coverage_within_generator_rank']['ap']:.3f} | {diag['coverage_within_generator_rank']['roc_auc']:.3f} |
 
-Length has ROC AUC above 0.5 in five generator samples. GPT-4 instead has length AUC 0.074 and only one positive; this unstable, opposite-direction result is retained rather than excluded. Normalizing within generators changes cross-generator comparisons and pooled AP/AUC; the reduction from raw length AUC 0.727 to rank-normalized AUC 0.632 is not an additive estimate of a generator effect. No uncertainty or equivalence margin has been established for these new differences. Longer answers may also have more opportunities for at least one annotated hallucination, without greater per-claim error. These data do not separate that exposure effect from semantic quality or generator behavior.
+Length has ROC AUC above 0.5 in five generator samples. GPT-4 instead has length AUC 0.074 and only one positive; this unstable, opposite-direction result is retained rather than excluded. Normalizing within generators changes cross-generator comparisons and pooled AP/AUC; the reduction from raw length AUC 0.727 to rank-normalized AUC 0.632 is not an additive estimate of a generator effect. Section 4.2 reports newly computed conditional intervals under the committed exploratory plan; no equivalence margin or confirmatory test was specified. Longer answers may also have more opportunities for at least one annotated hallucination, without greater per-claim error. These data do not separate that exposure effect from semantic quality or generator behavior.
 
+{extension}
 ## 5. Interpretation and alternative explanations
 
-The revised title focuses on baseline adequacy in this ALCE-to-RAGTruth audit. The present evidence establishes no advantage for the tested evidence-reading scores over length; it also does not establish length superiority. Failure of source recall and review workload to transfer is supporting context, not a universal transfer theorem.
+The revised title focuses on baseline adequacy in this ALCE-to-RAGTruth audit. Pooled AP favors raw length in the conditional exploratory comparison, while the fixed target-supervised incremental model gains signal from NLI. This mixed result does not support either a general length-superiority claim or a claim that NLI adds nothing. Failure of source recall and review workload to transfer is supporting context, not a universal transfer theorem.
 
 The within-generator controls in Section 4.1 weaken a semantic-support interpretation without identifying a causal explanation. The five-fold complete-question cross-fitted generator prior from the earlier response has AP {diag['generator_prior_target_supervised']['ap']:.3f}, ROC AUC {diag['generator_prior_target_supervised']['roc_auc']:.3f}. It uses target labels from other question groups; unlike the label-free rank transform, it is a target-supervised diagnostic and not a source-only comparator.
 
@@ -134,13 +136,13 @@ Window aggregation has opposing failure modes. A maximum across evidence may fin
 
 Protocols, source hashes, original code, integrity tests, individual derived risks and aggregate outputs accompany the manuscript in Sunnyvulli/Data-Engineer_AI/research-suite. The external protocol is fixed at commit cf1c7b96b7aee262fd64816377dbcf04168ba5e7. Run python -m research_suite.external_support with the pinned local data and model directory after installing documented dependencies. Hash-validated caches permit interrupted inference to resume. The recorded elapsed time is a resumed invocation, not a reconstructed end-to-end compute bill; no total from discarded process time is fabricated. CPU inference uses four intra-operation threads and batch 4; no paid API or GPU was used.
 
-Integrity checks cover hidden-label exclusion, complete token-window coverage, grouped paired resampling and existing causal/split controls. Passing tests cannot prove statistical validity or absence of all defects. The four-perspective review is a self-audit generated within this project, not independent expert peer review. No participant study, production deployment, manually adjudicated new labels or acceptance by a journal is represented.
+Integrity checks cover hidden-label exclusion, complete token-window coverage, grouped paired resampling and existing causal/split controls. Passing tests cannot validate statistical conclusions or prove absence of defects. Conditional fixed-prediction intervals omit training and fold-selection uncertainty, and the sparse GPT-4 token-rate fits have boundary nonidentification despite numerical convergence. The four-perspective review is a self-audit generated within this project, not independent expert peer review. No participant study, production deployment, manually adjudicated new labels or acceptance by a journal is represented.
 
 The named human author must inspect the artifacts, verify the claims and confirm substantive authorship and the final text before external submission. AI is not listed as an author. No institutional affiliation, funding award or external reviewer is invented.
 
 ## 7. Conclusion
 
-On this exposed RAGTruth whole-answer set, no advantage for the tested evidence-reading scores over answer length was established; neither approach was shown superior. Raw length has a higher pooled AP point estimate, but the paired length-versus-NLI uncertainty intervals remain uncomputed and within-generator AUC comparisons are mixed. These exploratory observations establish neither equivalence nor a causal explanation or general detector ranking. The original source-threshold workload failures remain relevant, but stronger matched comparators, calibration/window studies, fresh confirmation and independent human review are still required.
+On this exposed RAGTruth whole-answer set, pooled AP conditionally favors raw length over coverage NLI, but generator-stratified comparisons are mixed and adding NLI to a fixed cross-fitted length-plus-generator model yields a positive conditional incremental signal. That signal is a hypothesis for fresh confirmation, not a general method advantage. Annotated-token rates do not settle a causal exposure explanation, and sparse-generator boundary fits limit their interpretation. These exposed-target analyses establish neither equivalence, causal decomposition nor deployment validity. The original source-threshold workload failures remain relevant, but stronger matched comparators, calibration/window studies, fresh confirmation and independent human review are still required.
 
 ## References
 
@@ -164,9 +166,10 @@ Vulli research suite. Frozen external-support protocol and original evaluation i
 styles=getSampleStyleSheet()
 styles.add(ParagraphStyle(name='PaperTitle',parent=styles['Title'],fontName='PaperBold',fontSize=17,leading=22,spaceAfter=14))
 styles['BodyText'].fontName='PaperSerif';styles['BodyText'].fontSize=9.8;styles['BodyText'].leading=14;styles['BodyText'].spaceAfter=8
-styles['Heading2'].fontName='PaperBold';styles['Heading2'].fontSize=11;styles['Heading2'].leading=16
+styles['Heading2'].fontName='PaperBold';styles['Heading2'].fontSize=11;styles['Heading2'].leading=16;styles['Heading2'].keepWithNext=True
+styles.add(ParagraphStyle(name='Caption',parent=styles['BodyText'],keepWithNext=True))
 styles.add(ParagraphStyle(name='Cell',fontName='PaperSans',fontSize=7.2,leading=9))
-story=[];lines=body.splitlines();i=0
+story=[];lines=body.splitlines();i=0;pending_caption=None
 while i<len(lines):
  line=lines[i]
  if line.startswith('|'):
@@ -175,13 +178,15 @@ while i<len(lines):
    parts=[x.strip() for x in lines[i].strip('|').split('|')]
    if not all(re.fullmatch(r'[-: ]+',x) for x in parts):cells.append([Paragraph(escape(x),styles['Cell']) for x in parts])
    i+=1
-  cols=len(cells[0]);widths=([58,95,42,45,50,50,52,42] if cols==8 else [90,110,48,48,48,48,48] if cols==7 else [130,105,50,50,55,50] if cols==6 else [160,65,65,85,105] if cols==5 else [280,100,100])
+  cols=len(cells[0]); header=' '.join(lines[i-len(cells)-1:i])
+  widths=([58,95,42,45,50,50,52,42] if cols==8 else [90,110,48,48,48,48,48] if cols==7 else [125,52,52,110,100,53] if cols==6 and 'Total rate' in header else [130,105,50,50,55,50] if cols==6 else [140,125,125,51,51] if cols==5 and 'Generator' in header and 'AP diff' in header else [55,85,135,135,82] if cols==5 and 'Contrast' in header else [160,65,65,85,105] if cols==5 else [280,100,100])
   t=Table(cells,colWidths=[x*492/sum(widths) for x in widths],repeatRows=1,hAlign='LEFT')
   t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e7edf4')),('VALIGN',(0,0),(-1,-1),'TOP'),('BOTTOMPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),5),('LINEBELOW',(0,0),(-1,0),.5,colors.HexColor('#586a7e')),('LINEBELOW',(0,1),(-1,-1),.2,colors.HexColor('#d4dbe4'))]))
-  story.append(KeepTogether([t,Spacer(1,10)]));continue
+  story.append(KeepTogether(([pending_caption] if pending_caption is not None else [])+[t,Spacer(1,10)]));pending_caption=None;continue
  if line.startswith('# '):story.append(Paragraph(escape(line[2:]),styles['PaperTitle']))
  elif line.startswith('### '):story.append(Paragraph(escape(line[4:]),styles['Heading2']))
  elif line.startswith('## '):story.append(Paragraph(escape(line[3:]),styles['Heading2']))
+ elif line.startswith('Table '):pending_caption=Paragraph(escape(line),styles['Caption'])
  elif line.strip():story.append(Paragraph(escape(line),styles['BodyText']))
  i+=1
 
