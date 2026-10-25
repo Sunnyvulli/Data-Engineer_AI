@@ -38,3 +38,10 @@ No qualification, employment fact, publication status, enrollment, flagship engi
 ## Within-generator follow-up — 20 October 2026
 
 CI now regenerates length AP/AUC within all six generators and pooled average tied ranks divided by generator sample size. Within-generator length ranks yield AP 0.295864 / AUC 0.632204; symmetrically normalized coverage NLI yields AP 0.236435 / AUC 0.625422. Every row retains both ranks. No equivalence, superiority or causal decomposition is established. The GPT-4 one-positive stratum remains visible and explicitly unstable. Original model outputs, source thresholds, test counts and unpublished status are unchanged.
+
+
+## Additional statistical review — 25 October 2026
+
+Before implementing or running the additional analyses, committed `EXPLORATORY_ANALYSIS_PLAN.md` in 9002e048b42cec344165f8f8e4fe94f59a0e8bd6. It fixes all paired AP/AUC contrasts, question-cluster sampling, 5,000 draws and seed, GPT-4 inclusion/sensitivity, cross-fitting folds, length transform and model specifications. All remain exploratory because outcomes were already exposed. The annotation-exposure extension is a bounded generator-specific check, not a causal verdict.
+
+Immediately softened the abstract, research question, interpretation and conclusion: no evidence-reading advantage has been established, and neither approach has been shown superior. Existing point estimates and historical intervals are unchanged. New intervals, incremental-value models, token-rate results and AttrScore have not been computed in this revision. Independent advisor review and double annotation remain pending.
