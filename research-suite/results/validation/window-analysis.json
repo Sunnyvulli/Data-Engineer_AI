@@ -1,0 +1,100 @@
+{
+  "status": "exposed-target exploratory controlled window diagnostic",
+  "n": 900,
+  "groups": 150,
+  "reference": "e_all_c_all_max",
+  "reference_max_absolute_difference": 0.0,
+  "reencoding_truncations": 0,
+  "inference_pairs": 1836,
+  "metrics": {
+    "e_first_c_first": {
+      "ap": 0.21171935128762748,
+      "roc_auc": 0.6048310810810811
+    },
+    "e_first_c_all_max": {
+      "ap": 0.27291622143141336,
+      "roc_auc": 0.6874746621621621
+    },
+    "e_first_c_all_mean": {
+      "ap": 0.21512655366758407,
+      "roc_auc": 0.6203716216216216
+    },
+    "e_all_c_first": {
+      "ap": 0.21623644939544806,
+      "roc_auc": 0.6136908783783784
+    },
+    "e_all_c_all_max": {
+      "ap": 0.28123893892762253,
+      "roc_auc": 0.6990625
+    },
+    "e_all_c_all_mean": {
+      "ap": 0.22166739747843683,
+      "roc_auc": 0.6327195945945947
+    }
+  },
+  "uncertainty": {
+    "requested": 5000,
+    "valid": 5000,
+    "seed": 20261025,
+    "resampling_unit": "complete question source_id; identical sampled rows for every score",
+    "ap_95": {
+      "e_first_c_first": [
+        0.17493320706677526,
+        0.26015880054362217
+      ],
+      "e_first_c_all_max": [
+        0.22284292931830582,
+        0.3377036267280234
+      ],
+      "e_first_c_all_mean": [
+        0.178643708815369,
+        0.26325800697150126
+      ],
+      "e_all_c_first": [
+        0.17879534418161483,
+        0.2657955821281171
+      ],
+      "e_all_c_all_max": [
+        0.23029395639605377,
+        0.34750952996688445
+      ],
+      "e_all_c_all_mean": [
+        0.18415352989936942,
+        0.2712332694874815
+      ]
+    },
+    "paired_ap_difference_95": {
+      "e_first_c_first_minus_reference": [
+        -0.10450157051818286,
+        -0.04288600787128404
+      ],
+      "e_first_c_all_max_minus_reference": [
+        -0.01457552922890663,
+        -0.003434055249536035
+      ],
+      "e_first_c_all_mean_minus_reference": [
+        -0.10086644068329698,
+        -0.04034621572669582
+      ],
+      "e_all_c_first_minus_reference": [
+        -0.0990024264503779,
+        -0.03900499814623737
+      ],
+      "e_all_c_all_mean_minus_reference": [
+        -0.09343705728540816,
+        -0.03469291808504336
+      ]
+    }
+  },
+  "input_sha256": {
+    "window-diagnostic.json": "4281ef962578b702c93a2fe3f9ef4b8a4c56c44947181960c5b94c76cc2fe48d",
+    "ragtruth-coverage-risks.json": "d04c1bd89769f12833a99591a5729579ef72e678d5c47839ba57c059f9f928d3",
+    "external-support-scores.json": "793cc7f33161783a4fab6324e7fbeca3415f627d6b976fbfba106122874b1526"
+  },
+  "limitations": [
+    "Exploratory on previously exposed outcomes; no selected winner or confirmatory significance.",
+    "Conditional on fixed model, window boundaries and supplied evidence.",
+    "First-window policy is not the original bounded policy.",
+    "Aggregation changes may reflect length sensitivity; no general causal claim."
+  ]
+}

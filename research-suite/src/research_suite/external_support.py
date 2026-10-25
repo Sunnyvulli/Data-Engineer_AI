@@ -116,7 +116,7 @@ def window_ranges(length, width, stride):
 
 
 class CoverageNLI:
-    def __init__(self, directory):
+    def __init__(self, directory, threads=4):
         import onnxruntime as ort
         from tokenizers import Tokenizer
 
@@ -128,7 +128,7 @@ class CoverageNLI:
         self.tokenizer.no_truncation()
         self.tokenizer.no_padding()
         options = ort.SessionOptions()
-        options.intra_op_num_threads = 4
+        options.intra_op_num_threads = threads
         self.session = ort.InferenceSession(
             str(directory / "onnx/model.onnx"),
             sess_options=options,
